@@ -15,6 +15,7 @@ import {
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { cn } from '@/app/lib/utils';
+import { useAuth } from '@/app/lib/auth-client';
 
 interface HeaderProps {
   onMenuToggle: () => void;
@@ -22,26 +23,20 @@ interface HeaderProps {
     username: string;
     role: string;
   };
+  isSidebarOpen?: boolean;
 }
 
-export default function Header({ onMenuToggle, user }: HeaderProps) {
+export default function Header({ onMenuToggle, user, isSidebarOpen }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
+  const { logout } = useAuth();
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('/api/auth/logout', {
-        method: 'POST',
-      });
-
-      if (response.ok) {
-        toast.success('Logged out successfully');
-        router.push('/login');
-      } else {
-        toast.error('Logout failed');
-      }
+      await logout();
+      toast.success('Logged out successfully');
     } catch (error) {
       console.error('Logout error:', error);
       toast.error('An error occurred during logout');
@@ -59,14 +54,20 @@ export default function Header({ onMenuToggle, user }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-30 bg-gray-900/95 backdrop-blur-xl border-b border-gray-800">
-      <div className="flex items-center justify-between px-4 py-3 lg:px-6">
+      <div className="flex items-center justify-between px-4 py-3 lg:px-6 min-w-0">
         {/* Left side */}
         <div className="flex items-center gap-4">
           <button
             onClick={onMenuToggle}
-            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+            className={cn(
+              "p-2 hover:bg-gray-800 rounded-lg transition-all duration-200",
+              isSidebarOpen ? "lg:hidden" : "block"
+            )}
           >
-            <Menu className="w-5 h-5 text-gray-400" />
+            <Menu className={cn(
+              "w-5 h-5 text-gray-400 transition-transform duration-200",
+              isSidebarOpen ? "rotate-90" : "rotate-0"
+            )} />
           </button>
 
           <div className="flex items-center gap-3">
@@ -81,7 +82,7 @@ export default function Header({ onMenuToggle, user }: HeaderProps) {
         </div>
 
         {/* Center - Search */}
-        <div className="flex-1 max-w-md mx-4 hidden md:block">
+        <div className="flex-1 max-w-md mx-4 hidden md:block min-w-0">
           <form onSubmit={handleSearch} className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input

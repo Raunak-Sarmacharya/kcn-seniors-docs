@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Sidebar from '@/components/docs/Sidebar';
 import Header from '@/components/docs/Header';
 import { cn } from '@/app/lib/utils';
+import { useAuth } from '@/app/lib/auth-client';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -16,40 +17,56 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
+  const { checkAuth, startAutoRefresh, stopAutoRefresh } = useAuth();
 
   // Set sidebar to open by default on larger screens
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024 && !isSidebarOpen) {
+      if (window.innerWidth >= 1024) {
         setIsSidebarOpen(true);
+      } else {
+        setIsSidebarOpen(false);
       }
     };
     
     handleResize(); // Set initial state
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isSidebarOpen]);
+  }, []);
 
   useEffect(() => {
-    const checkAuth = async () => {
+    const initializeAuth = async () => {
       try {
-        const response = await fetch('/api/auth/me');
-        if (response.ok) {
-          const data = await response.json();
-          setUser(data.user);
+        const userData = await checkAuth();
+        if (userData) {
+          setUser(userData);
+          // Start automatic session refresh
+          startAutoRefresh((updatedUser) => {
+            if (updatedUser) {
+              setUser(updatedUser);
+            } else {
+              // User was logged out, redirect to login
+              router.push('/login');
+            }
+          });
         } else {
           router.push('/login');
         }
       } catch (error) {
-        console.error('Auth check error:', error);
+        console.error('Auth initialization error:', error);
         router.push('/login');
       } finally {
         setIsLoading(false);
       }
     };
 
-    checkAuth();
-  }, [router]);
+    initializeAuth();
+
+    // Cleanup function
+    return () => {
+      stopAutoRefresh();
+    };
+  }, [checkAuth, startAutoRefresh, stopAutoRefresh, router]);
 
   if (isLoading) {
     return (
@@ -77,13 +94,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       
       {/* Main content */}
       <div className={cn(
-        'main-content',
-        isSidebarOpen ? 'main-content-with-sidebar' : 'main-content-without-sidebar'
+        'flex-1 flex flex-col transition-all duration-300 ease-in-out min-w-0',
+        isSidebarOpen ? 'lg:ml-80' : 'lg:ml-0'
       )}>
         {/* Header */}
         <Header 
           onMenuToggle={() => setIsSidebarOpen(!isSidebarOpen)} 
           user={user}
+          isSidebarOpen={isSidebarOpen}
         />
         
         {/* Page content */}

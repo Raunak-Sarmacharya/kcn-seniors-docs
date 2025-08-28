@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getCurrentUser } from '@/app/lib/auth';
+import { getCurrentUser, getSessionFromCookie, AuthDAL, setSessionCookie } from '@/app/lib/auth';
 
 export async function GET(request: NextRequest) {
   try {
+    // Clean up expired sessions
+    await AuthDAL.cleanupExpiredSessions();
+    
     const user = await getCurrentUser();
     
     if (!user) {
@@ -12,7 +15,12 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    return NextResponse.json({
+    // Get the current session to check if it was refreshed
+    const sessionId = getSessionFromCookie();
+    const session = sessionId ? await AuthDAL.getSession(sessionId) : null;
+    
+    // Create response
+    const response = NextResponse.json({
       user: {
         id: user.id,
         username: user.username,
@@ -21,6 +29,13 @@ export async function GET(request: NextRequest) {
         createdAt: user.createdAt,
       }
     });
+
+    // If session was refreshed, update the cookie
+    if (session && session.expiresAt > new Date(Date.now() + 23 * 60 * 60 * 1000)) {
+      setSessionCookie(session.id, response);
+    }
+
+    return response;
   } catch (error) {
     console.error('Get user error:', error);
     return NextResponse.json(

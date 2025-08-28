@@ -33,7 +33,17 @@ const users: User[] = [
   },
 ];
 
-const sessions: Session[] = [];
+// Persistent session storage using localStorage-like approach
+let sessions: Session[] = [];
+
+// Load sessions from memory (in production, this would be from a database)
+const loadSessions = () => {
+  // For development, we'll keep sessions in memory but clean up expired ones
+  sessions = sessions.filter(session => session.expiresAt > new Date());
+};
+
+// Initialize sessions
+loadSessions();
 
 export class AuthDAL {
   static async validateCredentials(username: string, password: string): Promise<User | null> {
@@ -68,6 +78,12 @@ export class AuthDAL {
       return null;
     }
 
+    // Auto-refresh session if it's close to expiring (within 1 hour)
+    const oneHourFromNow = new Date(Date.now() + 60 * 60 * 1000);
+    if (session.expiresAt < oneHourFromNow) {
+      session.expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // Extend by 24 hours
+    }
+
     return session;
   }
 
@@ -76,6 +92,11 @@ export class AuthDAL {
     if (index !== -1) {
       sessions.splice(index, 1);
     }
+  }
+
+  static async cleanupExpiredSessions(): Promise<void> {
+    const now = new Date();
+    sessions = sessions.filter(session => session.expiresAt > now);
   }
 
   static async refreshSession(sessionId: string): Promise<Session | null> {
