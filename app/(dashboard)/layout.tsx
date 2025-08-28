@@ -34,6 +34,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Handle sidebar toggle - this should work on both mobile and desktop
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   useEffect(() => {
     const initializeAuth = async () => {
       try {
@@ -92,14 +97,16 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
-      {/* Main content */}
-      <div className={cn(
-        'flex-1 flex flex-col transition-all duration-300 ease-in-out min-w-0',
-        isSidebarOpen ? 'lg:ml-80' : 'lg:ml-0'
-      )}>
+             {/* Main content */}
+       <div className={cn(
+         'flex-1 flex flex-col transition-all duration-300 ease-in-out min-w-0',
+         // On desktop, shift content based on sidebar state
+         // On mobile, no margin shift needed since sidebar is fixed
+         isSidebarOpen ? 'lg:ml-80' : 'lg:ml-0'
+       )}>
         {/* Header */}
         <Header 
-          onMenuToggle={() => setIsSidebarOpen(!isSidebarOpen)} 
+          onMenuToggle={handleSidebarToggle} 
           user={user}
           isSidebarOpen={isSidebarOpen}
         />

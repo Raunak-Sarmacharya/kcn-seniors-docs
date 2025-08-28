@@ -59,10 +59,7 @@ export default function Header({ onMenuToggle, user, isSidebarOpen }: HeaderProp
         <div className="flex items-center gap-4">
           <button
             onClick={onMenuToggle}
-            className={cn(
-              "p-2 hover:bg-gray-800 rounded-lg transition-all duration-200",
-              isSidebarOpen ? "lg:hidden" : "block"
-            )}
+            className="p-2 hover:bg-gray-800 rounded-lg transition-all duration-200"
           >
             <Menu className={cn(
               "w-5 h-5 text-gray-400 transition-transform duration-200",

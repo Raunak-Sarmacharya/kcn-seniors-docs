@@ -101,14 +101,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         )}
       </AnimatePresence>
 
-      {/* Sidebar */}
-      <aside
-        className={cn(
-          'fixed left-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800 z-50 overflow-hidden transition-all duration-300 ease-in-out',
-          'lg:relative lg:translate-x-0 lg:z-auto lg:flex-shrink-0',
-          isOpen ? 'translate-x-0 shadow-2xl lg:shadow-none' : '-translate-x-full lg:translate-x-0'
-        )}
-      >
+             {/* Sidebar */}
+       <aside
+         className={cn(
+           'fixed left-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800 z-50 overflow-hidden transition-all duration-300 ease-in-out',
+           'lg:relative lg:z-auto lg:flex-shrink-0',
+           // Mobile: slide in/out based on isOpen state
+           // Desktop: always visible, but content shifts based on isOpen state
+           isOpen ? 'translate-x-0 shadow-2xl lg:shadow-none' : '-translate-x-full lg:translate-x-0'
+         )}
+       >
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-800">
