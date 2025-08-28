@@ -19,14 +19,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter();
   const { checkAuth, startAutoRefresh, stopAutoRefresh } = useAuth();
 
-  // Set sidebar to open by default on larger screens
+  // Set sidebar to closed by default on all screens
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsSidebarOpen(true);
-      } else {
-        setIsSidebarOpen(false);
-      }
+      // Start with sidebar closed on all screen sizes
+      setIsSidebarOpen(false);
     };
     
     handleResize(); // Set initial state
@@ -98,12 +95,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
              {/* Main content */}
-       <div className={cn(
-         'flex-1 flex flex-col transition-all duration-300 ease-in-out min-w-0',
-         // On desktop, shift content based on sidebar state
-         // On mobile, no margin shift needed since sidebar is fixed
-         isSidebarOpen ? 'lg:ml-80' : 'lg:ml-0'
-       )}>
+       <div className="flex-1 flex flex-col transition-all duration-300 ease-in-out min-w-0">
         {/* Header */}
         <Header 
           onMenuToggle={handleSidebarToggle} 
