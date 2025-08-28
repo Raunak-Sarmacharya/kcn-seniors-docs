@@ -10,8 +10,12 @@ export const metadata: Metadata = {
   description: 'Comprehensive documentation portal for KCN Seniors WordPress website management',
   keywords: ['WordPress', 'documentation', 'KCN Seniors', 'website management'],
   authors: [{ name: 'KCN Seniors' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'noindex, nofollow', // Private documentation portal
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
