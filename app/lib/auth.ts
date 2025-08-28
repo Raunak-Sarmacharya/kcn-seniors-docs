@@ -27,7 +27,7 @@ const users: User[] = [
   {
     id: '1',
     username: 'kcn_admin',
-    passwordHash: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj4J/HS.iK2O', // SecureKCN2025!
+    passwordHash: '$2a$12$WwfRozPUfs.MqZ/7u6YdoeC6IJ0jpe8wWl0WsU3R2R8MrE/mu/v.y', // SecureKCN2025!
     role: 'admin',
     createdAt: new Date('2025-01-01'),
   },
