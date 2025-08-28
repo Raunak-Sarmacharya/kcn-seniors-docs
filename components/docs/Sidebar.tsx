@@ -95,20 +95,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300"
             onClick={onClose}
           />
         )}
       </AnimatePresence>
 
       {/* Sidebar */}
-      <motion.aside
-        initial={{ x: -300 }}
-        animate={{ x: isOpen ? 0 : -300 }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+      <aside
         className={cn(
-          'fixed left-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800 z-50 overflow-hidden',
-          'lg:relative lg:translate-x-0 lg:z-auto'
+          'sidebar-container',
+          isOpen ? 'sidebar-visible' : 'sidebar-hidden'
         )}
       >
         <div className="flex flex-col h-full">
@@ -243,7 +240,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
           </div>
         </div>
-      </motion.aside>
+      </aside>
     </>
   );
 }

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Sidebar from '@/components/docs/Sidebar';
 import Header from '@/components/docs/Header';
+import { cn } from '@/app/lib/utils';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -15,6 +16,19 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
+
+  // Set sidebar to open by default on larger screens
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && !isSidebarOpen) {
+        setIsSidebarOpen(true);
+      }
+    };
+    
+    handleResize(); // Set initial state
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isSidebarOpen]);
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -57,12 +71,15 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 flex">
+    <div className="dashboard-layout flex">
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
       {/* Main content */}
-      <div className="flex-1 flex flex-col lg:ml-0">
+      <div className={cn(
+        'main-content',
+        isSidebarOpen ? 'main-content-with-sidebar' : 'main-content-without-sidebar'
+      )}>
         {/* Header */}
         <Header 
           onMenuToggle={() => setIsSidebarOpen(!isSidebarOpen)} 

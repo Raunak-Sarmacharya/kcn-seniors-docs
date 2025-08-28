@@ -64,7 +64,7 @@ export default function Header({ onMenuToggle, user }: HeaderProps) {
         <div className="flex items-center gap-4">
           <button
             onClick={onMenuToggle}
-            className="lg:hidden p-2 hover:bg-gray-800 rounded-lg transition-colors"
+            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
           >
             <Menu className="w-5 h-5 text-gray-400" />
           </button>
