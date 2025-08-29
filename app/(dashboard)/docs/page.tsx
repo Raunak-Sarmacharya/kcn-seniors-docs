@@ -55,141 +55,103 @@ export default function DocsOverviewPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-secondary-500/10 to-primary-500/5"></div>
-        <div className="relative px-6 py-12 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl font-bold text-white sm:text-6xl mb-6">
-                Welcome to{' '}
-                <span className="gradient-text">KCN Seniors</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Comprehensive documentation portal for managing your WordPress website. 
-                Find everything you need to maintain and enhance your KCN Seniors community site.
-              </p>
-            </motion.div>
-
-            {/* Quick Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
-            >
-              <div className="glass rounded-lg p-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-4 mx-auto">
-                  <BookOpen className="w-6 h-6 text-primary-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">11</h3>
-                <p className="text-gray-400">Documentation Sections</p>
-              </div>
-              <div className="glass rounded-lg p-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-secondary-500/20 rounded-lg mb-4 mx-auto">
-                  <Search className="w-6 h-6 text-secondary-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">50+</h3>
-                <p className="text-gray-400">Guides & Tutorials</p>
-              </div>
-              <div className="glass rounded-lg p-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-green-500/20 rounded-lg mb-4 mx-auto">
-                  <Video className="w-6 h-6 text-green-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">25+</h3>
-                <p className="text-gray-400">Video Tutorials</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
+    <div className="min-h-screen bg-white">
       {/* Main Content */}
-      <div className="px-6 py-12 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <div className="px-8 py-12 lg:px-12">
+        <div className="mx-auto max-w-6xl">
+          {/* Page Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              KCN Seniors Documentation
+            </h1>
+            <p className="text-xl text-gray-600 max-w-4xl leading-relaxed">
+              Welcome to your comprehensive documentation portal. Find everything you need to manage your KCN Seniors website effectively and efficiently.
+            </p>
+          </motion.div>
+
           {/* Quick Actions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Quick Actions</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-6">Quick Actions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link
                 href="/docs/getting-started/welcome"
-                className="glass rounded-lg p-4 hover:bg-white/10 transition-all duration-300 group"
+                className="glass rounded-lg p-4 hover:bg-orange-50 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center">
-                    <Home className="w-5 h-5 text-primary-400" />
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Home className="w-5 h-5 text-orange-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-white group-hover:text-primary-400 transition-colors">
+                    <h3 className="font-medium text-gray-900 group-hover:text-orange-700 transition-colors">
                       Get Started
                     </h3>
-                    <p className="text-sm text-gray-400">Begin your journey</p>
+                    <p className="text-sm text-gray-600">Begin your journey</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-primary-400 transition-colors ml-auto" />
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-600 transition-colors ml-auto" />
                 </div>
               </Link>
 
               <Link
-                href="/docs/content-management/dashboard-overview"
-                className="glass rounded-lg p-4 hover:bg-white/10 transition-all duration-300 group"
+                href="/docs/elementor/overview"
+                className="glass rounded-lg p-4 hover:bg-yellow-50 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-secondary-500/20 rounded-lg flex items-center justify-center">
-                    <FileText className="w-5 h-5 text-secondary-400" />
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                    <Palette className="w-5 h-5 text-yellow-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-white group-hover:text-secondary-400 transition-colors">
-                      Dashboard Guide
+                    <h3 className="font-medium text-gray-900 group-hover:text-yellow-700 transition-colors">
+                      Elementor Guide
                     </h3>
-                    <p className="text-sm text-gray-400">Learn the basics</p>
+                    <p className="text-sm text-gray-600">Page builder</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-secondary-400 transition-colors ml-auto" />
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-yellow-600 transition-colors ml-auto" />
                 </div>
               </Link>
 
               <Link
                 href="/docs/event-management/event-creation"
-                className="glass rounded-lg p-4 hover:bg-white/10 transition-all duration-300 group"
+                className="glass rounded-lg p-4 hover:bg-green-50 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <Calendar className="w-5 h-5 text-green-400" />
+                    <Calendar className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-white group-hover:text-green-400 transition-colors">
-                      Create Events
+                    <h3 className="font-medium text-gray-900 group-hover:text-green-700 transition-colors">
+                      Event Management
                     </h3>
-                    <p className="text-sm text-gray-400">Manage your events</p>
+                    <p className="text-sm text-gray-600">EventPrime setup</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-400 transition-colors ml-auto" />
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors ml-auto" />
                 </div>
               </Link>
 
               <Link
                 href="/docs/troubleshooting/common-issues"
-                className="glass rounded-lg p-4 hover:bg-white/10 transition-all duration-300 group"
+                className="glass rounded-lg p-4 hover:bg-red-50 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
-                    <Wrench className="w-5 h-5 text-red-400" />
+                    <Wrench className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-white group-hover:text-red-400 transition-colors">
-                      Troubleshoot
+                    <h3 className="font-medium text-gray-900 group-hover:text-red-700 transition-colors">
+                      Troubleshooting
                     </h3>
-                    <p className="text-sm text-gray-400">Fix common issues</p>
+                    <p className="text-sm text-gray-600">Fix common issues</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-red-400 transition-colors ml-auto" />
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-red-600 transition-colors ml-auto" />
                 </div>
               </Link>
             </div>
@@ -197,106 +159,75 @@ export default function DocsOverviewPage() {
 
           {/* Documentation Sections */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Documentation Sections</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">Documentation Sections</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sections.map((section, index) => {
-                const Icon = iconMap[section.icon] || FileText;
-                
+                const IconComponent = iconMap[section.icon] || FileText;
                 return (
                   <motion.div
                     key={section.id}
                     variants={itemVariants}
-                    whileHover={{ y: -5 }}
-                    className="glass rounded-lg p-6 hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300"
+                    className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1"
                   >
-                    <Link href={`/docs/${section.slug}`}>
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-white mb-2 hover:text-primary-400 transition-colors">
-                            {section.title}
-                          </h3>
-                          <p className="text-gray-400 text-sm mb-4">
-                            {section.description}
-                          </p>
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2 text-xs text-gray-500">
-                              <ClockIcon className="w-3 h-3" />
-                              <span>{section.children?.length || 0} guides</span>
-                            </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-primary-400 transition-colors" />
-                          </div>
+                    <div className="flex items-start gap-5">
+                      <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <IconComponent className="w-7 h-7" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-700 transition-colors">
+                          {section.title}
+                        </h3>
+                        <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                          {section.description}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                            {section.children?.length || 0} guides
+                          </span>
+                          <Link
+                            href={`/docs/${section.id}`}
+                            className="text-orange-600 hover:text-orange-700 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                          >
+                            Explore
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   </motion.div>
                 );
               })}
             </div>
           </motion.div>
 
-          {/* Recent Updates */}
+          {/* Help Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Recent Updates</h2>
-            <div className="glass rounded-lg p-6">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-400">January 15, 2025</span>
-                  <span className="text-white">Added comprehensive Event Management documentation</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm text-gray-400">January 10, 2025</span>
-                  <span className="text-white">Updated User Management guides with new features</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  <span className="text-sm text-gray-400">January 5, 2025</span>
-                  <span className="text-white">Enhanced Security & Maintenance documentation</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-16 text-center"
-          >
-            <div className="glass rounded-lg p-8">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mx-auto mb-6">
-                <Star className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-br from-orange-50 to-blue-50 border border-orange-200 rounded-2xl p-12 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Need Help?
               </h3>
-              <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our comprehensive documentation covers everything from basic setup to advanced customization.
+              <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
+                Can't find what you're looking for? Our comprehensive documentation covers everything from basic setup to advanced customization. We're here to help you succeed.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
                   href="/docs/troubleshooting/common-issues"
-                  className="button-primary"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                 >
                   View Troubleshooting
                 </Link>
                 <Link
                   href="/docs/video-tutorials/getting-started-videos"
-                  className="button-secondary"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Watch Tutorials
                 </Link>

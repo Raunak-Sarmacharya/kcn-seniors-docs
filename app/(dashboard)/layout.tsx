@@ -19,11 +19,16 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter();
   const { checkAuth, startAutoRefresh, stopAutoRefresh } = useAuth();
 
-  // Set sidebar to closed by default on all screens
+  // Handle responsive sidebar behavior
   useEffect(() => {
     const handleResize = () => {
-      // Start with sidebar closed on all screen sizes
-      setIsSidebarOpen(false);
+      // On desktop (lg and above), sidebar should be open by default
+      if (window.innerWidth >= 1024) {
+        setIsSidebarOpen(true);
+      } else {
+        // On mobile, sidebar should be closed by default
+        setIsSidebarOpen(false);
+      }
     };
     
     handleResize(); // Set initial state
@@ -31,7 +36,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Handle sidebar toggle - this should work on both mobile and desktop
+  // Handle sidebar toggle
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -72,14 +77,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center"
         >
-          <div className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading documentation portal...</p>
+          <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading documentation portal...</p>
         </motion.div>
       </div>
     );
@@ -90,12 +95,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   }
 
   return (
-    <div className="dashboard-layout flex">
+    <div className="dashboard-layout flex h-screen">
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
-             {/* Main content */}
-       <div className="flex-1 flex flex-col transition-all duration-300 ease-in-out min-w-0">
+      {/* Main content */}
+      <div className="flex-1 flex flex-col min-w-0">
         {/* Header */}
         <Header 
           onMenuToggle={handleSidebarToggle} 
@@ -104,7 +109,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         />
         
         {/* Page content */}
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1 overflow-auto bg-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

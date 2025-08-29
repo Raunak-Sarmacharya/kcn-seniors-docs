@@ -33,7 +33,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-3xl font-bold mb-6 text-white border-b border-gray-700 pb-2"
+        className="text-3xl font-bold mb-6 text-gray-900 border-b border-gray-200 pb-2"
       >
         {children}
       </motion.h1>
@@ -42,7 +42,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.h2
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-2xl font-semibold mb-4 text-white mt-8"
+        className="text-2xl font-semibold mb-4 text-gray-900 mt-8"
       >
         {children}
       </motion.h2>
@@ -51,7 +51,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.h3
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-xl font-medium mb-3 text-white mt-6"
+        className="text-xl font-medium mb-3 text-gray-900 mt-6"
       >
         {children}
       </motion.h3>
@@ -60,7 +60,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-gray-300 mb-4 leading-relaxed"
+        className="text-gray-700 mb-4 leading-relaxed"
       >
         {children}
       </motion.p>
@@ -69,7 +69,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="list-disc list-inside mb-4 text-gray-300 space-y-2"
+        className="list-disc list-inside mb-4 text-gray-700 space-y-2"
       >
         {children}
       </motion.ul>
@@ -78,7 +78,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.ol
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="list-decimal list-inside mb-4 text-gray-300 space-y-2"
+        className="list-decimal list-inside mb-4 text-gray-700 space-y-2"
       >
         {children}
       </motion.ol>
@@ -93,7 +93,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
 
       if (inline) {
         return (
-          <code className="bg-gray-800 text-green-400 px-2 py-1 rounded text-sm font-mono">
+          <code className="bg-gray-100 text-orange-600 px-2 py-1 rounded text-sm font-mono">
             {children}
           </code>
         );
@@ -105,11 +105,11 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
           animate={{ opacity: 1, y: 0 }}
           className="relative group mb-4"
         >
-          <div className="flex items-center justify-between bg-gray-800 px-4 py-2 rounded-t-lg border-b border-gray-700">
-            <span className="text-sm text-gray-400 font-mono">{language}</span>
+          <div className="flex items-center justify-between bg-gray-100 px-4 py-2 rounded-t-lg border-b border-gray-200">
+            <span className="text-sm text-gray-600 font-mono">{language}</span>
             <button
               onClick={() => handleCopyCode(code, language)}
-              className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
             >
               {copiedCode === `${language}-${code.slice(0, 10)}` ? (
                 <>
@@ -148,7 +148,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       <motion.blockquote
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="border-l-4 border-primary-500 pl-4 italic text-gray-400 mb-4 bg-gray-800/30 p-4 rounded-r-lg"
+        className="border-l-4 border-orange-500 pl-4 italic text-gray-600 mb-4 bg-orange-50 p-4 rounded-r-lg"
       >
         {children}
       </motion.blockquote>
@@ -158,7 +158,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-primary-400 hover:text-primary-300 underline inline-flex items-center gap-1"
+        className="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1"
       >
         {children}
         <ExternalLink className="w-3 h-3" />
@@ -166,18 +166,18 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
     ),
     table: ({ children }: any) => (
       <div className="overflow-x-auto mb-4">
-        <table className="w-full border-collapse bg-gray-800/30 rounded-lg overflow-hidden">
+        <table className="w-full border-collapse bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
           {children}
         </table>
       </div>
     ),
     th: ({ children }: any) => (
-      <th className="bg-gray-700 text-white px-4 py-2 text-left border border-gray-600 font-medium">
+      <th className="bg-gray-100 text-gray-900 px-4 py-2 text-left border border-gray-200 font-medium">
         {children}
       </th>
     ),
     td: ({ children }: any) => (
-      <td className="px-4 py-2 border border-gray-600 text-gray-300">
+      <td className="px-4 py-2 border border-gray-200 text-gray-700">
         {children}
       </td>
     ),
@@ -197,16 +197,16 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
               <Play className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white">Video Tutorial</h3>
-              <p className="text-gray-400 text-sm">Watch a step-by-step guide</p>
+              <h3 className="text-lg font-semibold text-gray-900">Video Tutorial</h3>
+              <p className="text-gray-600 text-sm">Watch a step-by-step guide</p>
             </div>
           </div>
-          <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center">
+          <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Play className="w-8 h-8 text-white ml-1" />
               </div>
-              <p className="text-gray-400">Video tutorial coming soon</p>
+              <p className="text-gray-600">Video tutorial coming soon</p>
               <p className="text-sm text-gray-500 mt-1">This feature will be available in the next update</p>
             </div>
           </div>

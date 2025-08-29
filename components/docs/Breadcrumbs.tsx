@@ -15,7 +15,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-6">
+    <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
       <motion.div
         initial={{ opacity: 0, x: -10 }}
         animate={{ opacity: 1, x: 0 }}
@@ -23,7 +23,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       >
         <Link
           href="/docs"
-          className="flex items-center gap-1 hover:text-primary-400 transition-colors"
+          className="flex items-center gap-1 hover:text-orange-600 transition-colors"
         >
           <Home className="w-4 h-4" />
           <span>Documentation</span>
@@ -38,13 +38,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           transition={{ delay: 0.1 + (index + 1) * 0.1 }}
           className="flex items-center space-x-2"
         >
-          <ChevronRight className="w-4 h-4 text-gray-600" />
+          <ChevronRight className="w-4 h-4 text-gray-400" />
           {index === items.length - 1 ? (
-            <span className="text-white font-medium">{item.title}</span>
+            <span className="text-gray-900 font-medium">{item.title}</span>
           ) : (
             <Link
               href={item.slug}
-              className="hover:text-primary-400 transition-colors"
+              className="hover:text-orange-600 transition-colors"
             >
               {item.title}
             </Link>
