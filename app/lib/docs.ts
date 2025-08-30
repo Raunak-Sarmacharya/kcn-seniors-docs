@@ -53,8 +53,8 @@ export const docSections: DocSection[] = [
   },
   {
     id: 'user-management',
-    title: 'User Management',
-    description: 'Managing users, roles, and permissions',
+    title: 'User Management System',
+    description: 'Complete user management, roles, permissions, and security',
     icon: 'Users',
     slug: 'user-management',
     category: 'administration',
@@ -63,7 +63,7 @@ export const docSections: DocSection[] = [
       { id: 'user-management-overview', title: 'User Management Overview', description: 'Complete guide to user management system', icon: 'Users', slug: 'user-management-overview', category: 'administration', order: 1 },
       { id: 'wordpress-users-management', title: 'WordPress Users Management', description: 'Managing user accounts and profiles', icon: 'UserCheck', slug: 'wordpress-users-management', category: 'administration', order: 2 },
       { id: 'members-plugin-guide', title: 'Members Plugin - Role Management', description: 'Complete role management with Members plugin', icon: 'Shield', slug: 'members-plugin-guide', category: 'administration', order: 3 },
-      { id: 'password-management', title: 'Password Management', description: 'Password policies and security', icon: 'Lock', slug: 'password-management', category: 'administration', order: 4 },
+      { id: 'password-management', title: 'Password Management & Security', description: 'Password policies and security measures', icon: 'Lock', slug: 'password-management', category: 'administration', order: 4 },
       { id: 'role-based-access', title: 'Role-Based Access Control', description: 'Controlling access based on roles', icon: 'Key', slug: 'role-based-access', category: 'administration', order: 5 },
       { id: 'registration-settings', title: 'User Registration Settings', description: 'Configuring user registration', icon: 'Settings', slug: 'registration-settings', category: 'administration', order: 6 },
     ],
@@ -222,13 +222,30 @@ export const docSections: DocSection[] = [
     ],
   },
   {
+    id: 'maintenance-support',
+    title: 'Maintenance & Support',
+    description: 'Regular maintenance, support procedures, and emergency contacts',
+    icon: 'Wrench',
+    slug: 'maintenance-support',
+    category: 'support',
+    order: 12,
+    children: [
+      { id: 'maintenance-schedule', title: 'Maintenance Schedule', description: 'Regular maintenance tasks and schedules', icon: 'Calendar', slug: 'maintenance-schedule', category: 'support', order: 1 },
+      { id: 'support-procedures', title: 'Support Procedures', description: 'How to get help and support', icon: 'HelpCircle', slug: 'support-procedures', category: 'support', order: 2 },
+      { id: 'emergency-contacts', title: 'Emergency Contacts', description: 'Important contact information for urgent issues', icon: 'Phone', slug: 'emergency-contacts', category: 'support', order: 3 },
+      { id: 'backup-procedures', title: 'Backup Procedures', description: 'Regular backup and recovery procedures', icon: 'Save', slug: 'backup-procedures', category: 'support', order: 4 },
+      { id: 'performance-monitoring', title: 'Performance Monitoring', description: 'Monitoring website performance and health', icon: 'Activity', slug: 'performance-monitoring', category: 'support', order: 5 },
+      { id: 'security-monitoring', title: 'Security Monitoring', description: 'Security monitoring and incident response', icon: 'Shield', slug: 'security-monitoring', category: 'support', order: 6 },
+    ],
+  },
+  {
     id: 'troubleshooting',
     title: 'Troubleshooting',
     description: 'Common issues and their solutions',
     icon: 'Wrench',
     slug: 'troubleshooting',
     category: 'support',
-    order: 12,
+    order: 13,
     children: [
       { id: 'common-issues', title: 'Common Issues & Solutions', description: 'Common issues and their solutions', icon: 'HelpCircle', slug: 'common-issues', category: 'support', order: 1 },
       { id: 'error-logs', title: 'Error Log Analysis', description: 'Analyzing error logs', icon: 'FileText', slug: 'error-logs', category: 'support', order: 2 },
@@ -245,7 +262,7 @@ export const docSections: DocSection[] = [
     icon: 'Video',
     slug: 'video-tutorials',
     category: 'tutorials',
-    order: 13,
+    order: 14,
     children: [
       { id: 'getting-started-videos', title: 'Getting Started Videos', description: 'Video tutorials for getting started', icon: 'Play', slug: 'getting-started-videos', category: 'tutorials', order: 1 },
       { id: 'advanced-features', title: 'Advanced Feature Walkthroughs', description: 'Advanced feature tutorials', icon: 'Video', slug: 'advanced-features', category: 'tutorials', order: 2 },
@@ -1945,189 +1962,227 @@ The Members plugin allows you to:
     id: 'user-management-overview',
     title: 'User Management Overview',
     content: `
-# User Management Overview
+# User Management System
 
-User Management is a comprehensive system for managing all aspects of user accounts, roles, and permissions on the KCN Seniors website. This section provides centralized control over user access, security, and content permissions.
+User management is a critical aspect of WordPress site administration that involves managing user accounts, roles, and permissions to ensure proper access control and security. The KCN Seniors website uses a comprehensive approach combining WordPress's built-in user system with the Members plugin for enhanced functionality.
 
-## What is User Management?
+## Core Principles
 
-User Management encompasses all systems and processes for:
-- **User Account Management**: Creating, editing, and managing user accounts
-- **Role-Based Access Control**: Managing user roles and permissions
-- **Security Management**: Password policies and account security
-- **Registration Control**: Managing user registration processes
-- **Content Access Control**: Controlling access to member-only content
+1. **Principle of Least Privilege**: Users should have the minimum permissions necessary to perform their tasks
+2. **Regular Auditing**: Review user accounts monthly or bi-monthly, removing inactive users
+3. **Security First**: Strong passwords, two-factor authentication when possible, and regular security reviews
+4. **Clear Role Definitions**: Each role should have clearly defined responsibilities and limitations
 
-## Key Components
+## System Benefits for KCN Seniors
 
-### 1. WordPress Users Management
-The core WordPress system for managing user accounts, profiles, and basic role assignment.
+- **Volunteer Coordination**: Dedicated volunteer accounts with appropriate access levels
+- **Member Benefits**: Exclusive content and event access for paying members
+- **Security**: Protection against unauthorized access to sensitive information
+- **Scalability**: Easy management as the organization grows
 
-**Features**:
-- User account creation and editing
-- Profile management
-- Password reset and security
-- Bulk user operations
-- User search and filtering
+## Site Architecture Overview
 
-**Navigation**: WordPress Dashboard → Users → All Users
+The KCN Seniors website uses a dual-system approach for comprehensive user management:
 
-### 2. Members Plugin - Role Management
-Advanced role and permission management system that extends WordPress's built-in capabilities.
+### Core Components
+1. **WordPress Users System**: Manages user accounts, profiles, and basic role assignment
+2. **Members Plugin**: Provides advanced role and capability management with content protection features
 
-**Features**:
-- Custom role creation and management
-- Granular permission control
-- Content protection based on roles
-- Role hierarchy and inheritance
-- Advanced access control
+### Integration Overview
+\`\`\`
+WordPress Users ←→ Members Plugin
+     ↓                    ↓
+User Accounts    +    Role Permissions
+     ↓                    ↓
+     Combined System
+     ↓
+Complete User Management Solution
+\`\`\`
 
-**Navigation**: WordPress Dashboard → Members → Roles
+### Hierarchical Access Levels
 
-### 3. Password Management
-Comprehensive password security and management system.
+KCN Seniors uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
 
-**Features**:
-- Password policy enforcement
-- Secure password reset procedures
-- Account lockout protection
-- Two-factor authentication support
-- Password strength requirements
+**Level 1 - Public Access**: Available to all website visitors
+- General website information and public content
 
-### 4. Role-Based Access Control
-System for controlling access to content and features based on user roles.
+**Level 2 - Subscriber Access** (Logged-in users): Public + 
+- Ability to comment on posts
+- Basic logged-in user features
 
-**Features**:
-- Content protection by role
-- Feature access control
-- Member-only content areas
-- Volunteer-specific access
-- Comment system permissions
+**Level 3 - Member Access** (Premium members): Subscriber + Public + 
+- Member-only events and content
+- Exclusive member resources and benefits
 
-### 5. User Registration Settings
-Configuration and management of user registration processes.
+**Level 4 - Volunteer Access**: Member + Subscriber + Public + 
+- Volunteer management tools and content
+- Volunteer-specific website features
 
-**Features**:
-- Registration form customization
-- Email verification settings
-- Default role assignment
-- Registration approval workflows
-- Spam protection
+**Level 5 - Manager Access** (Limited Admin): Volunteer + Member + Subscriber + Public +
+- Content management (posts, pages, media)
+- Limited administrative features
+- User management (restricted)
 
-## KCN Seniors User Structure
+**Level 6 - Administrator Access**: Manager + Volunteer + Member + Subscriber + Public +
+- Complete website control
+- Plugin and theme management
+- Full user and role management
+- System settings and configuration
 
-### User Roles Overview
-- **Administrator**: Full system access and control
-- **Subscriber**: Default role for new registrations
-- **Member**: Premium role with special content access
-- **Volunteer**: Dashboard access for volunteer management
-- **Manager**: Limited administrative access
+## Quick Reference Guide
 
-### Access Levels
-- **Public Access**: Available to all visitors
-- **Logged-in Access**: Available to all registered users
-- **Member Access**: Available only to members
-- **Volunteer Access**: Available to volunteers and above
-- **Admin Access**: Available to administrators only
+### Common Tasks Quick Links
+
+| Task | Location | Documentation Section |
+|------|----------|----------------------|
+| Add New User | \`Users → Add New\` | [Adding New Users](#adding-new-users) |
+| Edit User Role | \`Users → All Users → Edit\` | [Role Assignment](#role-assignment) |
+| Manage Roles | \`Members → Roles\` | [Managing Roles](#managing-roles) |
+| Reset Password | \`Users → All Users → Edit\` | [Password Management](#password-management) |
+| Protect Content | \`Edit Post/Page → Access\` | [Content Protection](#content-protection) |
+
+### Hierarchical Role Summary
+
+| Role | Dashboard Access | Access Level | Key Additional Permissions | Typical Use |
+|------|------------------|--------------|----------------------------|-------------|
+| **Administrator** | ✅ Complete | All levels 1-6 | Everything - full website control | Website owners/managers |
+| **Manager** | ✅ Limited | Levels 1-5 | Content & limited user management | Limited admin duties |
+| **Volunteer** | ✅ Volunteer-specific | Levels 1-4 | Volunteer tools + all member benefits | Community volunteers |
+| **Member** | ❌ No | Levels 1-3 | Member-only content/events | Premium subscribers |
+| **Subscriber** | ❌ No | Levels 1-2 | Commenting + basic logged-in features | Default new users |
+
+## Emergency Contacts & Support
+
+### Critical Issues (Site Down/Security)
+- **WordPress.org Support**: https://wordpress.org/support/
+- **Members Plugin Support**: https://members-plugin.com/
+
+### Documentation Resources
+- **WordPress User Management**: https://learn.wordpress.org/lesson-plan/user-management/
+- **Members Plugin Docs**: https://members-plugin.com/docs/
+- **WordPress Roles & Capabilities**: https://wordpress.org/documentation/article/roles-and-capabilities/
+
+### Backup Contact Information
+- Keep website hosting provider contact information readily available
+- Maintain backup admin account credentials in secure location
+- Document any custom modifications made to the system
 
 ## Getting Started
 
-### For New Administrators
-1. **Review User Management Overview**: Understand the complete system
-2. **Learn WordPress Users Management**: Master basic user account management
-3. **Master Members Plugin**: Understand advanced role management
-4. **Configure Security Settings**: Set up password and security policies
-5. **Test Access Control**: Verify role-based access works correctly
+### Welcome & Overview
 
-### For Content Managers
-1. **Understand User Roles**: Know what each role can access
-2. **Learn Content Protection**: Protect member-only content
-3. **Manage User Accounts**: Handle user creation and editing
-4. **Monitor User Activity**: Track user engagement and access
+Welcome to the complete KCN Seniors website documentation! This comprehensive guide covers all aspects of managing the Killick Coast North Seniors Co-operative (KCNseniors.coop) website - a non-profit community service co-operative serving Bauline, Flatrock, and Pouch Cove in Newfoundland, Canada.
 
-### For Volunteers
-1. **Understand Your Role**: Know your permissions and limitations
-2. **Access Volunteer Tools**: Use volunteer-specific features
-3. **Manage Your Profile**: Keep your information updated
-4. **Follow Security Guidelines**: Maintain account security
+**About KCN Seniors Co-operative:**
+KCN Seniors is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model of the Village to Village Network.
 
-## Best Practices
+**Complete Website Management Includes:**
+- **User Management**: User accounts, roles, and permissions (covered in this section)
+- **Content Management**: Posts, pages, and website content *(documentation coming soon)*
+- **Event Management**: Member and public events *(documentation coming soon)*
+- **Service Management**: Volunteer services and booking systems *(documentation coming soon)*
+- **Website Maintenance**: Updates, backups, and security *(documentation coming soon)*
 
-### Security Best Practices
-- **Strong Password Policies**: Enforce strong password requirements
-- **Regular Security Audits**: Review user access and permissions
-- **Account Monitoring**: Monitor for suspicious activity
-- **Backup Procedures**: Regular backup of user data
-- **Access Control**: Principle of least privilege
+**This Section Covers:**
+- User account and profile management
+- Understanding role-based access control
+- Password security and best practices
+- Content protection and member benefits
+- Volunteer coordination through the website
 
-### User Management Best Practices
-- **Clear Role Definitions**: Define clear role responsibilities
-- **Regular User Reviews**: Review and clean up user accounts
-- **Documentation**: Keep detailed records of role assignments
-- **Training**: Provide user training for new features
-- **Support**: Maintain clear support procedures
+**Before You Begin:**
+- Ensure you have Administrator access to the WordPress dashboard
+- Familiarize yourself with basic WordPress navigation
+- Keep this documentation bookmarked for future reference
 
-### Content Protection Best Practices
-- **Content Classification**: Clearly classify content by access level
-- **Regular Reviews**: Review protected content regularly
-- **Access Testing**: Test access controls regularly
-- **User Communication**: Communicate access changes to users
+## Maintenance and Support
 
-## Integration with Other Systems
+### Regular Maintenance Schedule
 
-### Event Management Integration
-- **Event Access Control**: Control who can view and register for events
-- **Member-Only Events**: Create events visible only to members
-- **Volunteer Event Management**: Allow volunteers to manage events
+#### Weekly Tasks
+- Review new user registrations and role assignments
+- Monitor security logs for suspicious login activity
+- Check for urgent system updates
 
-### Content Management Integration
-- **Protected Content**: Restrict access to specific pages and posts
-- **Member-Only Blog Posts**: Create posts visible only to members
-- **Comment System**: Control who can comment on content
+#### Monthly Tasks  
+- Comprehensive user account audit (remove inactive accounts)
+- Review and optimize role permissions
+- Update documentation for any system changes
+- Backup user configurations and role settings
 
-### Service Booking Integration
-- **Volunteer Service Management**: Allow volunteers to manage services
-- **Member Service Access**: Control access to service booking
-- **Role-Based Service Availability**: Show different services based on role
+#### Quarterly Tasks
+- Complete security assessment and password policy review
+- User role structure evaluation and optimization  
+- Staff training updates on new features or procedures
 
-## Troubleshooting
+### Troubleshooting Common Issues
 
-### Common Issues
-- **User Can't Access Content**: Check role assignment and permissions
-- **Password Reset Problems**: Verify email configuration
-- **Role Not Working**: Check Members Plugin configuration
-- **Registration Issues**: Review registration settings
+#### User Cannot Access Content
 
-### Performance Issues
-- **Slow User Loading**: Optimize database and reduce user count
-- **Memory Problems**: Increase PHP memory limit
-- **Cache Issues**: Clear caching plugins
+**Possible Solutions:**
+1. Verify user role assignment
+2. Check Members plugin configuration
+3. Clear website cache
+4. Test with different user account
 
-## Support and Resources
+#### Password Reset Problems
 
-### Documentation
-- **WordPress Users Documentation**: [Official WordPress Users Guide](https://wordpress.org/documentation/article/users-screen/)
-- **Members Plugin Documentation**: [Members Plugin Guide](/docs/user-management/members-plugin-guide)
-- **WordPress Codex**: [Managing Users](https://codex.wordpress.org/Users_Add_New_Screen)
+**Possible Solutions:**
+1. Verify email configuration
+2. Check spam/junk folders
+3. Test SMTP settings
+4. Generate manual password reset
 
-### Support Channels
-- **WordPress.org Forums**: Community support
-- **Plugin Support**: Individual plugin support
-- **Professional Support**: For complex implementations
+#### Role Permissions Not Working
+
+**Possible Solutions:**
+1. Check Members plugin role configuration
+2. Verify capability assignments
+3. Clear caching plugins
+4. Test with fresh user account
+
+### Additional Resources
+
+#### Documentation Links
+
+- **WordPress User Management**: https://learn.wordpress.org/lesson-plan/user-management/
+- **WordPress Roles and Capabilities**: https://wordpress.org/documentation/article/roles-and-capabilities/
+- **Members Plugin Documentation**: https://members-plugin.com/docs/
+- **WordPress Security Best Practices**: https://wordpress.org/support/article/hardening-wordpress/
+
+#### Support Channels
+
+- **WordPress.org Forums**: https://wordpress.org/support/
+- **Members Plugin Support**: https://members-plugin.com/
+- **Security Plugins**: Consider Wordfence, Jetpack Security, or similar
+
+#### Professional Support
+
+For complex implementations or issues beyond this documentation, consider:
+
+- WordPress development services
+- Security specialist consultation
+- Membership site optimization experts
+
+---
+
+*This documentation is maintained for the KCN Seniors Co-operative website. Last updated: August 2025*
+
+*For questions or suggestions about this documentation, please contact your website administrator.*
 
 ## Next Steps
 
 - Learn about [WordPress Users Management](/docs/user-management/wordpress-users-management)
 - Master [Members Plugin Role Management](/docs/user-management/members-plugin-guide)
-- Understand [Password Management](/docs/user-management/password-management)
+- Understand [Password Management & Security](/docs/user-management/password-management)
 - Explore [Role-Based Access Control](/docs/user-management/role-based-access)
     `,
     sectionId: 'user-management',
     slug: 'user-management-overview',
-    tags: ['user management', 'overview', 'roles', 'permissions', 'administration'],
+    tags: ['user management', 'overview', 'roles', 'permissions', 'administration', 'kcn seniors'],
     lastUpdated: new Date('2025-01-15'),
     difficulty: 'beginner',
-    estimatedTime: '20 minutes',
+    estimatedTime: '25 minutes',
   },
   {
     id: 'wordpress-users-management',
@@ -2535,6 +2590,965 @@ For users with volunteer roles:
     lastUpdated: new Date('2025-01-15'),
     difficulty: 'intermediate',
     estimatedTime: '40 minutes',
+  },
+  {
+    id: 'password-management',
+    title: 'Password Management & Security',
+    content: `
+# Password Management & Security
+
+Strong password policies and security measures are essential for protecting your WordPress site from unauthorized access.
+
+## Password Policy Requirements
+
+### Strong Password Guidelines
+- **Minimum Length**: 12 characters recommended
+- **Character Mix**: Letters (upper/lower), numbers, special characters
+- **Uniqueness**: Never reuse passwords across accounts
+- **Generation**: Use WordPress auto-generated passwords or password managers
+
+### Password Management Best Practices
+
+1. **For Administrators**:
+   - Use unique, complex passwords
+   - Enable two-factor authentication when possible
+   - Change passwords periodically for security
+   - Use password managers for storage
+
+2. **For Users**:
+   - Provide password strength guidelines
+   - Offer password reset procedures
+   - Educate about password security
+
+## Implementing Password Security
+
+### User Password Resets
+
+**Admin-Initiated Reset:**
+1. Go to \`Users → All Users\`
+2. Click "Edit" for the user
+3. Find "Account Management" section
+4. Click "Generate Password"
+5. Send new password to user securely
+6. Require password change at next login
+
+**User Self-Service Reset:**
+- Users can request password resets via login page
+- Reset links expire after 24 hours for security
+- Email notifications sent automatically
+
+## Security Enhancements
+
+### Two-Factor Authentication (2FA)
+
+Two-factor authentication adds an extra layer of security by requiring an additional verification method beyond just username and password:
+
+**Recommended Plugins:**
+- **Two Factor Authentication**: Simple 2FA implementation
+- **Wordfence**: Comprehensive security with 2FA
+- **Google Authenticator**: App-based authentication
+
+### Login Security Measures
+
+1. **Limit Login Attempts**
+   - Set limits of 3-5 failed attempts before lockout
+   - Automatic lockout prevents brute force attacks
+   - Whitelist admin IP addresses
+
+2. **Admin Username Security**
+   - Never use "admin" as username - create unique alternatives
+   - Use non-obvious usernames for administrator accounts
+
+3. **Session Management**
+   - Monitor active user sessions
+   - Log out inactive sessions automatically
+   - Track login attempts and suspicious activity
+
+## KCN Seniors Security Implementation
+
+### Administrator Security
+- **Unique Admin Usernames**: Never use "admin" - create descriptive usernames
+- **Strong Passwords**: Use password managers for complex passwords
+- **Two-Factor Authentication**: Enable 2FA for all admin accounts
+- **Regular Password Changes**: Change admin passwords quarterly
+
+### User Account Security
+- **Password Requirements**: Enforce strong password policies
+- **Account Monitoring**: Monitor for suspicious activity
+- **Inactive Account Management**: Review and clean up inactive accounts
+- **Security Notifications**: Notify users of security events
+
+### Content Protection
+- **Role-Based Access**: Protect content based on user roles
+- **Member-Only Content**: Secure member benefits and resources
+- **Volunteer Access**: Control volunteer-specific content
+- **Admin Content**: Protect administrative information
+
+## Security Monitoring
+
+### Regular Security Tasks
+
+#### Daily Monitoring
+- Check for failed login attempts
+- Monitor user registration activity
+- Review security plugin alerts
+- Check for suspicious user activity
+
+#### Weekly Security Review
+- Review user account changes
+- Check for unauthorized role changes
+- Monitor content access patterns
+- Review security plugin reports
+
+#### Monthly Security Audit
+- Complete user account audit
+- Review role assignments and permissions
+- Check for inactive or suspicious accounts
+- Update security policies and procedures
+
+### Security Incident Response
+
+#### Immediate Actions
+1. **Assess the Situation**: Determine scope and severity
+2. **Change Passwords**: Reset all admin passwords immediately
+3. **Review Logs**: Check access logs for suspicious activity
+4. **Contact Support**: Reach out to hosting provider if needed
+
+#### Follow-up Actions
+1. **Investigation**: Determine how the breach occurred
+2. **Remediation**: Fix security vulnerabilities
+3. **Documentation**: Document the incident and response
+4. **Prevention**: Implement measures to prevent future incidents
+
+## Best Practices for KCN Seniors
+
+### Password Security
+- **Unique Passwords**: Never reuse passwords across accounts
+- **Password Managers**: Use secure password managers
+- **Regular Updates**: Change passwords regularly
+- **Strong Requirements**: Enforce strong password policies
+
+### Account Security
+- **Two-Factor Authentication**: Enable 2FA for all admin accounts
+- **Session Management**: Monitor and manage user sessions
+- **Access Logging**: Log all access attempts and actions
+- **Account Lockout**: Implement account lockout policies
+
+### System Security
+- **Regular Updates**: Keep WordPress, plugins, and themes updated
+- **Security Plugins**: Use reputable security plugins
+- **Backup Procedures**: Regular backups with secure storage
+- **Monitoring**: Continuous security monitoring
+
+## Troubleshooting Security Issues
+
+### Common Security Problems
+
+#### Password Reset Issues
+**Problem**: Users can't reset their passwords
+**Solutions**:
+1. Check email configuration
+2. Verify SMTP settings
+3. Check spam/junk folders
+4. Test email delivery
+
+#### Login Problems
+**Problem**: Users can't log in despite correct credentials
+**Solutions**:
+1. Check account status
+2. Verify role assignments
+3. Clear browser cache
+4. Check for plugin conflicts
+
+#### Security Plugin Conflicts
+**Problem**: Security plugins causing issues
+**Solutions**:
+1. Update security plugins
+2. Check plugin compatibility
+3. Adjust security settings
+4. Contact plugin support
+
+### Performance Impact
+
+#### Security vs Performance
+- **Balanced Approach**: Find balance between security and performance
+- **Caching Considerations**: Ensure security doesn't break caching
+- **User Experience**: Maintain good user experience with security
+- **Monitoring**: Monitor performance impact of security measures
+
+## Emergency Procedures
+
+### Security Breach Response
+1. **Immediate Lockdown**: Change all admin passwords
+2. **Assess Damage**: Determine what was compromised
+3. **Contact Support**: Reach out to hosting and security support
+4. **Document Everything**: Record all actions and findings
+5. **Implement Fixes**: Apply security patches and updates
+6. **Monitor**: Enhanced monitoring for continued threats
+
+### Account Recovery
+1. **Verify Identity**: Confirm account ownership
+2. **Reset Credentials**: Generate new secure credentials
+3. **Review Access**: Check for unauthorized access
+4. **Implement 2FA**: Enable two-factor authentication
+5. **Monitor Activity**: Watch for suspicious activity
+
+## Support and Resources
+
+### Security Documentation
+- **WordPress Security**: https://wordpress.org/support/article/hardening-wordpress/
+- **Security Best Practices**: https://wordpress.org/support/article/security/
+- **Two-Factor Authentication**: https://wordpress.org/plugins/tags/two-factor-authentication/
+
+### Security Plugins
+- **Wordfence**: Comprehensive security suite
+- **Sucuri**: Website security and monitoring
+- **iThemes Security**: Security hardening and monitoring
+- **All In One WP Security**: Free security plugin
+
+### Professional Support
+- **Security Specialists**: For complex security issues
+- **Hosting Support**: For server-level security
+- **WordPress Security**: For WordPress-specific issues
+
+## Next Steps
+
+- Learn about [Role-Based Access Control](/docs/user-management/role-based-access)
+- Explore [User Registration Settings](/docs/user-management/registration-settings)
+- Review [Maintenance & Security](/docs/maintenance-security/security-best-practices)
+- Master [Emergency Procedures](/docs/troubleshooting/emergency-recovery)
+    `,
+    sectionId: 'user-management',
+    slug: 'password-management',
+    tags: ['password', 'security', 'authentication', 'user management', '2fa', 'kcn seniors'],
+    lastUpdated: new Date('2025-01-15'),
+    difficulty: 'intermediate',
+    estimatedTime: '30 minutes',
+  },
+  {
+    id: 'role-based-access',
+    title: 'Role-Based Access Control',
+    content: `
+# Role-Based Access Control
+
+Role-based access control (RBAC) allows you to control what users can and cannot do on your site by assigning different roles with specific capabilities.
+
+## Understanding Capabilities
+
+Capabilities define specific actions a user can perform. Examples include:
+
+- \`read\` - View content
+- \`edit_posts\` - Edit posts
+- \`publish_posts\` - Publish posts
+- \`delete_posts\` - Delete posts
+- \`manage_options\` - Access settings
+- \`edit_users\` - Edit user accounts
+
+## Role Hierarchy and Permissions
+
+### Content Access Levels
+
+The hierarchical role system provides cumulative access to content:
+
+1. **Public Content**
+   - Accessible to everyone (all roles + visitors)
+   - General website information, news, basic resources
+
+2. **Subscriber Content** 
+   - Subscriber level and above
+   - Enhanced logged-in features, commenting abilities
+
+3. **Member-Only Content**
+   - Member level and above (Member, Volunteer, Manager, Administrator)
+   - Premium resources, member newsletters, exclusive content
+
+4. **Volunteer Content**
+   - Volunteer level and above (Volunteer, Manager, Administrator)  
+   - Volunteer training, task coordination, internal communications
+
+5. **Management Content**
+   - Manager level and above (Manager, Administrator)
+   - Administrative reports, content management guides
+
+6. **Administrator Content**
+   - Administrator access only
+   - System configuration, security settings, sensitive data
+
+## Implementing Access Control
+
+### Content Protection Setup
+
+1. **For Posts and Pages**:
+   - Use Members plugin meta box
+   - Select appropriate roles
+   - Test access with different user types
+
+2. **For Events** (with EventPrime integration):
+   - Set event visibility by role
+   - Control registration permissions
+   - Manage member-only events
+
+3. **For Categories and Tags**:
+   - Protect entire content categories
+   - Organize content by access level
+   - Maintain content hierarchy
+
+### Menu and Widget Access
+
+Control what users see in navigation:
+
+1. **Custom Menus**:
+   - Show/hide menu items by role
+   - Create role-specific navigation
+   - Member and volunteer portal links
+
+2. **Widget Areas**:
+   - Display widgets based on user role
+   - Member-only announcements
+   - Volunteer-specific information
+
+## Testing Access Control
+
+### Verification Process
+
+1. **Create Test Users**:
+   - One user for each role type
+   - Test with real scenarios
+   - Verify permissions work correctly
+
+2. **Content Access Testing**:
+   - Attempt to access restricted content
+   - Verify error messages are appropriate
+   - Test login redirects
+
+3. **Administrative Testing**:
+   - Test dashboard access by role
+   - Verify menu visibility
+   - Check capability restrictions
+
+## KCN Seniors Specific Implementation
+
+### Member Benefits Protection
+- **Member-Only Events**: Exclusive events for paying members
+- **Premium Content**: Special resources and guides
+- **Enhanced Features**: Additional website functionality
+- **Community Access**: Member-only community areas
+
+### Volunteer Access Control
+- **Volunteer Dashboard**: Specialized volunteer management tools
+- **Task Management**: Access to volunteer task systems
+- **Training Resources**: Volunteer-specific training materials
+- **Communication Tools**: Internal volunteer communication
+
+### Administrative Access Levels
+- **Manager Access**: Limited administrative capabilities
+- **Full Admin Access**: Complete system control
+- **Content Management**: Post and page management
+- **User Management**: Limited user administration
+
+## Best Practices
+
+### Role Design Principles
+- **Principle of Least Privilege**: Grant minimum necessary permissions
+- **Clear Role Definitions**: Define what each role can and cannot do
+- **Regular Review**: Periodically review role assignments
+- **Documentation**: Keep detailed records of role configurations
+
+### Content Organization
+- **Logical Grouping**: Organize content by access level
+- **Clear Labels**: Use clear labels for protected content
+- **Consistent Application**: Apply access controls consistently
+- **User Communication**: Clearly communicate access levels
+
+### Security Considerations
+- **Regular Audits**: Audit role assignments regularly
+- **Access Monitoring**: Monitor access patterns
+- **Incident Response**: Have procedures for access issues
+- **Backup Procedures**: Backup role configurations
+
+## Troubleshooting Access Issues
+
+### Common Problems
+
+#### User Can't Access Content
+**Problem**: User with correct role can't access content
+**Solutions**:
+1. Verify role assignment in WordPress Users
+2. Check Members plugin role configuration
+3. Clear website cache
+4. Test with different user account
+
+#### Role Not Working
+**Problem**: Role permissions not functioning correctly
+**Solutions**:
+1. Check Members plugin settings
+2. Verify capability assignments
+3. Clear caching plugins
+4. Test with fresh user account
+
+#### Menu Items Not Showing
+**Problem**: Role-specific menu items not appearing
+**Solutions**:
+1. Check menu visibility settings
+2. Verify role assignments
+3. Clear cache
+4. Test menu configuration
+
+### Performance Considerations
+
+#### Access Control Impact
+- **Minimal Overhead**: Well-configured access control has minimal impact
+- **Caching Considerations**: Ensure access control works with caching
+- **Database Optimization**: Optimize role queries
+- **Monitoring**: Monitor performance impact
+
+## Integration with Other Systems
+
+### Event Management
+- **Event Visibility**: Control who can see events
+- **Registration Permissions**: Manage who can register
+- **Member-Only Events**: Create exclusive events
+- **Volunteer Events**: Special volunteer events
+
+### Content Management
+- **Protected Pages**: Restrict page access by role
+- **Member Blog Posts**: Create member-only blog content
+- **Resource Libraries**: Role-based resource access
+- **Documentation**: Role-specific documentation
+
+### Service Booking
+- **Service Access**: Control service booking access
+- **Volunteer Services**: Special volunteer service access
+- **Member Services**: Member-specific services
+- **Booking Permissions**: Manage booking capabilities
+
+## Maintenance and Updates
+
+### Regular Maintenance
+- **Role Reviews**: Monthly role assignment reviews
+- **Permission Audits**: Quarterly permission audits
+- **Content Reviews**: Regular content access reviews
+- **User Cleanup**: Remove inactive users
+
+### System Updates
+- **Plugin Updates**: Keep Members plugin updated
+- **WordPress Updates**: Ensure WordPress compatibility
+- **Theme Updates**: Update themes for compatibility
+- **Security Updates**: Apply security patches
+
+## Support and Resources
+
+### Documentation
+- **Members Plugin**: https://members-plugin.com/docs/
+- **WordPress Roles**: https://wordpress.org/documentation/article/roles-and-capabilities/
+- **Access Control**: https://wordpress.org/support/article/roles-and-capabilities/
+
+### Professional Support
+- **Plugin Support**: Members plugin support
+- **WordPress Support**: WordPress.org support
+- **Security Specialists**: For complex access control
+
+## Next Steps
+
+- Learn about [User Registration Settings](/docs/user-management/registration-settings)
+- Explore [Content Management](/docs/content-management/posts-pages)
+- Understand [Event Management](/docs/event-management/event-creation)
+- Master [Security Best Practices](/docs/maintenance-security/security-best-practices)
+    `,
+    sectionId: 'user-management',
+    slug: 'role-based-access',
+    tags: ['access control', 'roles', 'permissions', 'security', 'kcn seniors'],
+    lastUpdated: new Date('2025-01-15'),
+    difficulty: 'intermediate',
+    estimatedTime: '25 minutes',
+  },
+  {
+    id: 'registration-settings',
+    title: 'User Registration Settings',
+    content: `
+# User Registration Settings
+
+User registration settings control how new users can join your site and what their default permissions will be.
+
+## Registration Configuration
+
+### General Settings
+
+Navigate to \`Settings → General\`:
+
+1. **Membership Setting**:
+   - ✅ Allow user registration for open registration
+   - ❌ Disable for admin-only user creation
+
+2. **New User Default Role**:
+   - Set to "Subscriber" for general public
+   - Consider member-specific registration processes
+
+## Registration Process Options
+
+### Option 1: Admin-Only Registration (Current Recommended)
+- Administrators create all accounts manually
+- Complete control over membership verification  
+- Suitable for controlled membership growth
+- Process: Application → Review → Account Creation → Welcome
+
+### Option 2: Open Registration with Approval
+- Users register but require approval before activation
+- Balance between accessibility and control
+- Automatic role assignment after approval
+- Process: Self-Registration → Admin Review → Approval → Access
+
+### Option 3: Member-Specific Registration Workflows
+- Separate processes for different membership types
+- Payment integration for paid memberships
+- Automatic role assignment based on membership type
+- Process: Registration → Payment → Verification → Role Assignment
+
+## Custom Registration Forms
+
+For enhanced registration processes:
+
+### Using Contact Forms (WPForms Integration)
+
+1. Create registration forms with custom fields
+2. Collect additional member information
+3. Manual review and account creation
+4. Integration with payment systems for memberships
+
+### Member-Specific Registration
+
+1. **Member Registration Process**:
+   - Separate form for paid memberships
+   - Payment verification before account creation
+   - Automatic role assignment upon payment
+   - Welcome email with member benefits
+
+2. **Volunteer Registration**:
+   - Application process for volunteers
+   - Background check requirements (if applicable)
+   - Training completion before full access
+   - Volunteer-specific onboarding materials
+
+## Email Notifications
+
+### Automated Communications
+
+Configure email notifications for:
+
+1. **New User Registration**:
+   - Welcome email with login details
+   - Member handbook and guidelines
+   - Contact information for support
+
+2. **Role Changes**:
+   - Notification when user gains new permissions
+   - Instructions for using new features
+   - Access to role-specific resources
+
+3. **Password Resets**:
+   - Secure reset links with 24-hour expiration
+   - Clear instructions for completing reset
+   - Security reminders
+
+## Integration with KCN Seniors Operations
+
+### Member Management Workflow
+
+1. **New Member Process**:
+   - Application/registration form submission
+   - Payment processing and verification
+   - Account creation with "Member" role
+   - Welcome package and orientation
+   - Access to member-only resources and events
+
+2. **Volunteer Onboarding**:
+   - Volunteer application process
+   - Interview and background check
+   - Training completion requirements
+   - Account creation with "Volunteer" role
+   - Access to volunteer management tools
+
+3. **Account Maintenance**:
+   - Regular audit of inactive accounts
+   - Membership renewal processes
+   - Role updates based on participation
+   - Account suspension for non-payment
+
+## KCN Seniors Registration Strategy
+
+### Current Implementation
+- **Admin-Only Registration**: All accounts created by administrators
+- **Manual Verification**: Each application reviewed personally
+- **Role Assignment**: Appropriate role assigned based on membership type
+- **Welcome Process**: Personalized welcome and orientation
+
+### Registration Workflows
+
+#### Member Registration
+1. **Application Submission**: Potential member submits application
+2. **Review Process**: Board reviews application and payment
+3. **Account Creation**: Admin creates account with "Member" role
+4. **Welcome Package**: Send welcome email with member benefits
+5. **Orientation**: Provide member handbook and resources
+
+#### Volunteer Registration
+1. **Volunteer Application**: Potential volunteer submits application
+2. **Interview Process**: Conduct volunteer interview
+3. **Background Check**: Complete background check (if required)
+4. **Training**: Complete volunteer training requirements
+5. **Account Creation**: Admin creates account with "Volunteer" role
+6. **Access Grant**: Provide access to volunteer tools and resources
+
+#### General Public Registration
+1. **Public Registration**: Open registration for general public
+2. **Default Role**: Automatically assigned "Subscriber" role
+3. **Limited Access**: Access to public content only
+4. **Upgrade Path**: Clear path to upgrade to member status
+
+## Email Configuration
+
+### Welcome Emails
+
+#### Member Welcome Email
+- **Subject**: Welcome to KCN Seniors Co-operative
+- **Content**: 
+  - Welcome message and congratulations
+  - Member benefits overview
+  - Login credentials and instructions
+  - Member handbook and resources
+  - Contact information for support
+
+#### Volunteer Welcome Email
+- **Subject**: Welcome to KCN Seniors Volunteer Team
+- **Content**:
+  - Welcome and thank you message
+  - Volunteer role and responsibilities
+  - Access to volunteer tools and resources
+  - Training materials and guidelines
+  - Contact information for volunteer coordinator
+
+#### General Welcome Email
+- **Subject**: Welcome to KCN Seniors Website
+- **Content**:
+  - Welcome message
+  - Basic website navigation
+  - Information about membership benefits
+  - How to upgrade to member status
+  - Contact information
+
+### Notification Settings
+
+#### Admin Notifications
+- **New Registration**: Notify admins of new registrations
+- **Role Changes**: Alert when user roles are modified
+- **Payment Issues**: Notify of payment problems
+- **Account Issues**: Alert to account-related problems
+
+#### User Notifications
+- **Welcome Messages**: Send welcome emails to new users
+- **Role Updates**: Notify users when roles change
+- **Password Resets**: Send secure reset links
+- **Account Reminders**: Remind users of account status
+
+## Security Considerations
+
+### Registration Security
+- **Email Verification**: Require email verification for registration
+- **CAPTCHA Protection**: Prevent automated registrations
+- **Spam Prevention**: Implement spam protection measures
+- **Rate Limiting**: Limit registration attempts
+
+### Account Security
+- **Strong Passwords**: Enforce strong password requirements
+- **Account Verification**: Verify account information
+- **Suspicious Activity**: Monitor for suspicious registrations
+- **Account Lockout**: Implement account lockout policies
+
+## Troubleshooting Registration Issues
+
+### Common Problems
+
+#### Registration Not Working
+**Problem**: Users can't register for accounts
+**Solutions**:
+1. Check registration settings in WordPress
+2. Verify email configuration
+3. Check for plugin conflicts
+4. Test registration process
+
+#### Email Notifications Not Sending
+**Problem**: Welcome emails not being sent
+**Solutions**:
+1. Check SMTP configuration
+2. Verify email settings
+3. Test email delivery
+4. Check spam filters
+
+#### Role Assignment Issues
+**Problem**: Users not getting correct roles
+**Solutions**:
+1. Check default role settings
+2. Verify role assignment process
+3. Test role assignment manually
+4. Review registration workflow
+
+## Best Practices
+
+### Registration Process
+- **Clear Instructions**: Provide clear registration instructions
+- **User-Friendly Forms**: Create easy-to-use registration forms
+- **Quick Processing**: Process registrations promptly
+- **Follow-up**: Follow up with new users
+
+### Communication
+- **Welcome Messages**: Send personalized welcome messages
+- **Clear Expectations**: Set clear expectations for users
+- **Support Information**: Provide clear support contact information
+- **Regular Updates**: Keep users informed of changes
+
+### Security
+- **Verification**: Verify user information when possible
+- **Monitoring**: Monitor registration activity
+- **Backup**: Backup registration data regularly
+- **Documentation**: Document registration procedures
+
+## Maintenance and Updates
+
+### Regular Tasks
+- **Review Registrations**: Review new registrations regularly
+- **Update Procedures**: Update registration procedures as needed
+- **Monitor Performance**: Monitor registration system performance
+- **User Feedback**: Collect and act on user feedback
+
+### System Updates
+- **Plugin Updates**: Keep registration plugins updated
+- **WordPress Updates**: Ensure WordPress compatibility
+- **Security Updates**: Apply security patches
+- **Feature Updates**: Add new registration features as needed
+
+## Support and Resources
+
+### Documentation
+- **WordPress Registration**: https://wordpress.org/documentation/article/users-screen/
+- **Registration Plugins**: https://wordpress.org/plugins/tags/registration/
+- **Email Configuration**: https://wordpress.org/support/article/emails/
+
+### Professional Support
+- **Plugin Support**: Individual plugin support
+- **WordPress Support**: WordPress.org support
+- **Email Support**: Email service provider support
+
+## Next Steps
+
+- Learn about [WordPress Users Management](/docs/user-management/wordpress-users-management)
+- Explore [Members Plugin Role Management](/docs/user-management/members-plugin-guide)
+- Understand [Password Management & Security](/docs/user-management/password-management)
+- Master [Role-Based Access Control](/docs/user-management/role-based-access)
+    `,
+    sectionId: 'user-management',
+    slug: 'registration-settings',
+    tags: ['registration', 'user management', 'email', 'workflow', 'kcn seniors'],
+    lastUpdated: new Date('2025-01-15'),
+    difficulty: 'intermediate',
+    estimatedTime: '20 minutes',
+  },
+  {
+    id: 'maintenance-schedule',
+    title: 'Maintenance Schedule',
+    content: `
+# Maintenance Schedule
+
+Regular maintenance is essential for keeping your KCN Seniors website secure, up-to-date, and performing optimally.
+
+## Daily Maintenance Tasks
+
+### Security Monitoring
+- **Check Security Logs**: Review security plugin logs for suspicious activity
+- **Monitor Login Attempts**: Check for failed login attempts
+- **Review User Activity**: Monitor new user registrations and role changes
+- **Check for Updates**: Look for urgent WordPress, plugin, or theme updates
+
+### Performance Monitoring
+- **Check Website Speed**: Monitor website loading times
+- **Review Error Logs**: Check for any error messages or warnings
+- **Monitor Uptime**: Ensure website is accessible and functioning
+- **Check Backup Status**: Verify that backups are running successfully
+
+## Weekly Maintenance Tasks
+
+### Content Management
+- **Review New Content**: Check for new posts, pages, or events
+- **Moderate Comments**: Review and approve pending comments
+- **Update Content**: Keep important information current
+- **Check Media Library**: Organize and clean up media files
+
+### User Management
+- **Review New Users**: Check recently registered users
+- **Audit User Roles**: Verify role assignments are correct
+- **Monitor User Activity**: Check for unusual user behavior
+- **Update User Documentation**: Keep user guides current
+
+### System Health
+- **Database Optimization**: Run database optimization if needed
+- **Cache Management**: Clear and optimize caching
+- **Plugin Updates**: Update plugins that have new versions
+- **Performance Review**: Check website performance metrics
+
+## Monthly Maintenance Tasks
+
+### Comprehensive Security Audit
+- **User Account Review**: Audit all user accounts and permissions
+- **Plugin Security**: Review installed plugins for security issues
+- **Access Log Review**: Analyze access logs for suspicious activity
+- **Password Policy Review**: Ensure password policies are enforced
+
+### Content and SEO
+- **Content Audit**: Review and update all website content
+- **SEO Optimization**: Check and optimize SEO settings
+- **Link Checking**: Verify all internal and external links work
+- **Image Optimization**: Compress and optimize images
+
+### System Optimization
+- **Database Cleanup**: Remove unnecessary data and optimize tables
+- **File Cleanup**: Remove unused files and media
+- **Plugin Cleanup**: Remove unused or outdated plugins
+- **Theme Updates**: Update themes to latest versions
+
+## Quarterly Maintenance Tasks
+
+### Major System Updates
+- **WordPress Core Updates**: Update to latest WordPress version
+- **Plugin Compatibility**: Test all plugins with new WordPress version
+- **Theme Compatibility**: Ensure themes work with updates
+- **Backup Verification**: Test backup and restore procedures
+
+### Security Assessment
+- **Vulnerability Scan**: Run security scans for vulnerabilities
+- **Access Control Review**: Review and update access controls
+- **Security Plugin Updates**: Update security plugins and settings
+- **Incident Response Review**: Review and update incident response procedures
+
+### Performance Optimization
+- **Performance Audit**: Complete website performance analysis
+- **Caching Optimization**: Optimize caching strategies
+- **CDN Review**: Review and optimize CDN settings
+- **Database Optimization**: Complete database optimization
+
+## Annual Maintenance Tasks
+
+### Complete System Review
+- **Full Security Audit**: Comprehensive security assessment
+- **Performance Review**: Complete performance analysis and optimization
+- **Content Strategy Review**: Review and update content strategy
+- **Technology Stack Review**: Evaluate current technology stack
+
+### Documentation Updates
+- **Update Documentation**: Review and update all documentation
+- **Training Materials**: Update training materials and procedures
+- **Policy Review**: Review and update policies and procedures
+- **Emergency Procedures**: Update emergency response procedures
+
+## KCN Seniors Specific Maintenance
+
+### Member Management
+- **Membership Renewals**: Process membership renewals
+- **Member Benefits Review**: Review and update member benefits
+- **Volunteer Coordination**: Coordinate volunteer activities
+- **Event Planning**: Plan and schedule upcoming events
+
+### Community Engagement
+- **Content Calendar**: Plan content for upcoming months
+- **Event Calendar**: Schedule and plan community events
+- **Newsletter Updates**: Update newsletter content and distribution
+- **Social Media**: Review and update social media presence
+
+## Maintenance Tools and Resources
+
+### Automated Tools
+- **WordPress Updates**: Enable automatic updates for minor versions
+- **Backup Automation**: Set up automated backup systems
+- **Security Monitoring**: Use security monitoring tools
+- **Performance Monitoring**: Implement performance monitoring
+
+### Manual Procedures
+- **Update Procedures**: Document update procedures
+- **Backup Procedures**: Document backup and restore procedures
+- **Security Procedures**: Document security procedures
+- **Emergency Procedures**: Document emergency response procedures
+
+## Maintenance Checklist
+
+### Daily Checklist
+- [ ] Check security logs
+- [ ] Monitor user activity
+- [ ] Check for urgent updates
+- [ ] Verify website accessibility
+
+### Weekly Checklist
+- [ ] Review new content
+- [ ] Moderate comments
+- [ ] Update plugins
+- [ ] Check performance
+
+### Monthly Checklist
+- [ ] Security audit
+- [ ] Content review
+- [ ] Database optimization
+- [ ] User account review
+
+### Quarterly Checklist
+- [ ] Major system updates
+- [ ] Security assessment
+- [ ] Performance optimization
+- [ ] Backup verification
+
+### Annual Checklist
+- [ ] Complete system review
+- [ ] Documentation updates
+- [ ] Policy review
+- [ ] Technology evaluation
+
+## Emergency Maintenance
+
+### Critical Issues
+- **Security Breach**: Immediate response to security incidents
+- **Website Down**: Emergency response to website outages
+- **Data Loss**: Emergency data recovery procedures
+- **Performance Issues**: Emergency performance optimization
+
+### Emergency Contacts
+- **Hosting Provider**: Contact hosting provider for server issues
+- **Security Support**: Contact security specialists for breaches
+- **WordPress Support**: Contact WordPress support for core issues
+- **Plugin Support**: Contact plugin developers for plugin issues
+
+## Documentation and Record Keeping
+
+### Maintenance Logs
+- **Daily Logs**: Record daily maintenance activities
+- **Weekly Reports**: Document weekly maintenance tasks
+- **Monthly Reviews**: Document monthly maintenance reviews
+- **Annual Reports**: Document annual maintenance activities
+
+### Change Management
+- **Change Documentation**: Document all system changes
+- **Version Control**: Track version changes and updates
+- **Rollback Procedures**: Document rollback procedures
+- **Testing Procedures**: Document testing procedures
+
+## Next Steps
+
+- Learn about [Support Procedures](/docs/maintenance-support/support-procedures)
+- Explore [Emergency Contacts](/docs/maintenance-support/emergency-contacts)
+- Understand [Backup Procedures](/docs/maintenance-support/backup-procedures)
+- Master [Performance Monitoring](/docs/maintenance-support/performance-monitoring)
+    `,
+    sectionId: 'maintenance-support',
+    slug: 'maintenance-schedule',
+    tags: ['maintenance', 'schedule', 'tasks', 'kcn seniors'],
+    lastUpdated: new Date('2025-01-15'),
+    difficulty: 'intermediate',
+    estimatedTime: '15 minutes',
   },
 ];
 

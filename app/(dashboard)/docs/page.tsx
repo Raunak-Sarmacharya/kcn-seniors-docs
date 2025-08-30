@@ -20,7 +20,7 @@ import {
   Clock as ClockIcon,
   Star
 } from 'lucide-react';
-import { getAllSections } from '@/app/lib/docs';
+import { getAllSections } from '@/app/lib/markdown-docs';
 
 const iconMap: Record<string, React.ComponentType<any>> = {
   Home,
@@ -58,7 +58,7 @@ export default function DocsOverviewPage() {
     <div className="min-h-screen bg-white">
       {/* Main Content */}
       <div className="px-8 py-12 lg:px-12">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
           {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function DocsOverviewPage() {
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               KCN Seniors Documentation
             </h1>
-            <p className="text-xl text-gray-600 max-w-4xl leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-5xl leading-relaxed">
               Welcome to your comprehensive documentation portal. Find everything you need to manage your KCN Seniors website effectively and efficiently.
             </p>
           </motion.div>
@@ -102,7 +102,7 @@ export default function DocsOverviewPage() {
               </Link>
 
               <Link
-                href="/docs/elementor/overview"
+                href="/docs/page-builder-forms/elementor-integration"
                 className="glass rounded-lg p-4 hover:bg-yellow-50 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
@@ -189,7 +189,7 @@ export default function DocsOverviewPage() {
                             {section.children?.length || 0} guides
                           </span>
                           <Link
-                            href={`/docs/${section.id}`}
+                            href={`/docs/${section.slug}`}
                             className="text-orange-600 hover:text-orange-700 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
                           >
                             Explore
@@ -215,7 +215,7 @@ export default function DocsOverviewPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Need Help?
               </h3>
-              <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
+              <p className="text-gray-600 mb-8 max-w-4xl mx-auto text-lg leading-relaxed">
                 Can't find what you're looking for? Our comprehensive documentation covers everything from basic setup to advanced customization. We're here to help you succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -226,16 +226,18 @@ export default function DocsOverviewPage() {
                   View Troubleshooting
                 </Link>
                 <Link
-                  href="/docs/video-tutorials/getting-started-videos"
+                  href="/docs/getting-started/quick-reference"
                   className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Watch Tutorials
+                  Quick Reference
                 </Link>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
+
+
     </div>
   );
 }
