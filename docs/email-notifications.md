@@ -15,6 +15,14 @@ lastUpdated: "2024-01-15"
 
 The volunteer management system includes a comprehensive email notification system that automatically communicates with volunteers and administrators throughout the task lifecycle. This system ensures timely communication and efficient task coordination.
 
+**Technology Foundation:**
+The email notification system is powered by **WP Mail SMTP** plugin, which ensures reliable email delivery and professional communication from the kcnseniors.coop domain. Email content is dynamically generated using data from **Advanced Custom Fields (ACF)** to provide personalized, relevant information to each recipient.
+
+**Email System Scope:**
+This email notification system is exclusively used for the volunteer management system. All other email communications (contact forms, newsletters, etc.) use separate systems.
+
+For detailed technical implementation, see [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration).
+
 ### System Overview
 
 **Automated Communication:**

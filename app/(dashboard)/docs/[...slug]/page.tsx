@@ -482,7 +482,6 @@ export default function DocPage({ params }: PageProps) {
                             <Clock className="w-3 h-3" />
                             <span>{childDoc.estimatedTime}</span>
                           </div>
-                          <span className="capitalize">{childDoc.difficulty}</span>
                         </div>
                         {childDoc.tags.length > 0 && (
                           <div className="flex flex-wrap gap-1">

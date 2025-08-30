@@ -74,7 +74,7 @@ Your website showcases events in three distinct formats optimized for different 
 ### Role-Based Access Control
 
 **Location Protection System:**
-Your website implements sophisticated access control that selectively hides sensitive venue information based on user roles while maintaining public visibility for general event information.
+Your website implements CSS-based content hiding that selectively conceals sensitive venue information based on user roles while maintaining public visibility for general event information.
 
 **Access Level Implementation:**
 

@@ -17,29 +17,42 @@ This system automatically matches volunteers to tasks based on their skills and 
 
 **How the Complete System Works:**
 
-1. **Volunteer Registration**: Volunteers create profiles with their skills and interests
-2. **Skill Tracking**: System stores volunteer capabilities using WordPress taxonomy
+1. **Volunteer Account Creation**: Administrators create volunteer accounts and assign skills
+2. **Skill Tracking**: System stores volunteer capabilities using ACF custom fields
 3. **Task Creation**: Administrators create tasks and assign required skills  
 4. **Automatic Matching**: System finds volunteers with matching skills
-5. **Email Notifications**: Matching volunteers receive immediate email alerts
+5. **Email Notifications**: Matching volunteers receive immediate email alerts via WP Mail SMTP
 6. **Task Assignment**: First volunteer to accept gets the task
 7. **Status Updates**: All participants receive appropriate confirmations
+
+**Technology Stack:**
+- **ACF (Advanced Custom Fields)**: Manages volunteer skills and task requirements
+- **WP Mail SMTP**: Handles reliable email delivery for notifications
+- **WordPress Code Snippets**: Custom automation logic
+- **WordPress User Management**: Role-based access control
+
+For detailed technical implementation, see [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration).
 
 ## Setting Up Volunteer Profiles
 
 **For Administrators - Managing Volunteer Skills:**
 
-1. **Access Volunteer Profile:**
+1. **Create Volunteer Account:**
+   - Navigate to Users → Add New
+   - Create new user account or upgrade existing subscriber
+   - Assign "Volunteer" role to the user
+
+2. **Access Volunteer Profile:**
    - Navigate to Users → All Users
    - Find the volunteer's account
    - Click Edit next to their name
 
-2. **Locate Volunteer Tags Section:**
+3. **Locate Volunteer Tags Section:**
    - Scroll down to find "Volunteer Tags" field
    - This field uses Advanced Custom Fields (ACF) taxonomy
    - Multiple skills can be selected for each volunteer
 
-3. **Assign Skills and Interests:**
+4. **Assign Skills and Interests:**
    - Check all relevant skill categories for the volunteer
    - Common categories include:
      - Transportation and errands
@@ -50,7 +63,7 @@ This system automatically matches volunteers to tasks based on their skills and 
      - Event setup and coordination
      - Professional services (nursing, legal, etc.)
 
-4. **Save Profile:**
+5. **Save Profile:**
    - Click Update User
    - System automatically stores skills in user metadata
    - Volunteer is now eligible for matching tasks

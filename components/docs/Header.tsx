@@ -216,9 +216,6 @@ export default function Header() {
                             {highlightText(result.content.substring(0, 120) + '...', searchQuery)}
                           </p>
                           <div className="flex items-center gap-2 mt-2 text-xs text-gray-500">
-                            <span className="capitalize bg-gray-100 px-2 py-1 rounded">
-                              {result.difficulty}
-                            </span>
                             <span>{result.sectionId.replace('-', ' ')}</span>
                           </div>
                         </div>

@@ -16,6 +16,9 @@ order: 1
 
 Elementor is a powerful WordPress page builder that provides drag-and-drop functionality for creating custom pages and forms. The KCN Seniors website uses Elementor for creating membership application forms, newsletter forms, and custom page designs that integrate seamlessly with the WordPress user management and role-based access control system.
 
+**Theme Foundation:**
+Elementor works in conjunction with the **Hello Biz theme** - a lightweight, performance-optimized WordPress theme specifically designed for Elementor integration. This combination provides the ideal foundation for the KCN Seniors website, ensuring optimal performance and compatibility with the complex plugin stack.
+
 ## Key Features for KCN Seniors
 
 ### Core Capabilities
@@ -335,6 +338,12 @@ Elementor is a powerful WordPress page builder that provides drag-and-drop funct
 - **Video Tutorials**: https://elementor.com/help/video-tutorials/
 - **Community Forum**: https://elementor.com/community/
 - **Support Center**: https://elementor.com/support/
+
+### Related Documentation
+- **[Hello Biz Theme Integration](/docs/custom-development/hello-biz-theme-integration)**: Complete guide to theme management and WordPress Appearance options
+- **[Facebook Feed Integration](/docs/content-management/facebook-feed-integration)**: Social media integration for homepage display
+- **[Functions.php Customizations](/docs/custom-development/functions-php)**: Technical implementation details
+- **[Custom Page Design](/docs/page-builder-forms/custom-page-design)**: Creating custom pages with Elementor
 
 ### WordPress Integration
 - **WordPress Documentation**: https://wordpress.org/documentation/

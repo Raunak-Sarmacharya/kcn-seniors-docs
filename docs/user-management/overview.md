@@ -23,7 +23,7 @@ User management is a critical aspect of WordPress site administration that invol
 
 ## System Benefits for KCN Seniors
 
-- **Volunteer Coordination**: Admin-created volunteer accounts with ACF duty tags for specific responsibilities
+- **Volunteer Coordination**: Admin-created volunteer accounts with ACF skill tags for specific responsibilities
 - **Member Benefits**: Exclusive content and event access for paying members
 - **Security**: Protection against unauthorized access to sensitive information
 - **Scalability**: Easy management as the organization grows
@@ -70,12 +70,7 @@ KCN Seniors uses a **hierarchical role system** where each higher role includes 
 - Volunteer management tools and content
 - Volunteer-specific website features
 
-**Level 5 - Administrator 2 Access** (Limited Admin): Volunteer + Member + Subscriber + Public +
-- Content management (posts, pages, media)
-- Limited administrative features
-- User management (restricted)
-
-**Level 6 - Administrator Access**: Administrator 2 + Volunteer + Member + Subscriber + Public +
+**Level 5 - Administrator Access**: Volunteer + Member + Subscriber + Public +
 - Complete website control
 - Plugin and theme management
 - Full user and role management
@@ -97,9 +92,8 @@ KCN Seniors uses a **hierarchical role system** where each higher role includes 
 
 | Role | Dashboard Access | Access Level | Key Additional Permissions | Typical Use |
 |------|------------------|--------------|----------------------------|-------------|
-| **Administrator** | ✅ Complete | All levels 1-6 | Everything - full website control | Website owners/managers |
-| **Administrator 2** | ✅ Limited | Levels 1-5 | Content & limited user management | Limited admin duties |
-| **Volunteer** | ✅ Volunteer-specific | Levels 1-4 | Volunteer tools + all member benefits | Community volunteers |
+| **Administrator** | ✅ Complete | All levels 1-5 | Everything - full website control | Website owners/managers |
+| **Volunteer** | ✅ Limited | Levels 1-4 | Volunteer tools + all member benefits | Community volunteers |
 | **Member** | ❌ No | Levels 1-3 | Member-only content/events | Premium subscribers |
 | **Subscriber** | ❌ No | Levels 1-2 | Commenting + basic logged-in features | Default new users |
 

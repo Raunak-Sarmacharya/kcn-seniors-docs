@@ -23,13 +23,16 @@ Your `functions.php` file contains several custom functions that work together t
 3. **Emergency Access System**: Hidden backup administrator account
 4. **ACF Integration**: Volunteer skill management and task requirements
 
+**Theme Foundation:**
+These custom functions are built on top of the **Hello Biz theme** - a lightweight, performance-optimized WordPress theme that provides a clean foundation for custom development without interfering with the complex plugin stack used by KCN Seniors.
+
 ## Event Protection System
 
 ### CSS Injection for Content Protection
 
 **Function**: `hide_event_details_for_subscriber_and_guest()`
 
-This function injects CSS into the page head to selectively hide EventPrime venue elements from non-members:
+This function injects CSS into the page head to selectively hide EventPrime venue elements from non-members. This CSS-based approach works like actual access control by concealing sensitive information:
 
 ```php
 function hide_event_details_for_subscriber_and_guest() {
@@ -411,6 +414,8 @@ foreach ($task_tags as $tag_id) {
 
 ## Next Steps
 
+- Review [Hello Biz Theme Integration](/docs/custom-development/hello-biz-theme-integration) for WordPress Appearance management
+- Review [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration) for volunteer management automation
 - Review [ACF Integration](/docs/custom-development/acf-integration) for volunteer skills
 - Understand [CSS Injection System](/docs/custom-development/css-injection) for event protection
 - Explore [Database Structure](/docs/custom-development/database-structure) for metadata

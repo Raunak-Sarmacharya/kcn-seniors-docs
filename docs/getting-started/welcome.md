@@ -41,6 +41,7 @@ order: 1
 
 5. [Content Management System](/docs/content-management/media-library-management)
    - [WordPress Media Library Management](/docs/content-management/media-library-management)
+   - [Facebook Feed Integration](/docs/content-management/facebook-feed-integration)
 
 6. [Service & Volunteer Booking](#service--volunteer-booking)
    - [Volunteer System Overview](/docs/volunteer-management/volunteer-system-overview)
@@ -51,6 +52,8 @@ order: 1
 
 7. [Custom Development](#custom-development)
    - [Custom Development Overview](#custom-development-overview)
+   - [Hello Biz Theme Integration & WordPress Appearance Management](/docs/custom-development/hello-biz-theme-integration)
+   - [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration)
    - [WordPress Code Snippets Plugin Integration](#wordpress-code-snippets-plugin-integration)
    - [Functions.php Customizations](#functionsphp-customizations)
    - [Advanced Custom Fields Integration](#advanced-custom-fields-integration)
@@ -105,9 +108,14 @@ The KCN Seniors website uses a sophisticated **dual-system approach** for compre
 
 **Primary Platform:**
 - **WordPress**: Primary CMS platform with Block Editor (Gutenberg)
+- **Hello Biz Theme**: Performance-optimized theme foundation for Elementor integration
 - **EventPrime Plugin**: Complete event management system
 - **Members Plugin**: Advanced role-based access control
-- **Advanced Custom Fields (ACF)**: Custom data fields for volunteer profiles
+- **Advanced Custom Fields (ACF)**: Custom data fields for volunteer profiles and automated matching
+- **WP Mail SMTP**: Reliable email delivery for volunteer notifications
+- **Smash Balloon Facebook Feed**: Social media integration for homepage display
+- **WP Vivid Backup & Migration**: Comprehensive backup and migration system
+- **All-in-One WP Migration**: Specialized database migration and site transfer tool
 - **WordPress Code Snippets Plugin**: Custom functionality implementation
 - **Elementor**: Page builder for custom page design and forms
 - **Next.js Documentation Portal**: Separate documentation system (this current project)
@@ -127,7 +135,7 @@ The website uses a sophisticated dual-system approach:
 3. **Content Protection**: Members Plugin controls what users can access
 4. **Ongoing Management**: Both systems work together for user administration
 
-#### Hierarchical Role Structure (6 Levels)
+#### Hierarchical Role Structure (5 Levels)
 
 KCN Seniors uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
 
@@ -151,26 +159,21 @@ KCN Seniors uses a **hierarchical role system** where each higher role includes 
 - Volunteer-specific website features
 - Task coordination and assignment
 - Volunteer training resources
+- WordPress dashboard access (limited)
 
-**Level 5 - Administrator 2 Access** (Limited Admin): Volunteer + Member + Subscriber + Public +
-- Content management (posts, pages, media)
-- Limited administrative features
-- User management (restricted)
-- Event management capabilities
-
-**Level 6 - Administrator Access**: Administrator 2 + Volunteer + Member + Subscriber + Public +
+**Level 5 - Administrator Access**: Volunteer + Member + Subscriber + Public +
 - Complete website control
 - Plugin and theme management
 - Full user and role management
 - System settings and configuration
+- Complete WordPress dashboard access
 
 #### Key Roles & Permissions
 
 | Role | Dashboard Access | Access Level | Key Additional Permissions | Typical Use |
 |------|------------------|--------------|----------------------------|-------------|
-| **Administrator** | ✅ Complete | All levels 1-6 | Everything - full website control | Website owners/managers |
-| **Administrator 2** | ✅ Limited | Levels 1-5 | Content & limited user management | Limited admin duties |
-| **Volunteer** | ✅ Volunteer-specific | Levels 1-4 | Volunteer tools + all member benefits | Community volunteers |
+| **Administrator** | ✅ Complete | All levels 1-5 | Everything - full website control | Website owners/managers |
+| **Volunteer** | ✅ Limited | Levels 1-4 | Volunteer tools + all member benefits | Community volunteers |
 | **Member** | ❌ No | Levels 1-3 | Member-only content/events | Premium subscribers |
 | **Subscriber** | ❌ No | Levels 1-2 | Commenting + basic logged-in features | Default new users |
 
@@ -214,7 +217,22 @@ KCN Seniors uses a **hierarchical role system** where each higher role includes 
 - Spam protection and security
 - Form submission handling
 
-### Page Builder & Forms
+### Theme Foundation & Page Builder
+
+#### Hello Biz Theme Integration
+
+**Overview:**
+The KCN Seniors website uses the **Hello Biz theme** as its foundation - a lightweight, performance-optimized WordPress theme specifically designed for Elementor integration. Hello Biz provides a clean base that doesn't interfere with complex plugin functionality while offering seamless page building capabilities.
+
+**Key Benefits for KCN Seniors:**
+- **Performance Optimized**: Minimal codebase ensures fast loading times
+- **Elementor Compatible**: Designed specifically for Elementor page builder
+- **Plugin Friendly**: Clean codebase doesn't conflict with complex plugin stack
+- **Customization Ready**: Easy to modify with custom CSS and functions.php
+- **Professional Foundation**: Provides solid base for community website
+
+**Documentation:**
+- [Hello Biz Theme Integration](/docs/custom-development/hello-biz-theme-integration) - Complete guide to theme management and WordPress Appearance options
 
 #### Elementor Integration
 
@@ -277,10 +295,15 @@ WPForms Lite serves as the dedicated contact form solution for the Contact Us pa
 
 | Component | Purpose | Documentation |
 |-----------|---------|---------------|
+| **Hello Biz Theme** | Theme foundation and performance | [Hello Biz Theme Integration](/docs/custom-development/hello-biz-theme-integration) |
 | **WordPress Users** | User account management | [WordPress Users Management](#wordpress-users-management) |
 | **Members Plugin** | Role and permission control | [Members Plugin Guide](#members-plugin---role-management) |
 | **EventPrime** | Event management system | [Event Management Overview](/docs/event-management/event-management-overview) |
-| **ACF** | Volunteer profile fields | [Advanced Custom Fields Integration](#advanced-custom-fields-integration) |
+| **ACF** | Volunteer profile fields and automated matching | [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration) |
+| **WP Mail SMTP** | Email delivery for notifications | [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration) |
+| **Facebook Feed** | Social media integration | [Facebook Feed Integration](/docs/content-management/facebook-feed-integration) |
+| **WP Vivid Backup** | Backup and migration system | [Backup & Migration System](/docs/maintenance-support/backup-migration-system) |
+| **All-in-One WP Migration** | Database migration tool | [Backup & Migration System](/docs/maintenance-support/backup-migration-system) |
 | **Code Snippets** | Custom functionality | [Code Snippets Plugin](#wordpress-code-snippets-plugin-integration) |
 | **Elementor** | Page design and forms | [Elementor Integration](#elementor-integration) |
 | **WPForms** | Contact form system | [WPForms Lite Integration](#wpforms-lite-integration) |
@@ -894,6 +917,9 @@ Now that you understand the overall system architecture, you can dive into speci
 - [Email Notification System](/docs/volunteer-management/email-notifications) - Managing automated communications
 
 **For Technical Implementation:**
+- [Hello Biz Theme Integration](/docs/custom-development/hello-biz-theme-integration) - WordPress Appearance management and theme customization
+- [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration) - Volunteer management automation and email delivery
+- [Backup & Migration System](/docs/maintenance-support/backup-migration-system) - Comprehensive backup and migration management
 - [Custom Development - Functions.php](../custom-development/functions-php) - Technical implementation details
 - [Automated Task Matching](/docs/volunteer-management/automated-matching) - How the skill-based matching system works
 
@@ -924,12 +950,37 @@ Now that you understand the overall system architecture, you can dive into speci
 - Update documentation for any system changes
 - Backup user configurations and role settings
 - Review Elementor forms and page designs
+- Verify backup and migration system functionality
 
 #### Quarterly Tasks
 - Complete security assessment and password policy review
 - User role structure evaluation and optimization  
 - Staff training updates on new features or procedures
 - Performance optimization and plugin updates
+
+### Backup and Migration System
+
+The KCN Seniors website uses a comprehensive backup and migration system to ensure data protection and system reliability:
+
+#### Primary Backup Solution (WP Vivid):
+- **Automated Daily Backups**: Full site backups with cloud storage
+- **Database Backups**: Every 12 hours for critical data protection
+- **Cloud Integration**: Google Drive storage for offsite backup
+- **One-Click Restoration**: Complete site recovery capabilities
+
+#### Migration Solution (All-in-One WP Migration):
+- **Database Migrations**: Quick transfers between environments
+- **Site Cloning**: Exact site replication for development
+- **Emergency Transfers**: Rapid site movement during hosting issues
+- **Cross-Platform Compatibility**: Works across different hosting environments
+
+#### Recommended Schedule:
+- **Daily**: Full site backup at 2:00 AM
+- **Every 12 Hours**: Database-only backup
+- **Before Updates**: Manual backup before plugin/theme changes
+- **Monthly**: Test restoration procedures
+
+For detailed configuration and management, see [Backup & Migration System](/docs/maintenance-support/backup-migration-system).
 
 ### Troubleshooting Common Issues
 

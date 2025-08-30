@@ -8,6 +8,7 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Copy, Check, ExternalLink, Play } from 'lucide-react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
+import Link from 'next/link';
 import { copyToClipboard } from '@/app/lib/utils';
 
 interface MarkdownContentProps {
@@ -154,17 +155,53 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
         {children}
       </motion.blockquote>
     ),
-    a: ({ href, children }: any) => (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1"
-      >
-        {children}
-        <ExternalLink className="w-3 h-3" />
-      </a>
-    ),
+    a: ({ href, children }: any) => {
+      // Check if it's an internal documentation link
+      const isInternalLink = href && (
+        href.startsWith('/docs/') || 
+        href.startsWith('#') ||
+        href.startsWith('./') ||
+        href.startsWith('../')
+      );
+      
+      // Check if it's an external link (starts with http/https)
+      const isExternalLink = href && (href.startsWith('http://') || href.startsWith('https://'));
+      
+      if (isInternalLink) {
+        // Handle internal links - use Next.js Link for client-side navigation
+        return (
+          <Link
+            href={href}
+            className="text-blue-600 hover:text-blue-800 underline transition-colors"
+          >
+            {children}
+          </Link>
+        );
+      } else if (isExternalLink) {
+        // Handle external links - open in new tab
+        return (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1"
+          >
+            {children}
+            <ExternalLink className="w-3 h-3" />
+          </a>
+        );
+      } else {
+        // Handle relative links or other internal links
+        return (
+          <Link
+            href={href || '#'}
+            className="text-blue-600 hover:text-blue-800 underline transition-colors"
+          >
+            {children}
+          </Link>
+        );
+      }
+    },
     // Enhanced table components
     table: ({ children }: any) => (
       <motion.div

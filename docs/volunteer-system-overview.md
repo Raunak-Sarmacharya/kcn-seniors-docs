@@ -88,11 +88,45 @@ The volunteer system integrates seamlessly with the user management system:
 - Volunteer skills are stored as ACF tags
 - User profiles include volunteer preferences
 - Contact information is automatically populated
+- Automated email notifications via WP Mail SMTP
+- All volunteer accounts are created and managed by administrators
 
 **Security and Permissions:**
 - Task access is controlled by user roles
 - Personal information is protected
 - Communication is managed through secure channels
+
+## Technology Integration
+
+### ACF & WP Mail SMTP Integration
+
+**Volunteer Account Management:**
+- All volunteer accounts are created by administrators
+- Administrators assign volunteer privileges to existing subscribers
+- No volunteer application forms - purely administrative management
+- Volunteer skills and tags are assigned by administrators through ACF fields
+
+The volunteer management system is powered by **Advanced Custom Fields (ACF)** and **WP Mail SMTP** plugins:
+
+**ACF Integration:**
+- **Volunteer Skills**: Custom fields store volunteer skills and interests
+- **Task Requirements**: ACF fields define required skills for each task
+- **Automated Matching**: System matches volunteers to tasks based on ACF data
+- **Profile Management**: Volunteer preferences and availability stored in ACF fields
+
+**WP Mail SMTP Integration:**
+- **Reliable Email Delivery**: Ensures volunteer notifications reach their destination
+- **Professional Branding**: Emails sent from kcnseniors.coop domain
+- **Automated Notifications**: Instant alerts when new tasks match volunteer skills
+- **Delivery Tracking**: Monitor email delivery success rates
+
+**Combined Benefits:**
+- **Automated Workflow**: Tasks automatically matched to qualified volunteers
+- **Instant Communication**: Volunteers notified immediately of relevant opportunities
+- **Professional Service**: Branded, reliable email communication
+- **Scalable System**: Easy to add new volunteers and skill categories
+
+For detailed technical information, see [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration).
 
 ## System Workflow Overview
 

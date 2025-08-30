@@ -111,6 +111,7 @@ export const docSections: DocSection[] = [
     order: 5,
     children: [
       { id: 'media-library-management', title: 'WordPress Media Library Management', description: 'Complete guide to managing images, videos, and documents in WordPress Media Library', icon: 'Image', slug: 'media-library-management', category: 'content', order: 1 },
+      { id: 'facebook-feed-integration', title: 'Facebook Feed Integration', description: 'Smash Balloon Facebook Feed Pro integration for homepage display', icon: 'Facebook', slug: 'facebook-feed-integration', category: 'content', order: 2 },
     ],
   },
   {
@@ -139,11 +140,13 @@ export const docSections: DocSection[] = [
     order: 7,
     children: [
       { id: 'custom-development-overview', title: 'Custom Development Overview', description: 'Overview of custom features and implementations', icon: 'Code', slug: 'custom-development-overview', category: 'development', order: 1 },
-      { id: 'functions-php', title: 'Functions.php Customizations', description: 'Custom code in theme functions.php file', icon: 'FileCode', slug: 'functions-php', category: 'development', order: 2 },
-      { id: 'acf-integration', title: 'Advanced Custom Fields Integration', description: 'ACF plugin integration for volunteer skills', icon: 'Database', slug: 'acf-integration', category: 'development', order: 3 },
-      { id: 'css-injection', title: 'CSS Injection System', description: 'Dynamic CSS injection for content protection', icon: 'Palette', slug: 'css-injection', category: 'development', order: 4 },
-      { id: 'database-structure', title: 'Database Structure', description: 'Custom database tables and metadata', icon: 'Server', slug: 'database-structure', category: 'development', order: 5 },
-      { id: 'code-snippets-plugin', title: 'WordPress Code Snippets Plugin Integration', description: 'Custom code snippets implementation for enhanced functionality', icon: 'Code', slug: 'code-snippets-plugin', category: 'development', order: 6 },
+      { id: 'hello-biz-theme-integration', title: 'Hello Biz Theme Integration & WordPress Appearance Management', description: 'Complete guide to Hello Biz theme integration and WordPress Appearance tab options', icon: 'Layout', slug: 'hello-biz-theme-integration', category: 'development', order: 2 },
+      { id: 'functions-php', title: 'Functions.php Customizations', description: 'Custom code in theme functions.php file', icon: 'FileCode', slug: 'functions-php', category: 'development', order: 3 },
+      { id: 'acf-wp-mail-smtp-integration', title: 'ACF & WP Mail SMTP Integration', description: 'Advanced Custom Fields and WP Mail SMTP integration for volunteer management system', icon: 'Mail', slug: 'acf-wp-mail-smtp-integration', category: 'development', order: 4 },
+      { id: 'acf-integration', title: 'Advanced Custom Fields Integration', description: 'ACF plugin integration for volunteer skills', icon: 'Database', slug: 'acf-integration', category: 'development', order: 5 },
+      { id: 'css-injection', title: 'CSS Injection System', description: 'Dynamic CSS injection for content protection', icon: 'Palette', slug: 'css-injection', category: 'development', order: 6 },
+      { id: 'database-structure', title: 'Database Structure', description: 'Custom database tables and metadata', icon: 'Server', slug: 'database-structure', category: 'development', order: 7 },
+      { id: 'code-snippets-plugin', title: 'WordPress Code Snippets Plugin Integration', description: 'Custom code snippets implementation for enhanced functionality', icon: 'Code', slug: 'code-snippets-plugin', category: 'development', order: 8 },
     ],
   },
   {
@@ -175,7 +178,8 @@ export const docSections: DocSection[] = [
       { id: 'support-procedures', title: 'Support Procedures', description: 'How to get help and support', icon: 'HelpCircle', slug: 'support-procedures', category: 'support', order: 3 },
       { id: 'emergency-contacts', title: 'Emergency Contacts', description: 'Important contact information for urgent issues', icon: 'Phone', slug: 'emergency-contacts', category: 'support', order: 4 },
       { id: 'backup-procedures', title: 'Backup Procedures', description: 'Regular backup and recovery procedures', icon: 'Save', slug: 'backup-procedures', category: 'support', order: 5 },
-      { id: 'performance-monitoring', title: 'Performance Monitoring', description: 'Monitoring website performance and health', icon: 'Activity', slug: 'performance-monitoring', category: 'support', order: 6 },
+      { id: 'backup-migration-system', title: 'Backup & Migration System', description: 'Comprehensive backup and migration system using WP Vivid and All-in-One WP Migration', icon: 'Database', slug: 'backup-migration-system', category: 'support', order: 6 },
+      { id: 'performance-monitoring', title: 'Performance Monitoring', description: 'Monitoring website performance and health', icon: 'Activity', slug: 'performance-monitoring', category: 'support', order: 7 },
     ],
   },
   {
