@@ -1,195 +1,649 @@
 ---
 title: "Common Issues & Solutions"
-description: "Common issues and their solutions"
+description: "Solutions to common WordPress and plugin issues on the KCN Seniors website"
 sectionId: "troubleshooting"
 slug: "common-issues"
-tags: ["troubleshooting", "common issues", "solutions", "help"]
+tags: ["troubleshooting", "common issues", "solutions", "wordpress", "plugins", "errors", "fixes"]
 difficulty: "beginner"
-estimatedTime: "20 minutes"
+estimatedTime: "15 minutes"
 lastUpdated: "2025-01-15"
 order: 1
 ---
 
 # Common Issues & Solutions
 
-This guide covers the most common issues you might encounter while managing your KCN Seniors website and provides step-by-step solutions.
+## Troubleshooting Common Problems
 
-## WordPress Issues
+This guide provides solutions to the most common issues you may encounter while using the KCN Seniors website. Each issue includes step-by-step troubleshooting steps and solutions.
 
-### Login Problems
-**Problem**: Can't log into WordPress admin
-**Solutions**:
-1. **Check URL**: Ensure you're using the correct login URL
-2. **Clear Browser Cache**: Clear cookies and cache
-3. **Reset Password**: Use the "Lost Password" link
-4. **Check Email**: Verify you're using the correct email address
+## 🚨 **Critical System Issues**
 
-### White Screen of Death
-**Problem**: Website shows a blank white page
-**Solutions**:
-1. **Enable Debug Mode**: Add debug code to wp-config.php
-2. **Check Error Logs**: Review server error logs
-3. **Deactivate Plugins**: Temporarily disable all plugins
-4. **Switch Theme**: Activate a default WordPress theme
+### **Website Won't Load (White Screen)**
 
-### Slow Website Performance
-**Problem**: Website loads slowly
-**Solutions**:
-1. **Optimize Images**: Compress and resize images
-2. **Use Caching**: Install a caching plugin
-3. **Limit Plugins**: Remove unnecessary plugins
-4. **Check Hosting**: Contact your hosting provider
+**Symptoms:**
+- White screen when accessing website
+- No error messages displayed
+- Browser shows blank page
 
-## Elementor Issues
+**Common Causes:**
+- PHP memory limit exceeded
+- Plugin conflicts
+- Theme compatibility issues
+- Database connection problems
 
-### Elementor Not Loading
-**Problem**: Elementor editor won't open
-**Solutions**:
-1. **Check Permissions**: Ensure user has proper permissions
-2. **Clear Cache**: Clear all caching plugins
-3. **Update Elementor**: Update to the latest version
-4. **Check Conflicts**: Deactivate other plugins temporarily
+**Troubleshooting Steps:**
+1. **Check PHP Memory Limit**:
+   - Access website via FTP/cPanel
+   - Check `wp-config.php` for memory limit
+   - Increase memory limit if needed
 
-### Widgets Not Working
-**Problem**: Widgets don't function properly
-**Solutions**:
-1. **Update Widgets**: Update all widgets to latest versions
-2. **Check JavaScript**: Ensure JavaScript is enabled
-3. **Clear Browser Cache**: Clear browser cache and cookies
-4. **Reinstall Widgets**: Reinstall problematic widgets
+2. **Enable Debug Mode**:
+   ```php
+   // Add to wp-config.php
+   define('WP_DEBUG', true);
+   define('WP_DEBUG_LOG', true);
+   define('WP_DEBUG_DISPLAY', false);
+   ```
 
-### Styling Issues
-**Problem**: Styles not applying correctly
-**Solutions**:
-1. **Clear Cache**: Clear all caching
-2. **Check CSS**: Review custom CSS for conflicts
-3. **Reset Styles**: Reset widget styles to default
-4. **Check Theme**: Ensure theme compatibility
+3. **Check Error Logs**:
+   - Review `wp-content/debug.log`
+   - Check server error logs
+   - Look for PHP fatal errors
 
-## Event Management Issues
+4. **Disable Plugins**:
+   - Rename `wp-content/plugins` folder
+   - Test website access
+   - Re-enable plugins one by one
 
-### Events Not Displaying
-**Problem**: Events don't appear on the website
-**Solutions**:
-1. **Check Publication**: Ensure events are published
-2. **Verify Settings**: Check EventPrime settings
-3. **Clear Cache**: Clear website cache
-4. **Check Permissions**: Verify user permissions
+**Quick Fix:**
+```php
+// Add to wp-config.php
+define('WP_MEMORY_LIMIT', '256M');
+define('WP_MAX_MEMORY_LIMIT', '512M');
+```
 
-### Registration Problems
-**Problem**: Users can't register for events
-**Solutions**:
-1. **Check Capacity**: Verify event has available spots
-2. **Review Settings**: Check registration settings
-3. **Test Form**: Test registration form functionality
-4. **Check Email**: Verify email notifications are working
+### **Database Connection Errors**
 
-### Calendar Display Issues
-**Problem**: Event calendar not showing correctly
-**Solutions**:
-1. **Update Plugin**: Update EventPrime to latest version
-2. **Check Shortcode**: Verify calendar shortcode
-3. **Clear Cache**: Clear all caching
-4. **Check Theme**: Ensure theme compatibility
+**Symptoms:**
+- "Error establishing a database connection" message
+- Website completely inaccessible
+- Admin panel won't load
 
-## Content Management Issues
+**Common Causes:**
+- Database server down
+- Incorrect database credentials
+- Database corruption
+- Hosting provider issues
 
-### Images Not Uploading
-**Problem**: Can't upload images to media library
-**Solutions**:
-1. **Check Permissions**: Verify folder permissions
-2. **File Size**: Ensure file size is within limits
-3. **File Type**: Verify file type is supported
-4. **Storage Space**: Check available disk space
+**Troubleshooting Steps:**
+1. **Verify Database Credentials**:
+   - Check `wp-config.php` database settings
+   - Verify database name, username, and password
+   - Confirm database host and port
 
-### Pages Not Saving
-**Problem**: Page changes don't save
-**Solutions**:
-1. **Check Permissions**: Verify user permissions
-2. **Clear Cache**: Clear all caching
-3. **Check Database**: Verify database connection
-4. **Update WordPress**: Update to latest version
+2. **Test Database Connection**:
+   - Use phpMyAdmin or similar tool
+   - Test connection with database credentials
+   - Check database server status
 
-### Menu Issues
-**Problem**: Navigation menu not working
-**Solutions**:
-1. **Check Menu Location**: Verify menu is assigned to location
-2. **Clear Cache**: Clear all caching
-3. **Check Theme**: Ensure theme supports menus
-4. **Rebuild Menu**: Recreate the menu structure
+3. **Check Hosting Status**:
+   - Contact hosting provider
+   - Verify database service status
+   - Check for maintenance notifications
 
-## Security Issues
+**Quick Fix:**
+```php
+// Verify these settings in wp-config.php
+define('DB_NAME', 'your_database_name');
+define('DB_USER', 'your_database_username');
+define('DB_PASSWORD', 'your_database_password');
+define('DB_HOST', 'localhost');
+```
 
-### Suspicious Activity
-**Problem**: Notice unusual activity on website
-**Solutions**:
-1. **Change Passwords**: Update all user passwords
-2. **Scan for Malware**: Run security scan
-3. **Update Plugins**: Update all plugins and themes
-4. **Contact Host**: Contact hosting provider
+## 🔐 **User Access Issues**
 
-### Login Attempts
-**Problem**: Multiple failed login attempts
-**Solutions**:
-1. **Limit Login Attempts**: Install security plugin
-2. **Two-Factor Auth**: Enable two-factor authentication
-3. **Strong Passwords**: Use strong, unique passwords
-4. **Monitor Logs**: Regularly check access logs
+### **Can't Log In to WordPress Admin**
 
-## Performance Issues
+**Symptoms:**
+- Login page loads but credentials don't work
+- "Invalid username or password" error
+- Account locked out
 
-### Slow Page Load
-**Problem**: Pages take too long to load
-**Solutions**:
-1. **Optimize Images**: Compress and resize images
-2. **Use CDN**: Implement content delivery network
-3. **Minimize Plugins**: Remove unnecessary plugins
-4. **Database Cleanup**: Clean up database regularly
+**Common Causes:**
+- Incorrect username/password
+- Account locked due to failed attempts
+- User role permissions changed
+- Database corruption
 
-### High Server Load
-**Problem**: Server resources being overused
-**Solutions**:
-1. **Check Plugins**: Identify resource-heavy plugins
-2. **Optimize Database**: Clean and optimize database
-3. **Upgrade Hosting**: Consider hosting upgrade
-4. **Monitor Usage**: Track resource usage patterns
+**Troubleshooting Steps:**
+1. **Reset Password**:
+   - Use WordPress password reset function
+   - Check email for reset link
+   - Create new strong password
 
-## Getting Help
+2. **Check User Role**:
+   - Verify user has appropriate permissions
+   - Check if role was accidentally changed
+   - Ensure user account is active
 
-### When to Contact Support
-- **Critical Issues**: Website completely down
-- **Security Concerns**: Suspected security breach
-- **Data Loss**: Important data missing
-- **Complex Problems**: Issues beyond basic troubleshooting
+3. **Database Reset**:
+   - Use phpMyAdmin to reset password hash
+   - Update user meta table directly
+   - Clear user session data
 
-### Information to Provide
-- **Error Messages**: Exact error messages received
-- **Steps Taken**: What you've already tried
-- **Recent Changes**: Any recent modifications
-- **System Info**: WordPress version, plugins, theme
+**Quick Fix (Database Method):**
+```sql
+-- Reset admin password to 'admin123' (change immediately after login)
+UPDATE wp_users SET user_pass = MD5('admin123') WHERE user_login = 'admin';
+```
 
-### Emergency Contacts
-- **Technical Support**: [Support Email/Phone]
-- **Hosting Provider**: [Hosting Contact Info]
-- **Emergency Line**: [Emergency Contact]
+### **Role-Based Access Not Working**
 
-## Prevention Tips
+**Symptoms:**
+- Users can see content they shouldn't
+- Content protection not working
+- Role permissions not applying
 
-### Regular Maintenance
-- **Daily**: Check for updates and security alerts
-- **Weekly**: Review website performance and backups
-- **Monthly**: Complete security audit and cleanup
-- **Quarterly**: Full website review and optimization
+**Common Causes:**
+- Members Plugin configuration issues
+- CSS protection not loading
+- User role assignments incorrect
+- Plugin conflicts
 
-### Best Practices
-- **Regular Backups**: Always maintain current backups
-- **Update Regularly**: Keep all software updated
-- **Monitor Performance**: Track website performance
-- **Security Awareness**: Stay informed about security threats
+**Troubleshooting Steps:**
+1. **Check User Roles**:
+   - Verify user role assignments
+   - Check role hierarchy settings
+   - Ensure roles are properly configured
 
-## Next Steps
+2. **Test CSS Protection**:
+   - Check browser developer tools
+   - Verify CSS rules are loading
+   - Test with different user roles
 
-- Review [Error Log Analysis](/docs/troubleshooting/error-logs)
-- Learn about [Debug Mode Activation](/docs/troubleshooting/debug-mode)
-- Explore [Plugin Conflict Resolution](/docs/troubleshooting/plugin-conflicts)
-- Understand [Database Repair](/docs/troubleshooting/database-repair)
+3. **Plugin Configuration**:
+   - Review Members Plugin settings
+   - Check content protection rules
+   - Verify plugin integration
+
+**Quick Fix:**
+```php
+// Add to functions.php to debug user roles
+add_action('wp_footer', function() {
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        echo '<!-- Current user roles: ' . implode(', ', $user->roles) . ' -->';
+    }
+});
+```
+
+## 📝 **Content Management Issues**
+
+### **Can't Create or Edit Content**
+
+**Symptoms:**
+- Edit buttons missing
+- Save changes not working
+- Permission denied errors
+
+**Common Causes:**
+- Insufficient user permissions
+- Plugin conflicts
+- Theme compatibility issues
+- Database permission problems
+
+**Troubleshooting Steps:**
+1. **Check User Capabilities**:
+   - Verify user has appropriate permissions
+   - Check role-based capabilities
+   - Ensure user can edit content
+
+2. **Test with Different Content**:
+   - Try creating simple text post
+   - Test with different post types
+   - Check if issue is content-specific
+
+3. **Plugin Conflict Testing**:
+   - Disable plugins one by one
+   - Test content creation after each
+   - Identify conflicting plugin
+
+**Quick Fix:**
+```php
+// Add to functions.php to debug user capabilities
+add_action('wp_footer', function() {
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        echo '<!-- User can edit posts: ' . (current_user_can('edit_posts') ? 'Yes' : 'No') . ' -->';
+    }
+});
+```
+
+### **Media Upload Problems**
+
+**Symptoms:**
+- Can't upload images or files
+- Upload fails with errors
+- Media library not accessible
+
+**Common Causes:**
+- File permission issues
+- PHP upload limits
+- Server storage limits
+- Plugin conflicts
+
+**Troubleshooting Steps:**
+1. **Check File Permissions**:
+   - Verify `wp-content/uploads` permissions (755)
+   - Check file ownership
+   - Ensure write permissions
+
+2. **PHP Upload Limits**:
+   - Check `upload_max_filesize` in php.ini
+   - Verify `post_max_size` settings
+   - Increase limits if needed
+
+3. **Server Storage**:
+   - Check available disk space
+   - Verify hosting plan limits
+   - Contact hosting provider
+
+**Quick Fix:**
+```php
+// Add to wp-config.php to increase upload limits
+define('WP_MEMORY_LIMIT', '256M');
+define('MAX_EXECUTION_TIME', 300);
+```
+
+## 🎯 **Event Management Issues**
+
+### **EventPrime Events Not Displaying**
+
+**Symptoms:**
+- Events not showing on pages
+- Event shortcodes not working
+- Event display errors
+
+**Common Causes:**
+- Plugin not activated
+- Shortcode syntax errors
+- Theme compatibility issues
+- Database problems
+
+**Troubleshooting Steps:**
+1. **Plugin Status**:
+   - Verify EventPrime is activated
+   - Check plugin version compatibility
+   - Ensure all required plugins active
+
+2. **Shortcode Testing**:
+   - Test basic shortcode: `[eventprime_events]`
+   - Check shortcode parameters
+   - Verify shortcode placement
+
+3. **Theme Compatibility**:
+   - Test with default theme
+   - Check theme integration
+   - Verify responsive design
+
+**Quick Fix:**
+```php
+// Add to functions.php to debug EventPrime
+add_action('wp_footer', function() {
+    if (function_exists('ep_get_events')) {
+        $events = ep_get_events();
+        echo '<!-- EventPrime events found: ' . count($events) . ' -->';
+    }
+});
+```
+
+### **Venue Protection Not Working**
+
+**Symptoms:**
+- Venue information visible to non-members
+- Role-based protection failing
+- CSS protection not applied
+
+**Common Causes:**
+- CSS injection system failure
+- User role detection issues
+- Plugin integration problems
+- Cache conflicts
+
+**Troubleshooting Steps:**
+1. **Check User Roles**:
+   - Verify current user role
+   - Test with different user types
+   - Check role hierarchy
+
+2. **CSS Protection Test**:
+   - Inspect page source
+   - Check browser developer tools
+   - Verify CSS rules loading
+
+3. **Cache Issues**:
+   - Clear all caches
+   - Test with cache disabled
+   - Check caching plugins
+
+**Quick Fix:**
+```php
+// Add to functions.php to test venue protection
+add_action('wp_footer', function() {
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        $can_see_venue = in_array('member', $user->roles) || 
+                         in_array('volunteer', $user->roles) || 
+                         in_array('administrator', $user->roles);
+        echo '<!-- User can see venue: ' . ($can_see_venue ? 'Yes' : 'No') . ' -->';
+    }
+});
+```
+
+## 🔧 **Volunteer System Issues**
+
+### **Volunteer Task Creation Problems**
+
+**Symptoms:**
+- Can't create volunteer tasks
+- Task form not working
+- Task data not saving
+
+**Common Causes:**
+- ACF fields not configured
+- User permission issues
+- Custom post type problems
+- Database field issues
+
+**Troubleshooting Steps:**
+1. **ACF Field Check**:
+   - Verify ACF plugin active
+   - Check field group configuration
+   - Test field display
+
+2. **User Permissions**:
+   - Confirm user has volunteer role
+   - Check task creation capabilities
+   - Verify role assignments
+
+3. **Custom Post Type**:
+   - Check volunteer_task post type
+   - Verify post type registration
+   - Test post creation
+
+**Quick Fix:**
+```php
+// Add to functions.php to debug volunteer system
+add_action('wp_footer', function() {
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        $can_create_tasks = current_user_can('edit_posts') && 
+                           in_array('volunteer', $user->roles);
+        echo '<!-- User can create tasks: ' . ($can_create_tasks ? 'Yes' : 'No') . ' -->';
+    }
+});
+```
+
+### **ACF Fields Not Displaying**
+
+**Symptoms:**
+- Custom fields missing from forms
+- Field values not saving
+- ACF integration failing
+
+**Common Causes:**
+- Plugin not activated
+- Field group configuration issues
+- Theme compatibility problems
+- JavaScript conflicts
+
+**Troubleshooting Steps:**
+1. **Plugin Status**:
+   - Verify ACF plugin active
+   - Check plugin version
+   - Ensure license valid
+
+2. **Field Group Check**:
+   - Review field group settings
+   - Check field locations
+   - Verify field types
+
+3. **Theme Compatibility**:
+   - Test with default theme
+   - Check theme integration
+   - Verify responsive design
+
+**Quick Fix:**
+```php
+// Add to functions.php to debug ACF
+add_action('wp_footer', function() {
+    if (function_exists('get_field')) {
+        echo '<!-- ACF plugin is active -->';
+    } else {
+        echo '<!-- ACF plugin not found -->';
+    }
+});
+```
+
+## 🎨 **Theme and Design Issues**
+
+### **Page Layout Problems**
+
+**Symptoms:**
+- Pages not displaying correctly
+- Layout broken or distorted
+- Responsive design issues
+
+**Common Causes:**
+- Theme compatibility issues
+- CSS conflicts
+- Plugin interference
+- Browser compatibility
+
+**Troubleshooting Steps:**
+1. **Theme Testing**:
+   - Switch to default theme
+   - Test page display
+   - Check theme compatibility
+
+2. **CSS Conflicts**:
+   - Check browser developer tools
+   - Look for CSS errors
+   - Test with CSS disabled
+
+3. **Plugin Conflicts**:
+   - Disable plugins one by one
+   - Test page display
+   - Identify conflicting plugin
+
+**Quick Fix:**
+```php
+// Add to functions.php to debug theme issues
+add_action('wp_footer', function() {
+    echo '<!-- Current theme: ' . get_template() . ' -->';
+    echo '<!-- Theme directory: ' . get_template_directory() . ' -->';
+});
+```
+
+### **Elementor Page Builder Issues**
+
+**Symptoms:**
+- Elementor editor not loading
+- Page builder errors
+- Design elements broken
+
+**Common Causes:**
+- Plugin conflicts
+- Memory limit issues
+- Theme compatibility
+- JavaScript errors
+
+**Troubleshooting Steps:**
+1. **Plugin Status**:
+   - Verify Elementor active
+   - Check plugin version
+   - Ensure license valid
+
+2. **Memory Limits**:
+   - Increase PHP memory limit
+   - Check execution time
+   - Verify upload limits
+
+3. **Conflict Testing**:
+   - Disable other plugins
+   - Test Elementor functionality
+   - Identify conflicts
+
+**Quick Fix:**
+```php
+// Add to wp-config.php for Elementor
+define('WP_MEMORY_LIMIT', '512M');
+define('WP_MAX_MEMORY_LIMIT', '1024M');
+define('MAX_EXECUTION_TIME', 300);
+```
+
+## 📧 **Email and Notification Issues**
+
+### **WP Mail SMTP Problems**
+
+**Symptoms:**
+- Emails not sending
+- Delivery failures
+- SMTP connection errors
+
+**Common Causes:**
+- SMTP configuration errors
+- Server restrictions
+- Plugin conflicts
+- Email provider issues
+
+**Troubleshooting Steps:**
+1. **SMTP Settings**:
+   - Verify SMTP credentials
+   - Check port and security settings
+   - Test connection
+
+2. **Server Restrictions**:
+   - Check hosting email policies
+   - Verify port availability
+   - Contact hosting provider
+
+3. **Plugin Configuration**:
+   - Review WP Mail SMTP settings
+   - Test email delivery
+   - Check error logs
+
+**Quick Fix:**
+```php
+// Add to wp-config.php for email debugging
+define('SMTP_DEBUG', true);
+define('SMTP_DEBUG_OUTPUT', 'error_log');
+```
+
+## 🚀 **Performance Issues**
+
+### **Slow Website Loading**
+
+**Symptoms:**
+- Pages take long to load
+- Slow admin panel
+- Database queries slow
+
+**Common Causes:**
+- Large database
+- Unoptimized images
+- Plugin conflicts
+- Server resources
+
+**Troubleshooting Steps:**
+1. **Database Optimization**:
+   - Clean up post revisions
+   - Remove spam comments
+   - Optimize database tables
+
+2. **Image Optimization**:
+   - Compress images
+   - Use appropriate formats
+   - Implement lazy loading
+
+3. **Plugin Review**:
+   - Remove unused plugins
+   - Check plugin performance
+   - Optimize plugin settings
+
+**Quick Fix:**
+```sql
+-- Clean up database
+DELETE FROM wp_posts WHERE post_type = 'revision';
+DELETE FROM wp_comments WHERE comment_approved = 'spam';
+OPTIMIZE TABLE wp_posts, wp_postmeta, wp_comments;
+```
+
+## 🔍 **Debugging Tools and Techniques**
+
+### **WordPress Debug Mode**
+
+**Enable Debug Mode:**
+```php
+// Add to wp-config.php
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
+define('SAVEQUERIES', true);
+```
+
+**Check Debug Log:**
+- Look for `wp-content/debug.log`
+- Review error messages
+- Check for fatal errors
+
+### **Browser Developer Tools**
+
+**Useful Tools:**
+- **Console**: Check JavaScript errors
+- **Network**: Monitor requests
+- **Elements**: Inspect HTML/CSS
+- **Performance**: Analyze loading
+
+### **Database Debugging**
+
+**Check Database:**
+- Use phpMyAdmin
+- Review error logs
+- Check table structure
+- Verify data integrity
+
+## 📞 **When to Get Help**
+
+### **Seek Professional Help When:**
+- Critical system failures
+- Data loss or corruption
+- Security breaches
+- Complex plugin conflicts
+- Performance optimization needs
+
+### **Contact Support:**
+1. **Document the Issue**: Write down symptoms and steps
+2. **Check Documentation**: Verify issue isn't covered
+3. **Contact Team Support**: Start with internal help
+4. **Escalate if Needed**: Contact technical support
+
+## 🔗 **Related Documentation**
+
+- [Troubleshooting Overview](/docs/troubleshooting/overview)
+- [Error Log Analysis](/docs/troubleshooting/error-logs)
+- [Debug Mode Activation](/docs/troubleshooting/debug-mode)
+- [Plugin Conflict Resolution](/docs/troubleshooting/plugin-conflicts)
+- [Database Repair](/docs/troubleshooting/database-repair)
+
+---
+
+## 🎥 **Related Video Tutorials**
+
+- **Troubleshooting Basics**: Learn basic troubleshooting techniques
+- **Common Error Solutions**: See solutions in action
+- **Debug Mode Tutorial**: Understand debugging tools
+
+---
+
+*This troubleshooting guide covers the most common issues you may encounter. For issues not covered here, check the related documentation or contact support.*

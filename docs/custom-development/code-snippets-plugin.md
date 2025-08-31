@@ -425,8 +425,8 @@ error_log('Snippet debug: ' . print_r($variable, true));
 
 - Review [Functions.php Customizations](/docs/custom-development/functions-php) for related custom code
 - Understand [EventPrime Plugin Integration](/docs/event-management/eventprime-integration) for context
-- Explore [CSS Injection System](/docs/custom-development/css-injection) for styling approaches
-- Learn about [Database Structure](/docs/custom-development/database-structure) for data management
+- Explore [Functions.php Customizations](/docs/custom-development/functions-php) for styling approaches
+- Learn about [ACF Integration](/docs/custom-development/acf-integration) for data management
 
 ---
 

@@ -97,6 +97,22 @@ Your website implements CSS-based content hiding that selectively conceals sensi
 - Event information and details
 - General location area (e.g., "Bauline Community Area")
 
+## 🎥 Quick Start Video Tutorial
+
+**Watch the Complete Workflow:**
+
+Get started quickly with our comprehensive video tutorial that demonstrates the entire event creation and management process:
+
+**What This Video Covers:**
+- Complete EventPrime dashboard navigation
+- Step-by-step event creation process
+- Event visibility and access control setup
+- Making events open for all users
+- Complete event management workflow
+
+**Related Video Tutorial:**
+- [Complete Video Tutorials Library](/docs/video-tutorials) - Access all available video guides
+
 ## Integration with WordPress User System
 
 ### EventPrime and WordPress Roles
@@ -170,12 +186,21 @@ Your Members plugin configuration extends to EventPrime functionality:
 [em_events view="calendar"]  // Calendar view
 ```
 
+### 🎥 Video Learning Resources
+
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+- [Event Management Tutorial](/docs/video-tutorials) - Step-by-step video demonstration
+- [Event Types Management Tutorial](/docs/video-tutorials) - Managing event categories and types
+- [EventPrime Dashboard Overview Tutorial](/docs/video-tutorials) - Dashboard overview and options
+- [User Management Basics Tutorial](/docs/video-tutorials) - User roles, volunteer tags, and permissions management
+
 ## Next Steps
 
 - Learn about [Creating and Managing Events](/docs/event-management/event-creation)
+- Understand [Event Types and Categories Management](/docs/event-management/event-categories) - Organizing events with categories
 - Understand [Role-Based Event Protection](/docs/event-management/event-protection)
-- Explore [EventPrime Plugin Integration](/docs/event-management/eventprime-integration)
-- Review [User Management System](/docs/user-management/overview) for role configuration
+- Explore [EventPrime Plugin Integration](/docs/event-management/eventprime-integration) - Technical integration and dashboard overview
+- Review [User Management System](/docs/user-management/user-management-overview) for role configuration
 
 ---
 

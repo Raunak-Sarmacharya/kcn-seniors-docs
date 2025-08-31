@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 import { copyToClipboard } from '@/app/lib/utils';
+import VideoTutorials from './VideoTutorials';
 
 interface MarkdownContentProps {
   content: string;
@@ -18,6 +19,7 @@ interface MarkdownContentProps {
 
 export default function MarkdownContent({ content, videoUrl }: MarkdownContentProps) {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [processedContent, setProcessedContent] = useState<string>('');
 
   const handleCopyCode = async (code: string, language: string) => {
     const success = await copyToClipboard(code);
@@ -29,6 +31,16 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
       toast.error('Failed to copy code');
     }
   };
+
+  // Process content to replace VideoTutorials component with a placeholder
+  useEffect(() => {
+    let processed = content;
+    
+    // Replace VideoTutorials component with a special marker
+    processed = processed.replace(/<VideoTutorials \/>/g, '<!--VIDEO_TUTORIALS_COMPONENT-->');
+    
+    setProcessedContent(processed);
+  }, [content]);
 
   const components = {
     h1: ({ children }: any) => (
@@ -254,7 +266,7 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8 p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg"
+          className="mb-8"
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
@@ -265,25 +277,51 @@ export default function MarkdownContent({ content, videoUrl }: MarkdownContentPr
               <p className="text-gray-600 text-sm">Watch a step-by-step guide</p>
             </div>
           </div>
-          <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Play className="w-8 h-8 text-white ml-1" />
-              </div>
-              <p className="text-gray-600">Video tutorial coming soon</p>
-              <p className="text-sm text-gray-500 mt-1">This feature will be available in the next update</p>
+          
+          {/* Video Player */}
+          <div className="relative w-full bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+            <div className="aspect-video">
+              <iframe 
+                src={videoUrl}
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Video Tutorial"
+              />
             </div>
+          </div>
+          
+          {/* Video Controls Info */}
+          <div className="mt-3 text-sm text-gray-600 text-center">
+            <p>Use the video player controls to play, pause, and adjust playback speed</p>
           </div>
         </motion.div>
       )}
 
-      {/* Markdown content */}
-      <ReactMarkdown 
-        components={components}
-        remarkPlugins={[remarkGfm]}
-      >
-        {content}
-      </ReactMarkdown>
+      {/* Process content and render VideoTutorials component when needed */}
+      {processedContent.includes('<!--VIDEO_TUTORIALS_COMPONENT-->') ? (
+        <div>
+          {processedContent.split('<!--VIDEO_TUTORIALS_COMPONENT-->').map((part, index) => (
+            <div key={index}>
+              {index > 0 && <VideoTutorials />}
+              <ReactMarkdown 
+                components={components}
+                remarkPlugins={[remarkGfm]}
+              >
+                {part}
+              </ReactMarkdown>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <ReactMarkdown 
+          components={components}
+          remarkPlugins={[remarkGfm]}
+        >
+          {processedContent}
+        </ReactMarkdown>
+      )}
     </div>
   );
 }

@@ -8,11 +8,50 @@ difficulty: "intermediate"
 estimatedTime: "25 minutes"
 lastUpdated: "2025-01-15"
 order: 2
+videoUrl: "https://player.vimeo.com/video/1114706019?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
 ---
 
 # Creating and Managing Events
 
 This guide covers the complete process of creating and managing events using the EventPrime plugin, including best practices for recurring events and venue management.
+
+## 🎥 Video Tutorial Guide
+
+**Watch the Complete Process:**
+
+For a visual demonstration of the event creation workflow, watch our comprehensive video tutorial below:
+
+**What the Video Covers:**
+- Complete EventPrime dashboard navigation
+- Step-by-step event creation process
+- Event visibility and access control setup
+- Making events open for all users
+- Complete event management workflow
+
+**Related Video Tutorial:**
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+
+### Key Steps Covered in the Video
+
+1. **Accessing EventPrime Dashboard**
+   - Navigate to Events section in WordPress
+   - Use "Add New Event" button
+   - Access event creation interface
+
+2. **Event Information Setup**
+   - Enter clear event title and description
+   - Set event date, time, and duration
+   - Configure event categories and organization
+
+3. **Event Visibility Configuration**
+   - Set event status and publication options
+   - Configure access control settings
+   - Make events open for all users
+
+4. **Complete Event Management**
+   - Save and publish events
+   - Manage event details and updates
+   - Monitor event performance and engagement
 
 ## EventPrime Dashboard Access
 
@@ -326,16 +365,25 @@ Based on research and practical experience with EventPrime, **custom dates provi
 - **Custom Date Management**: https://eventprime.io/documentation/event-dates/
 
 ### Integration Resources
-- **WordPress User Management**: [User Management System](/docs/user-management/overview)
+- **WordPress User Management**: [User Management System](/docs/user-management/user-management-overview)
 - **Role-Based Access**: [Role-Based Access Control](/docs/user-management/role-based-access)
 - **Content Protection**: [Role-Based Event Protection](/docs/event-management/event-protection)
 
 ## Next Steps
 
-- Learn about [Role-Based Event Protection](/docs/event-management/event-protection)
-- Explore [EventPrime Plugin Integration](/docs/event-management/eventprime-integration)
-- Review [User Management System](/docs/user-management/overview) for role configuration
+- Learn about [Event Types and Categories Management](/docs/event-management/event-categories) - Organizing events with categories
+- Understand [Role-Based Event Protection](/docs/event-management/event-protection)
+- Explore [EventPrime Plugin Integration](/docs/event-management/eventprime-integration) - Technical integration and dashboard overview
+- Review [User Management System](/docs/user-management/user-management-overview) for role configuration
 - Understand [Custom Development](/docs/custom-development/functions-php) for technical details
+
+### 🎥 Video Learning Resources
+
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+- [Event Management Tutorial](/docs/video-tutorials) - Step-by-step video demonstration
+- [Event Types Management Tutorial](/docs/video-tutorials) - Managing event categories and types
+- [EventPrime Dashboard Overview Tutorial](/docs/video-tutorials) - Dashboard overview and options
+- [User Management Basics Tutorial](/docs/video-tutorials) - User roles, volunteer tags, and permissions management
 
 ---
 

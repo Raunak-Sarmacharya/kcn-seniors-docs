@@ -20,7 +20,12 @@ order: 1
    - [Quick Reference Guide](#quick-reference-guide)
    - [Emergency Contacts & Support](#emergency-contacts--support)
 
-2. [User Management System](#user-management-system)
+2. [WordPress Basics](#wordpress-basics)
+   - [WordPress Basics Overview](/docs/wordpress-basics/wordpress-basics-overview)
+   - [WordPress Dashboard Navigation Guide](/docs/wordpress-basics/dashboard-navigation)
+   - [Creating Content - The KCN Seniors Way](/docs/wordpress-basics/creating-content)
+
+3. [User Management System](#user-management-system)
    - [User Management Overview](#user-management-overview)
    - [WordPress Users Management](#wordpress-users-management)
    - [Members Plugin - Role Management](#members-plugin---role-management)
@@ -29,38 +34,38 @@ order: 1
    - [User Registration Settings](#user-registration-settings)
    - [Emergency Access System](#emergency-access-system)
 
-3. [Event Management System](/docs/event-management/event-management-overview)
+4. [Event Management System](/docs/event-management/event-management-overview)
    - [Event Management Overview](/docs/event-management/event-management-overview)
    - [Creating and Managing Events](/docs/event-management/event-creation)
    - [Role-Based Event Protection](/docs/event-management/event-protection)
    - [EventPrime Plugin Integration](/docs/event-management/eventprime-integration)
 
-4. [Blog Management System](/docs/blog-management/blog-system-overview)
+5. [Blog Management System](/docs/blog-management/blog-system-overview)
    - [Comments System Management](/docs/blog-management/comments-system-management)
    - [Blog System Overview](/docs/blog-management/blog-system-overview)
 
-5. [Content Management System](/docs/content-management/media-library-management)
+6. [Content Management System](/docs/content-management/media-library-management)
    - [WordPress Media Library Management](/docs/content-management/media-library-management)
    - [Facebook Feed Integration](/docs/content-management/facebook-feed-integration)
 
-6. [Service & Volunteer Booking](#service--volunteer-booking)
+7. [Service & Volunteer Booking](#service--volunteer-booking)
    - [Volunteer System Overview](/docs/volunteer-management/volunteer-system-overview)
    - [Managing Volunteer Profiles](/docs/volunteer-management/volunteer-profiles)
    - [Task Creation and Management](/docs/volunteer-management/task-management)
    - [Automated Task Matching](/docs/volunteer-management/automated-matching)
    - [Email Notification System](/docs/volunteer-management/email-notifications)
 
-7. [Custom Development](#custom-development)
+8. [Custom Development](#custom-development)
    - [Custom Development Overview](#custom-development-overview)
    - [Hello Biz Theme Integration & WordPress Appearance Management](/docs/custom-development/hello-biz-theme-integration)
    - [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration)
    - [WordPress Code Snippets Plugin Integration](#wordpress-code-snippets-plugin-integration)
    - [Functions.php Customizations](#functionsphp-customizations)
    - [Advanced Custom Fields Integration](#advanced-custom-fields-integration)
-   - [CSS Injection System](#css-injection-system)
-   - [Database Structure](#database-structure)
+   - [Functions.php Customizations](#functions-php-customizations)
+   - [ACF Integration](#acf-integration)
 
-8. [Page Builder & Forms](#page-builder--forms)
+9. [Page Builder & Forms](#page-builder--forms)
    - [Elementor Integration](#elementor-integration)
    - [Form Submissions Management](#form-submissions-management)
    - [Custom Page Design](#custom-page-design)
@@ -78,7 +83,8 @@ Welcome to the complete KCN Seniors website documentation! This comprehensive gu
 KCN Seniors is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model of the Village to Village Network.
 
 **Complete Website Management Includes:**
-- **User Management**: User accounts, roles, and permissions (covered in this section)
+- **WordPress Basics**: Core WordPress functionality and content creation (covered in this section)
+- **User Management**: User accounts, roles, and permissions
 - **Blog Management**: Posts, articles, and member discussions with [role-based commenting](/docs/blog-management/blog-system-overview)
 - **Content Management**: Media library, images, videos, and documents with [Media Library Management](/docs/content-management/media-library-management)
 - **Event Management**: Member and public events with [EventPrime integration](/docs/event-management/event-management-overview)
@@ -88,6 +94,8 @@ KCN Seniors is a non-profit community service co-operative where volunteers offe
 
 **This Section Covers:**
 - Complete system architecture overview
+- WordPress basics and fundamentals
+- Content creation and management
 - User account and profile management
 - Understanding role-based access control
 - Password security and best practices
@@ -98,6 +106,7 @@ KCN Seniors is a non-profit community service co-operative where volunteers offe
 **Before You Begin:**
 - Ensure you have Administrator access to the WordPress dashboard
 - Familiarize yourself with basic WordPress navigation
+- Review the WordPress Basics section for fundamental concepts
 - Keep this documentation bookmarked for future reference
 
 ### Site Architecture Overview
@@ -924,7 +933,7 @@ Now that you understand the overall system architecture, you can dive into speci
 - [Automated Task Matching](/docs/volunteer-management/automated-matching) - How the skill-based matching system works
 
 **For User Management:**
-- [User Management Overview](../user-management/overview) - Complete user management system guide
+- [User Management Overview](/docs/user-management/user-management-overview) - Complete user management system guide
 - [WordPress Users Management](../user-management/wordpress-users-management) - Managing user accounts and profiles
 - [Members Plugin Guide](../user-management/members-plugin-guide) - Advanced role management
 

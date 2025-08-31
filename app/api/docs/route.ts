@@ -6,6 +6,16 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 
+// Create a reusable remark processor for better performance
+const markdownProcessor = remark()
+  .use(html)
+  .use(remarkGfm);
+
+// Cache for processed markdown content
+let processedDocsCache: DocContent[] | null = null;
+let cacheTimestamp: number = 0;
+const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes (increased from 5)
+
 // Calculate reading time based on content length
 function calculateReadingTime(content: string): string {
   // Average reading speed: 200-250 words per minute
@@ -77,12 +87,8 @@ async function parseMarkdownFile(filePath: string): Promise<DocContent | null> {
     const fileContents = readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
     
-    // Convert markdown to HTML
-    const processedContent = await remark()
-      .use(html)
-      .use(remarkGfm)
-      .process(content);
-    
+    // Convert markdown to HTML using the reusable processor
+    const processedContent = await markdownProcessor.process(content);
     const htmlContent = processedContent.toString();
 
     return {
@@ -108,6 +114,13 @@ async function parseMarkdownFile(filePath: string): Promise<DocContent | null> {
 
 // Get all markdown documentation content
 async function getAllMarkdownDocs(): Promise<DocContent[]> {
+  const now = Date.now();
+  
+  // Return cached content if still valid
+  if (processedDocsCache && (now - cacheTimestamp) < CACHE_DURATION) {
+    return processedDocsCache;
+  }
+
   const markdownFiles = getAllMarkdownFiles(docsDirectory);
   const docs: DocContent[] = [];
 
@@ -125,6 +138,10 @@ async function getAllMarkdownDocs(): Promise<DocContent[]> {
     }
     return a.order - b.order;
   });
+
+  // Update cache
+  processedDocsCache = docs;
+  cacheTimestamp = now;
 
   return docs;
 }
@@ -155,7 +172,10 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: 'Document not found' }, { status: 404 });
       }
       
-      return NextResponse.json(doc);
+      // Add caching headers for better performance
+      const response = NextResponse.json(doc);
+      response.headers.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=600'); // 5 min cache, 10 min stale
+      return response;
     }
 
     if (sectionId) {
@@ -163,12 +183,17 @@ export async function GET(request: NextRequest) {
       const docs = await getAllMarkdownDocs();
       const sectionDocs = docs.filter(d => d.sectionId === sectionId);
       
-      return NextResponse.json(sectionDocs);
+      // Add caching headers for better performance
+      const response = NextResponse.json(sectionDocs);
+      response.headers.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=600'); // 5 min cache, 10 min stale
+      return response;
     }
 
     // Get all documents
     const docs = await getAllMarkdownDocs();
-    return NextResponse.json(docs);
+    const response = NextResponse.json(docs);
+    response.headers.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=600'); // 5 min cache, 10 min stale
+    return response;
   } catch (error) {
     console.error('Error loading documentation:', error);
     return NextResponse.json(

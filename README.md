@@ -124,15 +124,15 @@ kcn-docs-portal/
 
 1. **Getting Started** - Welcome and essential information
 2. **User Management** - Managing users, roles, and permissions
-3. **Content Management** - Creating and managing website content
-4. **Event Management** - Managing events and registrations
-5. **Service Booking** - Managing service bookings and volunteer slots
-6. **Theme Customization** - Customizing website appearance
-7. **Plugin Management** - Managing WordPress plugins
+3. **Event Management** - Managing events and registrations
+4. **Blog Management** - WordPress Posts/Blog system with role-based commenting
+5. **Content Management** - Creating and managing website content
+6. **Service & Volunteer Booking** - Managing service bookings and volunteer slots
+7. **Video Tutorials** - Step-by-step video guides for common tasks
 8. **Custom Development** - Advanced customization options
-9. **Maintenance & Security** - Keeping your site secure and updated
-10. **Troubleshooting** - Common issues and solutions
-11. **Video Tutorials** - Step-by-step video guides
+9. **Page Builder & Forms** - Elementor integration and form management
+10. **Maintenance & Support** - Keeping your site secure and updated
+11. **Troubleshooting** - Common issues and solutions
 
 ## 🔧 Configuration
 

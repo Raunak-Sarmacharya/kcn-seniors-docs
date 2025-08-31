@@ -309,10 +309,10 @@ function handle_task_acceptance() {
 
 This automated task matching system integrates with:
 
-- **[User Management System](/docs/user-management/overview)**: Uses volunteer roles and profiles
+- **[User Management System](/docs/user-management/user-management-overview)**: Uses volunteer roles and profiles
 - **[Advanced Custom Fields](/docs/custom-development/acf-integration)**: Stores volunteer skills and task requirements
 - **[Email Notification System](/docs/volunteer-management/email-notifications)**: Sends task alerts and confirmations
-- **[Database Structure](/docs/custom-development/database-structure)**: Stores task metadata and assignments
+- **[ACF Integration](/docs/custom-development/acf-integration)**: Stores task metadata and assignments
 
 ## Next Steps
 

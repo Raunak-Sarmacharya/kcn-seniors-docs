@@ -371,7 +371,7 @@ add_filter('wp_authenticate_username_password', 'kcn_email_login', 20, 3);
 - **[Elementor Integration](/docs/page-builder-forms/elementor-integration)**: How Hello Biz works with Elementor
 - **[Functions.php Customizations](/docs/custom-development/functions-php)**: Technical implementation details
 - **[Code Snippets Plugin](/docs/custom-development/code-snippets-plugin)**: Custom functionality management
-- **[User Management Overview](/docs/user-management/overview)**: Role-based access control
+- **[User Management Overview](/docs/user-management/user-management-overview)**: Role-based access control
 - **[Event Management Overview](/docs/event-management/event-management-overview)**: EventPrime integration
 
 ### Cross-References:

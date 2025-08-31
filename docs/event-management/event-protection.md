@@ -134,12 +134,12 @@ This feature works specifically with the EventPrime event management plugin (tes
 
 ## Integration with User Management
 
-This event protection system works in conjunction with your [User Management System](/docs/user-management/overview) and [Role-Based Access Control](/docs/user-management/role-based-access). The protection is automatically applied based on user roles defined in the [Members Plugin](/docs/user-management/members-plugin-guide).
+This event protection system works in conjunction with your [User Management System](/docs/user-management/user-management-overview) and [Role-Based Access Control](/docs/user-management/role-based-access). The protection is automatically applied based on user roles defined in the [Members Plugin](/docs/user-management/members-plugin-guide).
 
 ## Integration with Other Systems
 
 ### User Management Integration
-This event protection system works in conjunction with your [User Management System](/docs/user-management/overview) and [Role-Based Access Control](/docs/user-management/role-based-access). The protection is automatically applied based on user roles defined in the [Members Plugin](/docs/user-management/members-plugin-guide).
+This event protection system works in conjunction with your [User Management System](/docs/user-management/user-management-overview) and [Role-Based Access Control](/docs/user-management/role-based-access). The protection is automatically applied based on user roles defined in the [Members Plugin](/docs/user-management/members-plugin-guide).
 
 ### Event Management Integration
 The protection system integrates seamlessly with the [Event Management System](/docs/event-management/event-management-overview) and works across all [Event Display Formats](/docs/event-management/eventprime-integration#event-display-formats-and-shortcodes).
@@ -148,8 +148,8 @@ The protection system integrates seamlessly with the [Event Management System](/
 
 - Learn about [Creating and Managing Events](/docs/event-management/event-creation)
 - Understand [EventPrime Plugin Integration](/docs/event-management/eventprime-integration)
-- Review [Custom Development](/docs/custom-development/css-injection) for technical details
-- Explore [User Management System](/docs/user-management/overview) for role configuration
+- Review [Custom Development](/docs/custom-development/functions-php) for technical details
+- Explore [User Management System](/docs/user-management/user-management-overview) for role configuration
 
 ---
 

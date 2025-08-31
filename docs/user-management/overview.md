@@ -8,11 +8,52 @@ difficulty: "beginner"
 estimatedTime: "25 minutes"
 lastUpdated: "2025-01-15"
 order: 1
+videoUrl: "https://player.vimeo.com/video/1114714099?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
 ---
 
 # User Management System
 
 User management is a critical aspect of WordPress site administration that involves managing user accounts, roles, and permissions to ensure proper access control and security. The KCN Seniors website uses a comprehensive approach combining WordPress's built-in user system with the Members plugin for enhanced functionality.
+
+## 🎥 Video Tutorial Guide
+
+**Watch the Complete Process:**
+
+For a visual demonstration of user management basics, watch our comprehensive video tutorial below:
+
+**What the Video Covers:**
+- Changing user roles in the KCN Seniors system
+- Adding volunteer tags to volunteer users
+- Managing role permissions through the Members plugin
+- Essential user administration tasks
+
+**Important Disclaimer:**
+⚠️ **Volunteer Tags**: Only add volunteer tags to users who have been assigned the **Volunteer role**. Adding volunteer tags to non-volunteer users can cause system conflicts and security issues.
+
+**Related Video Tutorial:**
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+
+### Key Steps Covered in the Video
+
+1. **User Role Management**
+   - Navigate to Users section in WordPress
+   - Change user roles appropriately
+   - Understand role hierarchy and permissions
+
+2. **Volunteer Tag Assignment**
+   - Add volunteer tags to volunteer users only
+   - Use ACF custom fields for skill tags
+   - Ensure proper role assignment before tagging
+
+3. **Members Plugin Configuration**
+   - Access Members plugin settings
+   - Modify role permissions and capabilities
+   - Configure content access controls
+
+4. **User Administration Best Practices**
+   - Follow security protocols
+   - Maintain proper role assignments
+   - Regular user account auditing
 
 ## Core Principles
 
@@ -20,6 +61,8 @@ User management is a critical aspect of WordPress site administration that invol
 2. **Regular Auditing**: Review user accounts monthly or bi-monthly, removing inactive users
 3. **Security First**: Strong passwords, two-factor authentication when possible, and regular security reviews
 4. **Clear Role Definitions**: Each role should have clearly defined responsibilities and limitations
+
+> **📚 Prerequisites**: This section assumes you have completed the [WordPress Basics](/docs/wordpress-basics/wordpress-basics-overview) section. If you're new to WordPress, start there first.
 
 ## System Benefits for KCN Seniors
 
@@ -209,6 +252,11 @@ For complex implementations or issues beyond this documentation, consider:
 - WordPress development services
 - Security specialist consultation
 - Membership site optimization experts
+
+### 🎥 Video Learning Resources
+
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+- [User Management Basics Tutorial](/docs/video-tutorials) - User roles, volunteer tags, and permissions management
 
 ## Next Steps
 

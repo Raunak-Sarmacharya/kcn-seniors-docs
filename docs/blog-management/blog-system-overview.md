@@ -16,6 +16,8 @@ order: 1
 
 The KCN Seniors WordPress website features a comprehensive blog system built on WordPress's native Posts functionality. This system provides members with engaging content while implementing **role-based access control** for comments, ensuring only logged-in users can participate in discussions.
 
+> **📚 Prerequisites**: This section assumes you have completed the [WordPress Basics](/docs/wordpress-basics/wordpress-basics-overview) section, particularly [Creating Content](/docs/wordpress-basics/creating-content). If you're new to WordPress, start there first.
+
 ### Key Features
 - **WordPress Block Editor (Gutenberg)** - Modern content creation
 - **Role-Based Commenting** - Only logged-in users can comment

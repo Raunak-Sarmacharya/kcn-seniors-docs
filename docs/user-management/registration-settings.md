@@ -418,7 +418,7 @@ Configure comprehensive email notifications for all registration-related activit
 
 ## Next Steps
 
-- Review [User Management Overview](/docs/user-management/overview)
+- Review [User Management Overview](/docs/user-management/user-management-overview)
 - Learn about [WordPress Users Management](/docs/user-management/wordpress-users-management)
 - Master [Members Plugin Role Management](/docs/user-management/members-plugin-guide)
 - Understand [Password Management & Security](/docs/user-management/password-management)

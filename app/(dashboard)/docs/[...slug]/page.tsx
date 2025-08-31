@@ -24,6 +24,8 @@ import Breadcrumbs from '@/components/docs/Breadcrumbs';
 import MarkdownContent from '@/components/docs/MarkdownContent';
 import html2pdf from 'html2pdf.js';
 
+
+
 interface PageProps {
   params: {
     slug: string[];
@@ -431,117 +433,175 @@ export default function DocPage({ params }: PageProps) {
     );
   }
 
-  // If no specific doc, show section overview
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 py-8">
-        {/* Breadcrumbs */}
-        <Breadcrumbs items={breadcrumbs} />
+  // If no specific doc, check if section has children or show section content
+  if (section.children && section.children.length > 0) {
+    // Section has children, show section overview
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 py-8">
+          {/* Breadcrumbs */}
+          <Breadcrumbs items={breadcrumbs} />
 
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-12"
-        >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{section.title}</h1>
-          <p className="text-xl text-gray-600 max-w-4xl">{section.description}</p>
-        </motion.div>
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-12"
+          >
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">{section.title}</h1>
+            <p className="text-xl text-gray-600 max-w-4xl">{section.description}</p>
+          </motion.div>
 
-        {/* Section Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {section.children?.map((child, index) => {
-            const childDoc = sectionDocs.find(doc => doc.slug === child.slug);
-            
-            return (
-              <motion.div
-                key={child.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-                whileHover={{ y: -5 }}
-                className="glass rounded-lg p-6 hover:shadow-lg transition-all duration-300"
-              >
-                <Link href={`/docs/${sectionSlug}/${child.slug}`}>
-                  <div className="h-full">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:text-orange-600 transition-colors">
-                      {child.title}
-                    </h3>
-                    {childDoc && (
-                      <div className="space-y-3">
-                        <p className="text-gray-600 text-sm line-clamp-3">
-                          {childDoc.content.substring(0, 150)}...
-                        </p>
-                        <div className="flex items-center gap-4 text-xs text-gray-500">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            <span>{childDoc.estimatedTime}</span>
+          {/* Section Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {section.children.map((child, index) => {
+              const childDoc = sectionDocs.find(doc => doc.slug === child.slug);
+              
+              return (
+                <motion.div
+                  key={child.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                  whileHover={{ y: -5 }}
+                  className="glass rounded-lg p-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <Link href={`/docs/${sectionSlug}/${child.slug}`}>
+                    <div className="h-full">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:text-orange-600 transition-colors">
+                        {child.title}
+                      </h3>
+                      {childDoc && (
+                        <div className="space-y-3">
+                          <p className="text-gray-600 text-sm line-clamp-3">
+                            {childDoc.content.substring(0, 150)}...
+                          </p>
+                          <div className="flex items-center gap-4 text-xs text-gray-500">
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              <span>{childDoc.estimatedTime}</span>
+                            </div>
                           </div>
+                          {childDoc.tags.length > 0 && (
+                            <div className="flex flex-wrap gap-1">
+                              {childDoc.tags.slice(0, 2).map((tag: string) => (
+                                <span
+                                  key={tag}
+                                  className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                              {childDoc.tags.length > 2 && (
+                                <span className="px-2 py-1 bg-gray-200 text-gray-600 rounded text-xs">
+                                  +{childDoc.tags.length - 2}
+                                </span>
+                              )}
+                            </div>
+                          )}
                         </div>
-                        {childDoc.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-1">
-                            {childDoc.tags.slice(0, 2).map((tag: string) => (
-                              <span
-                                key={tag}
-                                className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                            {childDoc.tags.length > 2 && (
-                              <span className="px-2 py-1 bg-gray-200 text-gray-600 rounded text-xs">
-                                +{childDoc.tags.length - 2}
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
+                      )}
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Section Footer */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mt-16 text-center"
+          >
+            <div className="glass rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Need more help with {section.title}?
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+                Explore our comprehensive guides and tutorials to master {section.title.toLowerCase()} for your KCN Seniors website.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/docs/troubleshooting/common-issues"
+                  className="button-primary"
+                >
+                  View Troubleshooting
                 </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        {/* Section Footer */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <div className="glass rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Need more help with {section.title}?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-              Explore our comprehensive guides and tutorials to master {section.title.toLowerCase()} for your KCN Seniors website.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/docs/troubleshooting/common-issues"
-                className="button-primary"
-              >
-                View Troubleshooting
-              </Link>
-              <Link
-                href="/docs/video-tutorials/getting-started-videos"
-                className="button-secondary"
-              >
-                Watch Tutorials
-              </Link>
+                <Link
+                  href="/docs/video-tutorials"
+                  className="button-secondary"
+                >
+                  Watch Tutorials
+                </Link>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
+    );
+  } else {
+    // Section has no children, show section content directly
+    const sectionDoc = sectionDocs.find(doc => doc.slug === sectionSlug);
+    
+    if (sectionDoc) {
+      return (
+        <div className="min-h-screen bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6 py-8">
+            {/* Breadcrumbs */}
+            <Breadcrumbs items={breadcrumbs} />
 
+            {/* Article Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-8"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex-1">
+                  <h1 className="text-3xl font-bold text-gray-900 mb-4">{sectionDoc.title}</h1>
+                  <div className="flex items-center gap-6 text-sm text-gray-600">
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{sectionDoc.estimatedTime}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    </div>
-  );
+              {/* Tags */}
+              {sectionDoc.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {sectionDoc.tags.map((tag: string) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+
+            {/* Article Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="glass rounded-lg p-8"
+            >
+              <MarkdownContent content={sectionDoc.content} videoUrl={sectionDoc.videoUrl} />
+            </motion.div>
+          </div>
+        </div>
+      );
+    }
+  }
 }

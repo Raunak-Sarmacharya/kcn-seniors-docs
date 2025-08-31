@@ -224,18 +224,14 @@ export const docSections: DocSection[] = [
   {
     id: 'maintenance-support',
     title: 'Maintenance & Support',
-    description: 'Regular maintenance, support procedures, and emergency contacts',
+    description: 'Regular maintenance and support procedures',
     icon: 'Wrench',
     slug: 'maintenance-support',
     category: 'support',
     order: 12,
     children: [
       { id: 'maintenance-schedule', title: 'Maintenance Schedule', description: 'Regular maintenance tasks and schedules', icon: 'Calendar', slug: 'maintenance-schedule', category: 'support', order: 1 },
-      { id: 'support-procedures', title: 'Support Procedures', description: 'How to get help and support', icon: 'HelpCircle', slug: 'support-procedures', category: 'support', order: 2 },
-      { id: 'emergency-contacts', title: 'Emergency Contacts', description: 'Important contact information for urgent issues', icon: 'Phone', slug: 'emergency-contacts', category: 'support', order: 3 },
-      { id: 'backup-procedures', title: 'Backup Procedures', description: 'Regular backup and recovery procedures', icon: 'Save', slug: 'backup-procedures', category: 'support', order: 4 },
-      { id: 'performance-monitoring', title: 'Performance Monitoring', description: 'Monitoring website performance and health', icon: 'Activity', slug: 'performance-monitoring', category: 'support', order: 5 },
-      { id: 'security-monitoring', title: 'Security Monitoring', description: 'Security monitoring and incident response', icon: 'Shield', slug: 'security-monitoring', category: 'support', order: 6 },
+      { id: 'backup-migration-system', title: 'Backup & Migration System', description: 'Comprehensive backup and migration system using WP Vivid and All-in-One WP Migration', icon: 'Database', slug: 'backup-migration-system', category: 'support', order: 2 },
     ],
   },
   {
@@ -250,25 +246,17 @@ export const docSections: DocSection[] = [
       { id: 'common-issues', title: 'Common Issues & Solutions', description: 'Common issues and their solutions', icon: 'HelpCircle', slug: 'common-issues', category: 'support', order: 1 },
       { id: 'error-logs', title: 'Error Log Analysis', description: 'Analyzing error logs', icon: 'FileText', slug: 'error-logs', category: 'support', order: 2 },
       { id: 'debug-mode', title: 'Debug Mode Activation', description: 'Activating debug mode', icon: 'Bug', slug: 'debug-mode', category: 'support', order: 3 },
-      { id: 'plugin-conflicts', title: 'Plugin Conflict Resolution', description: 'Resolving plugin conflicts', icon: 'AlertTriangle', slug: 'plugin-conflicts', category: 'support', order: 4 },
-      { id: 'database-repair', title: 'Database Repair', description: 'Repairing database issues', icon: 'Database', slug: 'database-repair', category: 'support', order: 5 },
-      { id: 'emergency-recovery', title: 'Emergency Recovery', description: 'Emergency recovery procedures', icon: 'AlertCircle', slug: 'emergency-recovery', category: 'support', order: 6 },
+
     ],
   },
   {
     id: 'video-tutorials',
     title: 'Video Tutorials',
-    description: 'Step-by-step video guides',
+    description: 'Master KCN Seniors website management with comprehensive video guides',
     icon: 'Video',
     slug: 'video-tutorials',
     category: 'tutorials',
     order: 14,
-    children: [
-      { id: 'getting-started-videos', title: 'Getting Started Videos', description: 'Video tutorials for getting started', icon: 'Play', slug: 'getting-started-videos', category: 'tutorials', order: 1 },
-      { id: 'advanced-features', title: 'Advanced Feature Walkthroughs', description: 'Advanced feature tutorials', icon: 'Video', slug: 'advanced-features', category: 'tutorials', order: 2 },
-      { id: 'maintenance-procedures', title: 'Maintenance Procedures', description: 'Maintenance procedure videos', icon: 'Wrench', slug: 'maintenance-procedures', category: 'tutorials', order: 3 },
-      { id: 'troubleshooting-guides', title: 'Troubleshooting Guides', description: 'Troubleshooting video guides', icon: 'HelpCircle', slug: 'troubleshooting-guides', category: 'tutorials', order: 4 },
-    ],
   },
 ];
 

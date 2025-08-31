@@ -378,6 +378,6 @@ The Members plugin is a powerful WordPress plugin that provides advanced user ro
 - Understand [Password Management & Security](/docs/user-management/password-management)
 - Explore [Role-Based Access Control](/docs/user-management/role-based-access)
 - Configure [User Registration Settings](/docs/user-management/registration-settings)
-- Review [User Management Overview](/docs/user-management/overview)
+- Review [User Management Overview](/docs/user-management/user-management-overview)
 
 

@@ -56,13 +56,27 @@ export const docSections: DocSection[] = [
     ],
   },
   {
+    id: 'wordpress-basics',
+    title: 'WordPress Basics',
+    description: 'Essential WordPress fundamentals for KCN Seniors team members',
+    icon: 'FileText',
+    slug: 'wordpress-basics',
+    category: 'basics',
+    order: 2,
+    children: [
+      { id: 'wordpress-basics-overview', title: 'WordPress Basics Overview', description: 'Complete guide to WordPress fundamentals for KCN Seniors team members', icon: 'BookOpen', slug: 'wordpress-basics-overview', category: 'basics', order: 1 },
+      { id: 'dashboard-navigation', title: 'WordPress Dashboard Navigation Guide', description: 'Complete guide to navigating the WordPress dashboard and admin menu', icon: 'Layout', slug: 'dashboard-navigation', category: 'basics', order: 2 },
+      { id: 'creating-content', title: 'Creating Content - The KCN Seniors Way', description: 'Complete guide to creating posts, pages, and managing content in WordPress', icon: 'Edit', slug: 'creating-content', category: 'basics', order: 3 },
+    ],
+  },
+  {
     id: 'user-management',
     title: 'User Management System',
     description: 'Complete user management, roles, permissions, and security',
     icon: 'Users',
     slug: 'user-management',
     category: 'administration',
-    order: 2,
+    order: 3,
     children: [
       { id: 'user-management-overview', title: 'User Management Overview', description: 'Complete guide to user management system', icon: 'Users', slug: 'user-management-overview', category: 'administration', order: 1 },
       { id: 'wordpress-users-management', title: 'WordPress Users Management', description: 'Managing user accounts and profiles', icon: 'UserCheck', slug: 'wordpress-users-management', category: 'administration', order: 2 },
@@ -80,7 +94,7 @@ export const docSections: DocSection[] = [
     icon: 'Calendar',
     slug: 'event-management',
     category: 'content',
-    order: 3,
+    order: 4,
     children: [
       { id: 'event-management-overview', title: 'Event Management Overview', description: 'Complete guide to EventPrime event management system', icon: 'Calendar', slug: 'event-management-overview', category: 'content', order: 1 },
       { id: 'event-creation', title: 'Creating and Managing Events', description: 'Complete guide to creating and managing events with EventPrime', icon: 'Plus', slug: 'event-creation', category: 'content', order: 2 },
@@ -95,7 +109,7 @@ export const docSections: DocSection[] = [
     icon: 'FileText',
     slug: 'blog-management',
     category: 'content',
-    order: 4,
+    order: 5,
     children: [
       { id: 'blog-system-overview', title: 'Blog System Overview', description: 'Complete guide to WordPress Posts/Blog system with role-based commenting', icon: 'FileText', slug: 'blog-system-overview', category: 'content', order: 1 },
       { id: 'comments-system-management', title: 'Comments System Management', description: 'Complete guide to WordPress comments with role-based access control', icon: 'MessageSquare', slug: 'comments-system-management', category: 'content', order: 2 },
@@ -108,7 +122,7 @@ export const docSections: DocSection[] = [
     icon: 'Image',
     slug: 'content-management',
     category: 'content',
-    order: 5,
+    order: 6,
     children: [
       { id: 'media-library-management', title: 'WordPress Media Library Management', description: 'Complete guide to managing images, videos, and documents in WordPress Media Library', icon: 'Image', slug: 'media-library-management', category: 'content', order: 1 },
       { id: 'facebook-feed-integration', title: 'Facebook Feed Integration', description: 'Smash Balloon Facebook Feed Pro integration for homepage display', icon: 'Facebook', slug: 'facebook-feed-integration', category: 'content', order: 2 },
@@ -121,7 +135,7 @@ export const docSections: DocSection[] = [
     icon: 'Heart',
     slug: 'volunteer-management',
     category: 'services',
-    order: 6,
+    order: 7,
     children: [
       { id: 'volunteer-system-overview', title: 'Volunteer System Overview', description: 'Complete guide to volunteer management system', icon: 'Heart', slug: 'volunteer-system-overview', category: 'services', order: 1 },
       { id: 'volunteer-profiles', title: 'Managing Volunteer Profiles', description: 'Setting up volunteer skills and interests', icon: 'User', slug: 'volunteer-profiles', category: 'services', order: 2 },
@@ -131,22 +145,30 @@ export const docSections: DocSection[] = [
     ],
   },
   {
+    id: 'video-tutorials',
+    title: 'Video Tutorials',
+    description: 'Master KCN Seniors website management with comprehensive video guides',
+    icon: 'Play',
+    slug: 'video-tutorials',
+    category: 'learning',
+    order: 8,
+  },
+  {
     id: 'custom-development',
     title: 'Custom Development',
     description: 'Technical implementation details and custom features',
     icon: 'Code',
     slug: 'custom-development',
     category: 'development',
-    order: 7,
+    order: 9,
     children: [
       { id: 'custom-development-overview', title: 'Custom Development Overview', description: 'Overview of custom features and implementations', icon: 'Code', slug: 'custom-development-overview', category: 'development', order: 1 },
       { id: 'hello-biz-theme-integration', title: 'Hello Biz Theme Integration & WordPress Appearance Management', description: 'Complete guide to Hello Biz theme integration and WordPress Appearance tab options', icon: 'Layout', slug: 'hello-biz-theme-integration', category: 'development', order: 2 },
       { id: 'functions-php', title: 'Functions.php Customizations', description: 'Custom code in theme functions.php file', icon: 'FileCode', slug: 'functions-php', category: 'development', order: 3 },
       { id: 'acf-wp-mail-smtp-integration', title: 'ACF & WP Mail SMTP Integration', description: 'Advanced Custom Fields and WP Mail SMTP integration for volunteer management system', icon: 'Mail', slug: 'acf-wp-mail-smtp-integration', category: 'development', order: 4 },
       { id: 'acf-integration', title: 'Advanced Custom Fields Integration', description: 'ACF plugin integration for volunteer skills', icon: 'Database', slug: 'acf-integration', category: 'development', order: 5 },
-      { id: 'css-injection', title: 'CSS Injection System', description: 'Dynamic CSS injection for content protection', icon: 'Palette', slug: 'css-injection', category: 'development', order: 6 },
-      { id: 'database-structure', title: 'Database Structure', description: 'Custom database tables and metadata', icon: 'Server', slug: 'database-structure', category: 'development', order: 7 },
-      { id: 'code-snippets-plugin', title: 'WordPress Code Snippets Plugin Integration', description: 'Custom code snippets implementation for enhanced functionality', icon: 'Code', slug: 'code-snippets-plugin', category: 'development', order: 8 },
+
+      { id: 'code-snippets-plugin', title: 'WordPress Code Snippets Plugin Integration', description: 'Custom code snippets implementation for enhanced functionality', icon: 'Code', slug: 'code-snippets-plugin', category: 'development', order: 6 },
     ],
   },
   {
@@ -156,7 +178,7 @@ export const docSections: DocSection[] = [
     icon: 'Layout',
     slug: 'page-builder-forms',
     category: 'content',
-    order: 8,
+    order: 10,
     children: [
       { id: 'elementor-integration', title: 'Elementor Integration', description: 'Complete guide to Elementor page builder integration', icon: 'Layout', slug: 'elementor-integration', category: 'content', order: 1 },
       { id: 'form-submissions-management', title: 'Form Submissions Management', description: 'Managing form submissions and applications', icon: 'FileText', slug: 'form-submissions-management', category: 'content', order: 2 },
@@ -167,19 +189,15 @@ export const docSections: DocSection[] = [
   {
     id: 'maintenance-support',
     title: 'Maintenance & Support',
-    description: 'Regular maintenance, support procedures, and emergency contacts',
+    description: 'Regular maintenance and support procedures',
     icon: 'Wrench',
     slug: 'maintenance-support',
     category: 'support',
-    order: 12,
+    order: 14,
     children: [
       { id: 'maintenance-support-overview', title: 'Maintenance & Support Overview', description: 'Overview of maintenance and support procedures', icon: 'Wrench', slug: 'maintenance-support-overview', category: 'support', order: 1 },
       { id: 'maintenance-schedule', title: 'Maintenance Schedule', description: 'Regular maintenance tasks and schedules', icon: 'Calendar', slug: 'maintenance-schedule', category: 'support', order: 2 },
-      { id: 'support-procedures', title: 'Support Procedures', description: 'How to get help and support', icon: 'HelpCircle', slug: 'support-procedures', category: 'support', order: 3 },
-      { id: 'emergency-contacts', title: 'Emergency Contacts', description: 'Important contact information for urgent issues', icon: 'Phone', slug: 'emergency-contacts', category: 'support', order: 4 },
-      { id: 'backup-procedures', title: 'Backup Procedures', description: 'Regular backup and recovery procedures', icon: 'Save', slug: 'backup-procedures', category: 'support', order: 5 },
-      { id: 'backup-migration-system', title: 'Backup & Migration System', description: 'Comprehensive backup and migration system using WP Vivid and All-in-One WP Migration', icon: 'Database', slug: 'backup-migration-system', category: 'support', order: 6 },
-      { id: 'performance-monitoring', title: 'Performance Monitoring', description: 'Monitoring website performance and health', icon: 'Activity', slug: 'performance-monitoring', category: 'support', order: 7 },
+      { id: 'backup-migration-system', title: 'Backup & Migration System', description: 'Comprehensive backup and migration system using WP Vivid and All-in-One WP Migration', icon: 'Database', slug: 'backup-migration-system', category: 'support', order: 3 },
     ],
   },
   {
@@ -189,14 +207,12 @@ export const docSections: DocSection[] = [
     icon: 'Wrench',
     slug: 'troubleshooting',
     category: 'support',
-    order: 13,
+    order: 15,
     children: [
       { id: 'common-issues', title: 'Common Issues & Solutions', description: 'Common issues and their solutions', icon: 'HelpCircle', slug: 'common-issues', category: 'support', order: 1 },
       { id: 'error-logs', title: 'Error Log Analysis', description: 'Analyzing error logs', icon: 'FileText', slug: 'error-logs', category: 'support', order: 2 },
       { id: 'debug-mode', title: 'Debug Mode Activation', description: 'Activating debug mode', icon: 'Bug', slug: 'debug-mode', category: 'support', order: 3 },
-      { id: 'plugin-conflicts', title: 'Plugin Conflict Resolution', description: 'Resolving plugin conflicts', icon: 'AlertTriangle', slug: 'plugin-conflicts', category: 'support', order: 4 },
-      { id: 'database-repair', title: 'Database Repair', description: 'Repairing database issues', icon: 'Database', slug: 'database-repair', category: 'support', order: 5 },
-      { id: 'emergency-recovery', title: 'Emergency Recovery', description: 'Emergency recovery procedures', icon: 'AlertCircle', slug: 'emergency-recovery', category: 'support', order: 6 },
+
     ],
   },
 ];
@@ -204,7 +220,11 @@ export const docSections: DocSection[] = [
 // Cache for markdown content
 let markdownCache: DocContent[] | null = null;
 let cacheTimestamp: number = 0;
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes (increased from 5)
+
+// Individual document cache for better performance
+let documentCache = new Map<string, { data: DocContent; timestamp: number }>();
+const DOC_CACHE_DURATION = 15 * 60 * 1000; // 15 minutes for individual docs
 
 // Get all markdown documentation content
 export async function getAllMarkdownDocs(): Promise<DocContent[]> {
@@ -248,6 +268,14 @@ export async function getAllMarkdownDocs(): Promise<DocContent[]> {
 
 // Get documentation by slug
 export async function getMarkdownDocBySlug(slug: string): Promise<DocContent | null> {
+  const now = Date.now();
+  
+  // Check individual document cache first
+  const cachedDoc = documentCache.get(slug);
+  if (cachedDoc && (now - cachedDoc.timestamp) < DOC_CACHE_DURATION) {
+    return cachedDoc.data;
+  }
+  
   try {
     const response = await fetch(`/api/docs?slug=${encodeURIComponent(slug)}`);
     if (!response.ok) {
@@ -255,6 +283,10 @@ export async function getMarkdownDocBySlug(slug: string): Promise<DocContent | n
     }
     
     const doc: DocContent = await response.json();
+    
+    // Cache the individual document
+    documentCache.set(slug, { data: doc, timestamp: now });
+    
     return doc;
   } catch (error) {
     console.error('Error fetching document by slug:', error);
@@ -384,4 +416,5 @@ export async function searchMarkdownDocs(query: string): Promise<SearchResult[]>
 export function clearMarkdownCache(): void {
   markdownCache = null;
   cacheTimestamp = 0;
+  documentCache.clear();
 }

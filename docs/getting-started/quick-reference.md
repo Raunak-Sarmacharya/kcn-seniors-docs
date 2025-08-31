@@ -219,7 +219,7 @@ order: 3
 | Edit Snippets | Snippets → All Snippets | [Code Snippets Plugin](/docs/custom-development/code-snippets-plugin) |
 | Functions.php | Theme editor | [Functions.php Customizations](/docs/custom-development/functions-php) |
 | ACF Fields | Custom Fields → Field Groups | [ACF Integration](/docs/custom-development/acf-integration) |
-| CSS Injection | Custom code for styling | [CSS Injection System](/docs/custom-development/css-injection) |
+| Functions.php | Custom code for styling | [Functions.php Customizations](/docs/custom-development/functions-php) |
 
 ## Security & Access Control Quick Reference
 
@@ -273,7 +273,7 @@ order: 3
 
 | Task | Frequency | Documentation |
 |------|-----------|---------------|
-| User Audit | Monthly | [User Management Overview](/docs/user-management/overview) |
+| User Audit | Monthly | [User Management Overview](/docs/user-management/user-management-overview) |
 | Backup System | Weekly | [Backup Procedures](/docs/maintenance-support/backup-procedures) |
 | Update Plugins | As needed | [Maintenance Schedule](/docs/maintenance-support/maintenance-schedule) |
 | Performance Check | Monthly | [Performance Monitoring](/docs/maintenance-support/performance-monitoring) |

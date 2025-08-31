@@ -8,11 +8,44 @@ difficulty: "advanced"
 estimatedTime: "30 minutes"
 lastUpdated: "2025-01-15"
 order: 4
+videoUrl: "https://player.vimeo.com/video/1114712978?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
 ---
 
 # EventPrime Plugin Integration
 
 This guide covers the technical integration details, advanced features, and troubleshooting for the EventPrime plugin in your KCN Seniors website.
+
+## 🎥 Video Tutorial Guide
+
+**Watch the Complete Process:**
+
+For a visual demonstration of the EventPrime dashboard and its capabilities, watch our comprehensive video tutorial below:
+
+**What the Video Covers:**
+- EventPrime plugin dashboard overview
+- Available dashboard options and features
+- Plugin capabilities and functionality
+- Brief introduction to EventPrime tools
+
+**Related Video Tutorial:**
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+
+### Key Steps Covered in the Video
+
+1. **EventPrime Dashboard Access**
+   - Navigate to Events section in WordPress
+   - Access EventPrime plugin interface
+   - View available dashboard options
+
+2. **Dashboard Overview**
+   - Explore EventPrime menu structure
+   - Understand available features and tools
+   - Learn about plugin capabilities
+
+3. **Plugin Functionality**
+   - Brief introduction to EventPrime tools
+   - Overview of available options
+   - Understanding plugin scope and features
 
 ## Technical Implementation
 
@@ -438,13 +471,19 @@ add_action('rest_api_init', function () {
 - **Version Compatibility**: Check current WordPress version support
 - **Backup Recommendations**: Always backup before major updates
 
+### 🎥 Video Learning Resources
+
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+- [EventPrime Dashboard Overview Tutorial](/docs/video-tutorials) - Dashboard overview and options
+- [User Management Basics Tutorial](/docs/video-tutorials) - User roles, volunteer tags, and permissions management
+
 ## Next Steps
 
 - Review [Role-Based Event Protection](/docs/event-management/event-protection) for protection details
 - Learn about [Creating and Managing Events](/docs/event-management/event-creation)
 - Explore [Custom Development](/docs/custom-development/functions-php) for technical implementation
 - Discover [WordPress Code Snippets Plugin Integration](/docs/custom-development/code-snippets-plugin) for custom code management
-- Understand [User Management System](/docs/user-management/overview) for role configuration
+- Understand [User Management System](/docs/user-management/user-management-overview) for role configuration
 
 ---
 

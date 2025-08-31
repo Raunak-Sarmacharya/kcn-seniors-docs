@@ -191,7 +191,7 @@ add_action('init','wpb_admin_account');
 
 ## Next Steps
 
-- Review [User Management Overview](/docs/user-management/overview)
+- Review [User Management Overview](/docs/user-management/user-management-overview)
 - Learn about [Password Management & Security](/docs/user-management/password-management)
 - Understand [Role-Based Access Control](/docs/user-management/role-based-access)
 - Explore [Custom Development](/docs/custom-development/functions-php) for technical details

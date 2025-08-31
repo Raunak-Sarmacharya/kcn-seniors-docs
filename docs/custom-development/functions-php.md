@@ -417,8 +417,8 @@ foreach ($task_tags as $tag_id) {
 - Review [Hello Biz Theme Integration](/docs/custom-development/hello-biz-theme-integration) for WordPress Appearance management
 - Review [ACF & WP Mail SMTP Integration](/docs/custom-development/acf-wp-mail-smtp-integration) for volunteer management automation
 - Review [ACF Integration](/docs/custom-development/acf-integration) for volunteer skills
-- Understand [CSS Injection System](/docs/custom-development/css-injection) for event protection
-- Explore [Database Structure](/docs/custom-development/database-structure) for metadata
+- Understand [Functions.php Customizations](/docs/custom-development/functions-php) for event protection
+- Explore [ACF Integration](/docs/custom-development/acf-integration) for metadata
 - Learn about [Event Protection](/docs/event-management/event-protection) implementation
 - Discover [WordPress Code Snippets Plugin Integration](/docs/custom-development/code-snippets-plugin) for custom code management
 

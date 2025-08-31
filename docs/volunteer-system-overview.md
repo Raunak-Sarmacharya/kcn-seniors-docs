@@ -173,10 +173,12 @@ The volunteer management system is built on:
 ## Getting Started
 
 **For Administrators:**
-1. Review the [Task Creation and Management](/docs/volunteer-management/task-management) guide
+1. Review the [Task Creation and Management](/docs/volunteer-management/task-management) guide for video tutorial
 2. Set up volunteer skill categories in the dashboard
 3. Configure email notification settings
 4. Begin creating volunteer tasks for member requests
+
+
 
 **For Volunteers:**
 1. Ensure your profile includes relevant skill tags
@@ -196,4 +198,10 @@ The volunteer management system is built on:
 - [Managing Volunteer Profiles](/docs/volunteer-management/volunteer-profiles) - Setting up and managing volunteer skill profiles
 - [Automated Task Matching](/docs/volunteer-management/automated-matching) - How the skill-based matching system works
 - [Email Notification System](/docs/volunteer-management/email-notifications) - Managing volunteer task notifications
+- [Event Management System](/docs/event-management/event-management-overview) - Complete guide to event creation and management
+- [Event Types and Categories](/docs/event-management/event-categories) - Managing event organization and categorization
+- [EventPrime Plugin Integration](/docs/event-management/eventprime-integration) - Technical integration and dashboard overview
+- [User Management System](/docs/user-management/user-management-overview) - User roles, volunteer tags, and permissions management
 - [Custom Development - Functions.php](/docs/custom-development/functions-php) - Technical implementation details
+
+

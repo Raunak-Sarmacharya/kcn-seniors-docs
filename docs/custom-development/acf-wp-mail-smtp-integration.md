@@ -498,7 +498,7 @@ wp_mail('test@example.com', 'Test Subject', 'Test message');
 ## Integration with KCN Seniors Documentation
 
 ### Related Documentation Sections:
-- **[Volunteer System Overview](/docs/volunteer-system-overview)**: Complete volunteer management system
+- **[Volunteer System Overview](/docs/volunteer-management/volunteer-system-overview)**: Complete volunteer management system
 - **[Automated Task Matching](/docs/automated-matching)**: How the skill-based matching system works
 - **[Email Notification System](/docs/email-notifications)**: Managing automated communications
 - **[Functions.php Customizations](/docs/custom-development/functions-php)**: Technical implementation details
@@ -507,7 +507,7 @@ wp_mail('test@example.com', 'Test Subject', 'Test message');
 ### Cross-References:
 - **Volunteer Management**: See [Volunteer Profiles](/docs/volunteer-profiles)
 - **Task Management**: See [Task Creation and Management](/docs/task-management)
-- **User Management**: See [User Management Overview](/docs/user-management/overview)
+- **User Management**: See [User Management Overview](/docs/user-management/user-management-overview)
 - **Event Integration**: See [Event Management Overview](/docs/event-management/event-management-overview)
 
 ---

@@ -7,6 +7,7 @@ difficulty: "intermediate"
 estimatedTime: "12 minutes"
 order: 3
 lastUpdated: "2024-01-15"
+videoUrl: "https://player.vimeo.com/video/1114699885?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
 ---
 
 # Task Creation and Management
@@ -36,6 +37,48 @@ lastUpdated: "2024-01-15"
 - Click "Publish" to activate the task
 - System immediately processes volunteer matching
 - Email notifications sent automatically to tagged volunteers
+
+### Video Tutorial Guide
+
+**Watch the Complete Process:**
+
+For a visual demonstration of the task creation workflow, watch our comprehensive video tutorial below:
+
+**What the Video Covers:**
+- Complete dashboard navigation
+- Step-by-step task creation process
+- Volunteer matching system demonstration
+- Email notification workflow
+- Task assignment and acceptance flow
+
+**Related Video Tutorial:**
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+
+### Key Steps Covered in the Video
+
+1. **Accessing the Dashboard**
+   - Navigate to Volunteer Tasks section
+   - Use "Add new Volunteer Task" button
+
+2. **Task Information Entry**
+   - Enter clear service description
+   - Add detailed requirements
+   - Assign appropriate skill tags
+
+3. **System Processing**
+   - Automated volunteer matching
+   - Email notification generation
+   - Task status updates
+
+4. **Volunteer Response**
+   - Email notification delivery
+   - Task acceptance process
+   - Assignment confirmation
+
+5. **Coordination Flow**
+   - Administrator notification
+   - Member contact process
+   - Service coordination
 
 ### Task Information Requirements
 
@@ -237,4 +280,16 @@ lastUpdated: "2024-01-15"
 - [Volunteer System Overview](/docs/volunteer-management/volunteer-system-overview) - Complete guide to volunteer management system
 - [Automated Task Matching](/docs/volunteer-management/automated-matching) - How the skill-based matching system works
 - [Email Notification System](/docs/volunteer-management/email-notifications) - Managing volunteer task notifications
+- [Event Management System](/docs/event-management/event-management-overview) - Complete guide to event creation and management
+- [Event Types and Categories](/docs/event-management/event-categories) - Managing event organization and categorization
+- [EventPrime Plugin Integration](/docs/event-management/eventprime-integration) - Technical integration and dashboard overview
+- [User Management System](/docs/user-management/user-management-overview) - User roles, volunteer tags, and permissions management
 - [Custom Development - Functions.php](/docs/custom-development/functions-php) - Technical implementation details
+
+### 🎥 Video Learning Resources
+
+- [Video Tutorials Library](/docs/video-tutorials) - Complete collection of video guides
+- [Volunteer Task Assignment Tutorial](/docs/video-tutorials) - Step-by-step video demonstration
+- [Event Types Management Tutorial](/docs/video-tutorials) - Managing event categories and types
+- [EventPrime Dashboard Overview Tutorial](/docs/video-tutorials) - Dashboard overview and options
+- [User Management Basics Tutorial](/docs/video-tutorials) - User roles, volunteer tags, and permissions management

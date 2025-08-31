@@ -34,13 +34,7 @@ export default function NotFound() {
               Go to Documentation
             </Link>
             
-            <Link
-              href="/search"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-full flex items-center justify-center gap-2"
-            >
-              <Search className="w-5 h-5" />
-              Search Documentation
-            </Link>
+
             
             <button
               onClick={() => window.history.back()}
