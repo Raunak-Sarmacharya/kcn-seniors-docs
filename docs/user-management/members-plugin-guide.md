@@ -14,9 +14,9 @@ order: 3
 
 The Members plugin is a powerful WordPress plugin that provides advanced user role and capability management, allowing you to create custom roles, manage permissions, and protect content based on user roles.
 
-## Why Members Plugin for KCN Seniors
+## Why Members Plugin
 
-| Feature | Benefit | KCN Seniors Use Case |
+| Feature | Benefit | Use Case |
 |---------|---------|---------------------|
 | **Granular Control** | Fine-tune permissions for volunteers and members | Custom volunteer access levels |
 | **Content Protection** | Restrict member-only events and content | Premium member benefits |
@@ -27,7 +27,7 @@ The Members plugin is a powerful WordPress plugin that provides advanced user ro
 
 **Navigation Path**: WordPress Dashboard → Members → Roles
 
-## KCN Seniors Hierarchical Role Structure
+## Hierarchical Role Structure
 
 **Important**: Each role includes ALL capabilities from lower-level roles. This hierarchical system ensures volunteers get member benefits, Administrator 2 gets volunteer tools, etc.
 
@@ -158,7 +158,7 @@ The Members plugin is a powerful WordPress plugin that provides advanced user ro
    - Click "Add Role"
    - Verify role appears in roles list
 
-#### Custom Role Examples for KCN Seniors
+#### Custom Role Examples
 
 | Role Name | Internal Name | Purpose | Key Capabilities |
 |-----------|---------------|---------|------------------|

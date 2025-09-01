@@ -1,6 +1,6 @@
-# KCN Seniors Documentation
+# Documentation
 
-This directory contains the markdown-based documentation for the KCN Seniors website. The documentation is organized by sections and uses frontmatter for metadata.
+This directory contains the markdown-based documentation for the website. The documentation is organized by sections and uses frontmatter for metadata.
 
 ## Structure
 

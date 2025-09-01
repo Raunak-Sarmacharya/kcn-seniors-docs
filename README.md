@@ -1,34 +1,27 @@
-# KCN Seniors Documentation Portal
+# Documentation Portal
 
-A sophisticated, secure documentation portal for the KCN Seniors WordPress website built with Next.js 14+ and modern web technologies.
+A modern, responsive documentation portal built with Next.js 14+ and modern web technologies. This portal provides comprehensive guides, tutorials, and reference materials with an intuitive navigation system and advanced search capabilities.
 
 ## 🎯 Overview
 
-This documentation portal provides comprehensive guides, tutorials, and reference materials for managing the KCN Seniors WordPress website. It features a modern, responsive design with advanced search capabilities, user authentication, and an intuitive navigation system.
+This documentation portal features a clean, modern design with smooth animations, responsive layouts, and an organized content structure. It serves as a comprehensive knowledge base with easy navigation and search functionality.
 
 ## ✨ Features
 
-### 🔒 Security & Authentication
-- **Session-based authentication** with secure httpOnly cookies
-- **Data Access Layer (DAL)** pattern for centralized auth logic
-- **Password hashing** with bcrypt
-- **Automatic session refresh** and timeout handling
-- **Protected routes** with server-side authentication checks
-
 ### 🎨 Modern UI/UX
-- **Dark mode design** with glassmorphism effects
-- **Responsive layout** optimized for all devices
+- **Responsive design** optimized for all devices
 - **Smooth animations** with Framer Motion
-- **Gradient accents** and modern typography
+- **Glassmorphism effects** and modern typography
 - **Interactive components** with hover effects
+- **Dark/light mode support**
 
 ### 📚 Documentation Features
-- **11 comprehensive sections** covering all aspects of WordPress management
-- **Markdown content rendering** with syntax highlighting
+- **Markdown-based content** with syntax highlighting
+- **Organized sections** covering various topics
 - **Full-text search** with filters and real-time results
 - **Breadcrumb navigation** for easy orientation
-- **Video tutorial placeholders** for future content
 - **Copy-to-clipboard** functionality for code snippets
+- **Reading time estimates** for content
 
 ### 🔍 Search & Navigation
 - **Real-time search** across all documentation
@@ -41,7 +34,7 @@ This documentation portal provides comprehensive guides, tutorials, and referenc
 - **Mobile-first approach**
 - **Touch-friendly interface**
 - **Adaptive layouts** for all screen sizes
-- **Optimized performance** with sub-3 second load times
+- **Optimized performance** with efficient caching
 
 ## 🚀 Quick Start
 
@@ -54,7 +47,7 @@ This documentation portal provides comprehensive guides, tutorials, and referenc
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd kcn-docs-portal
+   cd documentation-portal
    ```
 
 2. **Install dependencies**
@@ -70,39 +63,33 @@ This documentation portal provides comprehensive guides, tutorials, and referenc
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Default Login Credentials
-- **Username:** `kcn_admin`
-- **Password:** `SecureKCN2025!`
-
 ## 📁 Project Structure
 
 ```
-kcn-docs-portal/
+documentation-portal/
 ├── app/
-│   ├── (auth)/                 # Authentication routes
-│   │   └── login/
-│   ├── (dashboard)/            # Protected dashboard routes
+│   ├── (dashboard)/            # Main dashboard routes
 │   │   ├── docs/              # Documentation pages
 │   │   └── search/            # Search functionality
 │   ├── api/                   # API routes
-│   │   ├── auth/              # Authentication endpoints
+│   │   ├── docs/              # Documentation API
 │   │   └── search/            # Search API
-│   ├── lib/                   # Data access layer
-│   │   ├── auth.ts           # Authentication logic
-│   │   ├── docs.ts           # Documentation data
-│   │   └── utils.ts          # Utility functions
-│   ├── globals.css           # Global styles
-│   ├── layout.tsx            # Root layout
-│   └── page.tsx              # Home page
+│   ├── lib/                   # Core utilities
+│   │   ├── markdown-docs.ts   # Documentation loading
+│   │   ├── build-time-docs.ts # Build-time processing
+│   │   └── utils.ts           # Utility functions
+│   ├── globals.css            # Global styles
+│   ├── layout.tsx             # Root layout
+│   └── page.tsx               # Home page
 ├── components/
-│   ├── auth/                 # Authentication components
-│   │   └── LoginForm.tsx
-│   └── docs/                 # Documentation components
+│   └── docs/                  # Documentation components
 │       ├── Breadcrumbs.tsx
 │       ├── Header.tsx
 │       ├── MarkdownContent.tsx
-│       └── Sidebar.tsx
-├── public/                   # Static assets
+│       ├── Sidebar.tsx
+│       └── VideoTutorials.tsx
+├── docs/                      # Markdown documentation files
+├── public/                    # Static assets
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -113,26 +100,28 @@ kcn-docs-portal/
 
 - **Framework:** Next.js 14+ with App Router
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Authentication:** Custom session-based with bcrypt
+- **Styling:** Tailwind CSS with custom design system
 - **Animations:** Framer Motion
 - **Icons:** Lucide React
 - **Markdown:** React Markdown with syntax highlighting
-- **Notifications:** React Hot Toast
+- **Performance:** Multi-level caching system
 
-## 📚 Documentation Sections
+## 📚 Documentation System
 
-1. **Getting Started** - Welcome and essential information
-2. **User Management** - Managing users, roles, and permissions
-3. **Event Management** - Managing events and registrations
-4. **Blog Management** - WordPress Posts/Blog system with role-based commenting
-5. **Content Management** - Creating and managing website content
-6. **Service & Volunteer Booking** - Managing service bookings and volunteer slots
-7. **Video Tutorials** - Step-by-step video guides for common tasks
-8. **Custom Development** - Advanced customization options
-9. **Page Builder & Forms** - Elementor integration and form management
-10. **Maintenance & Support** - Keeping your site secure and updated
-11. **Troubleshooting** - Common issues and solutions
+### Content Structure
+Documentation is organized into logical sections, each containing multiple guides and tutorials. Content is written in Markdown format with frontmatter metadata for organization and search.
+
+### Adding New Content
+1. Create a new `.md` file in the appropriate section directory
+2. Add frontmatter metadata (title, description, tags, difficulty, etc.)
+3. Write content using standard Markdown syntax
+4. The system automatically processes and displays new content
+
+### Search Functionality
+- Full-text search across all documentation
+- Filter by category, difficulty, and tags
+- Real-time search results with highlighting
+- Search history and suggestions
 
 ## 🔧 Configuration
 
@@ -140,34 +129,22 @@ kcn-docs-portal/
 Create a `.env.local` file in the root directory:
 
 ```env
-# Authentication
-NEXTAUTH_SECRET=your-secret-key-here
-NEXTAUTH_URL=http://localhost:3000
-
-# Database (for production)
-DATABASE_URL=your-database-url
-
-# Security
-COOKIE_SECRET=your-cookie-secret
+# Optional: Customize application settings
+NEXT_PUBLIC_APP_NAME=Documentation Portal
+NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
 ### Customization
 
 #### Adding New Documentation
-1. Add content to `app/lib/docs.ts`
-2. Update the `docSections` array with new sections
-3. Add content to the `docContent` array
-4. The routing will automatically handle new content
+1. Add content to the `docs/` directory
+2. Update section definitions in `app/lib/markdown-docs.ts`
+3. The routing will automatically handle new content
 
 #### Styling
 - Modify `tailwind.config.js` for theme customization
 - Update `app/globals.css` for custom styles
 - Use the provided CSS classes for consistent design
-
-#### Authentication
-- Update user credentials in `app/lib/auth.ts`
-- Modify session duration and security settings
-- Add new user roles as needed
 
 ## 🚀 Deployment
 
@@ -181,21 +158,20 @@ COOKIE_SECRET=your-cookie-secret
 2. Start production server: `npm start`
 3. Configure your hosting platform
 
-## 🔒 Security Considerations
+## 🔒 Security Features
 
 - **HTTPS Required** in production
-- **Secure cookies** with httpOnly flag
-- **Password hashing** with bcrypt
-- **Session management** with automatic cleanup
+- **Security headers** with XSS protection
+- **Content Security Policy** implementation
 - **Input validation** on all forms
-- **CSRF protection** implemented
+- **Secure routing** with Next.js App Router
 
 ## 📈 Performance
 
+- **Multi-level caching** (API, client-side, HTTP)
 - **Static generation** for documentation pages
 - **Image optimization** with Next.js Image component
 - **Code splitting** for optimal loading
-- **Caching strategies** for improved performance
 - **Lazy loading** for non-critical components
 
 ## 🤝 Contributing
@@ -208,7 +184,7 @@ COOKIE_SECRET=your-cookie-secret
 
 ## 📄 License
 
-This project is proprietary software for KCN Seniors. All rights reserved.
+This project is proprietary software. All rights reserved.
 
 ## 🆘 Support
 
@@ -220,11 +196,11 @@ For technical support or questions:
 ## 🔄 Updates
 
 This documentation portal is regularly updated with:
-- New WordPress features and best practices
-- Security updates and improvements
-- UI/UX enhancements
+- New features and improvements
+- Security updates and enhancements
+- UI/UX improvements
 - Additional content and tutorials
 
 ---
 
-**Built with ❤️ for KCN Seniors Community**
+**Documentation Portal v1.0.0**

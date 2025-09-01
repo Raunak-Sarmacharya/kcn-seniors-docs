@@ -12,7 +12,7 @@ order: 2
 
 # Functions.php Customizations
 
-This document covers the custom code implemented in your theme's `functions.php` file that provides advanced functionality for the KCN Seniors website, including event protection, volunteer task management, and emergency access systems.
+This document covers the custom code implemented in your theme's `functions.php` file that provides advanced functionality for the website, including event protection, volunteer task management, and emergency access systems.
 
 ## Overview of Custom Functions
 
@@ -24,7 +24,7 @@ Your `functions.php` file contains several custom functions that work together t
 4. **ACF Integration**: Volunteer skill management and task requirements
 
 **Theme Foundation:**
-These custom functions are built on top of the **Hello Biz theme** - a lightweight, performance-optimized WordPress theme that provides a clean foundation for custom development without interfering with the complex plugin stack used by KCN Seniors.
+These custom functions are built on top of the **Hello Biz theme** - a lightweight, performance-optimized WordPress theme that provides a clean foundation for custom development without interfering with the complex plugin stack used by the website.
 
 ## Event Protection System
 
@@ -323,7 +323,7 @@ function send_volunteer_task_notification($volunteer, $task_id) {
     $message .= "Click here to accept this task:\n";
     $message .= $acceptance_url . "\n\n";
     $message .= "Remember: This is first come, first served!\n\n";
-    $message .= "Best regards,\nKCN Seniors Team";
+    $message .= "Best regards,\nWebsite Team";
     
     wp_mail($volunteer->user_email, $subject, $message);
 }

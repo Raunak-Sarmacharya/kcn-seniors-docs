@@ -19,7 +19,7 @@ This guide covers the complete process of creating and managing events using the
 
 **Watch the Complete Process:**
 
-For a visual demonstration of the event creation workflow, watch our comprehensive video tutorial below:
+For a visual demonstration of the event creation workflow, watch the comprehensive video tutorial below:
 
 **What the Video Covers:**
 - Complete EventPrime dashboard navigation
@@ -91,7 +91,7 @@ For a visual demonstration of the event creation workflow, watch our comprehensi
    - **Full Description**: Detailed event information visible to all users
    - Include what attendees can expect
    - Mention any requirements or preparation needed
-   - Add general location area (e.g., "Flatrock Community Center area")
+   - Add general location area (e.g., "[Location] Community Center area")
 
 3. **Event Date & Time:**
    - Set the primary event date and time
@@ -128,7 +128,7 @@ For a visual demonstration of the event creation workflow, watch our comprehensi
    - Include venue contact information
 
 2. **Address Details:**
-   - Complete venue address (automatically protected by your system)
+   - Complete venue address (automatically protected by the system)
    - Include postal code for map accuracy
    - Add any special access instructions
 

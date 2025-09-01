@@ -14,7 +14,7 @@ order: 4
 
 ## Overview
 
-The KCN Seniors website utilizes **WPForms Lite** as the primary contact form solution, specifically implemented on the **Contact Us page**. WPForms Lite provides a user-friendly, feature-rich contact form system that enables visitors to submit inquiries, feedback, and contact requests directly through the website.
+The website utilizes **WPForms Lite** as the primary contact form solution, specifically implemented on the **Contact Us page**. WPForms Lite provides a user-friendly, feature-rich contact form system that enables visitors to submit inquiries, feedback, and contact requests directly through the website.
 
 **Key Integration Points:**
 - WPForms Lite plugin provides the foundation for contact form functionality
@@ -63,7 +63,7 @@ WPForms Lite is a free, beginner-friendly WordPress contact form plugin that all
 
 ### Contact Us Page Integration
 
-The WPForms contact form is specifically implemented on the **Contact Us page** of the KCN Seniors website, serving as the primary communication channel for visitors and potential members.
+The WPForms contact form is specifically implemented on the **Contact Us page** of the website, serving as the primary communication channel for visitors and potential members.
 
 #### **Page Location:**
 - **URL**: `/contact-us/` or `/contact/`
@@ -75,7 +75,7 @@ The WPForms contact form is specifically implemented on the **Contact Us page** 
 - **Above the Fold**: Form prominently displayed for immediate access
 - **Responsive Layout**: Adapts to mobile and desktop screen sizes
 - **Clear Call-to-Action**: Obvious purpose and submission instructions
-- **Professional Design**: Consistent with KCN Seniors branding
+- **Professional Design**: Consistent with website branding
 
 ### Form Structure and Fields
 
@@ -257,7 +257,7 @@ The WPForms contact form is specifically implemented on the **Contact Us page** 
 - **Response Time**: Quick acknowledgment of form submissions
 
 #### **Email Template Customization:**
-- **Branded Headers**: Include KCN Seniors logo and branding
+- **Branded Headers**: Include website logo and branding
 - **Professional Tone**: Maintain professional communication standards
 - **Clear Information**: Well-organized submission data
 - **Call-to-Action**: Clear next steps for administrators
@@ -312,7 +312,7 @@ The WPForms contact form is specifically implemented on the **Contact Us page** 
 
 #### **Contact Form Types:**
 - **General Inquiries**: General questions and information requests
-- **Service Inquiries**: Questions about KCN Seniors services
+- **Service Inquiries**: Questions about services
 - **Membership Inquiries**: Questions about membership and benefits
 - **General Contact**: All other contact requests
 
@@ -327,13 +327,13 @@ The WPForms contact form is specifically implemented on the **Contact Us page** 
 ### Form Design Customization
 
 #### **Visual Customization:**
-- **Color Schemes**: Match KCN Seniors brand colors
+- **Color Schemes**: Match brand colors
 - **Typography**: Consistent font styles and sizes
 - **Layout Options**: Single column, multi-column, or custom layouts
 - **Spacing and Alignment**: Professional form appearance
 
 #### **Brand Integration:**
-- **Logo Placement**: KCN Seniors logo in form header
+- **Logo Placement**: Website logo in form header
 - **Brand Colors**: Consistent color scheme throughout forms
 - **Professional Styling**: Maintain professional appearance
 - **Mobile Optimization**: Responsive design for all devices
@@ -464,10 +464,10 @@ The WPForms contact form is specifically implemented on the **Contact Us page** 
 
 ## Conclusion
 
-WPForms Lite serves as the primary contact form solution for the KCN Seniors website, providing a reliable, user-friendly system for visitor inquiries and contact requests. The integration on the Contact Us page ensures that potential members, service inquiries, and general questions can be easily submitted and managed by administrators.
+WPForms Lite serves as the primary contact form solution for the website, providing a reliable, user-friendly system for visitor inquiries and contact requests. The integration on the Contact Us page ensures that potential members, service inquiries, and general questions can be easily submitted and managed by administrators.
 
 **Key Success Factors:**
-- **Professional Appearance**: Forms that reflect KCN Seniors' professional image
+- **Professional Appearance**: Forms that reflect the website's professional image
 - **Reliable Delivery**: Consistent email notifications for administrators
 - **Spam Protection**: Effective filtering of unwanted submissions
 - **User Experience**: Easy-to-use forms for all visitors
@@ -480,7 +480,7 @@ WPForms Lite serves as the primary contact form solution for the KCN Seniors web
 - Enhanced visitor engagement and satisfaction
 - Efficient administrator workflow for contact management
 
-This contact form system supports the KCN Seniors co-operative mission by providing an accessible, professional communication channel that helps connect seniors with the services and support they need, while maintaining the high standards of professionalism and reliability that the organization represents.
+This contact form system supports the co-operative mission by providing an accessible, professional communication channel that helps connect seniors with the services and support they need, while maintaining the high standards of professionalism and reliability that the organization represents.
 
 ## Additional Resources
 

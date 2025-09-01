@@ -299,7 +299,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-2xl md:text-3xl text-gray-300 mb-16 max-w-2xl mx-auto font-light"
             >
-              Your complete guide to your WordPress website
+              Complete documentation for your website management system
             </motion.p>
 
             {/* Enhanced CTA Button */}

@@ -525,7 +525,7 @@ export default function DocPage({ params }: PageProps) {
                 Need more help with {section.title}?
               </h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-                Explore our comprehensive guides and tutorials to master {section.title.toLowerCase()} for your KCN Seniors website.
+                View troubleshooting guides and video tutorials for additional support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

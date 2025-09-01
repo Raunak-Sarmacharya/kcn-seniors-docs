@@ -1,6 +1,6 @@
 ---
 title: "Welcome & Overview"
-description: "Complete guide to the KCN Seniors website management system"
+description: "Complete guide to the website management system"
 sectionId: "getting-started"
 slug: "welcome"
 tags: ["welcome", "overview", "getting started", "kcn seniors", "documentation", "wordpress", "eventprime", "members plugin", "acf", "elementor"]
@@ -23,7 +23,7 @@ order: 1
 2. [WordPress Basics](#wordpress-basics)
    - [WordPress Basics Overview](/docs/wordpress-basics/wordpress-basics-overview)
    - [WordPress Dashboard Navigation Guide](/docs/wordpress-basics/dashboard-navigation)
-   - [Creating Content - The KCN Seniors Way](/docs/wordpress-basics/creating-content)
+   - [Creating Content](/docs/wordpress-basics/creating-content)
 
 3. [User Management System](#user-management-system)
    - [User Management Overview](#user-management-overview)
@@ -77,10 +77,10 @@ order: 1
 
 ### Welcome & Overview
 
-Welcome to the complete KCN Seniors website documentation! This comprehensive guide covers all aspects of managing the Killick Coast North Seniors Co-operative (KCNseniors.coop) website - a non-profit community service co-operative serving Bauline, Flatrock, and Pouch Cove in Newfoundland, Canada.
+Welcome to the complete website documentation! This comprehensive guide covers all aspects of managing the seniors co-operative website - a non-profit community service co-operative.
 
-**About KCN Seniors Co-operative:**
-KCN Seniors is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model of the Village to Village Network.
+**About the Co-operative:**
+This is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model of the Village to Village Network.
 
 **Complete Website Management Includes:**
 - **WordPress Basics**: Core WordPress functionality and content creation (covered in this section)
@@ -111,7 +111,7 @@ KCN Seniors is a non-profit community service co-operative where volunteers offe
 
 ### Site Architecture Overview
 
-The KCN Seniors website uses a sophisticated **dual-system approach** for comprehensive user management and content protection, built on a robust WordPress foundation with specialized plugins and custom development.
+The website uses a sophisticated **dual-system approach** for comprehensive user management and content protection, built on a robust WordPress foundation with specialized plugins and custom development.
 
 #### Core Technology Stack
 
@@ -146,7 +146,7 @@ The website uses a sophisticated dual-system approach:
 
 #### Hierarchical Role Structure (5 Levels)
 
-KCN Seniors uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
+The system uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
 
 **Level 1 - Public Access**: Available to all website visitors
 - General website information and public content

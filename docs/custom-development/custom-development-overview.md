@@ -1,6 +1,6 @@
 ---
 title: "Custom Development Overview"
-description: "Complete overview of custom features and implementations for KCN Seniors website"
+description: "Complete overview of custom features and implementations for website"
 sectionId: "custom-development"
 slug: "custom-development-overview"
 tags: ["custom development", "overview", "technical", "implementation", "features", "wordpress", "plugins", "integration"]
@@ -14,7 +14,7 @@ order: 1
 
 ## Understanding Custom Development Features
 
-The KCN Seniors website incorporates several custom development features that extend beyond standard WordPress functionality. These customizations provide enhanced user management, content protection, volunteer coordination, and system integration capabilities.
+The website incorporates several custom development features that extend beyond standard WordPress functionality. These customizations provide enhanced user management, content protection, volunteer coordination, and system integration capabilities.
 
 ## 🏗️ **System Architecture Overview**
 
@@ -392,4 +392,4 @@ The KCN Seniors website incorporates several custom development features that ex
 
 ---
 
-*This overview provides a comprehensive understanding of all custom development features implemented on the KCN Seniors website. For detailed implementation guides, refer to the specific sections listed above.*
+*This overview provides a comprehensive understanding of all custom development features implemented on the website. For detailed implementation guides, refer to the specific sections listed above.*

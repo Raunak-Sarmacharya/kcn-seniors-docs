@@ -14,7 +14,7 @@ order: 2
 
 ## Understanding Website Maintenance
 
-Regular maintenance is essential for keeping the KCN Seniors website secure, fast, and reliable. This maintenance schedule outlines the routine tasks that should be performed to ensure optimal website performance and security, utilizing the power of our installed plugins.
+Regular maintenance is essential for keeping the website secure, fast, and reliable. This maintenance schedule outlines the routine tasks that should be performed to ensure optimal website performance and security, utilizing the power of our installed plugins.
 
 ## 📅 **Maintenance Schedule Overview**
 
@@ -446,4 +446,4 @@ Next Week's Focus:
 
 ---
 
-*Regular maintenance is essential for website health and security. Following this maintenance schedule ensures that the KCN Seniors website remains secure, fast, and reliable for all users.*
+*Regular maintenance is essential for website health and security. Following this maintenance schedule ensures that the website remains secure, fast, and reliable for all users.*

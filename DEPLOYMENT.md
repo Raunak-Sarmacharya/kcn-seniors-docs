@@ -1,8 +1,8 @@
-# Deployment Guide - KCN Seniors Documentation Portal
+# Deployment Guide - Documentation Portal
 
 ## 🚀 Quick Deployment to Vercel
 
-This guide will walk you through deploying the KCN Seniors Documentation Portal to Vercel via GitHub.
+This guide will walk you through deploying the Documentation Portal to Vercel via GitHub.
 
 ## 📋 Prerequisites
 
@@ -17,8 +17,8 @@ This guide will walk you through deploying the KCN Seniors Documentation Portal 
 1. **Go to GitHub.com** and sign in to your account
 2. **Click the "+" icon** in the top right corner and select "New repository"
 3. **Repository settings:**
-   - **Repository name:** `kcn-seniors-docs` (or your preferred name)
-   - **Description:** `KCN Seniors WordPress Documentation Portal - Modern, secure documentation system built with Next.js 14+`
+   - **Repository name:** `documentation-portal` (or your preferred name)
+   - **Description:** `Modern documentation portal built with Next.js 14+ - Features markdown support, search, and responsive design`
    - **Visibility:** Choose Public or Private (Private recommended for security)
    - **DO NOT** initialize with README, .gitignore, or license (we already have these)
 4. **Click "Create repository"**
@@ -35,7 +35,7 @@ This guide will walk you through deploying the KCN Seniors Documentation Portal 
 gh auth login
 
 # Create repository
-gh repo create kcn-seniors-docs --description "KCN Seniors WordPress Documentation Portal" --private --source=. --remote=origin --push
+gh repo create documentation-portal --description "Modern documentation portal built with Next.js 14+" --private --source=. --remote=origin --push
 ```
 
 ## 🔗 Step 2: Connect Local Repository to GitHub
@@ -44,7 +44,7 @@ After creating the GitHub repository, run these commands in your project directo
 
 ```bash
 # Add the remote origin (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/kcn-seniors-docs.git
+git remote add origin https://github.com/YOUR_USERNAME/documentation-portal.git
 
 # Push the code to GitHub
 git branch -M main
@@ -59,10 +59,10 @@ git push -u origin main
 2. **Click "New Project"**
 3. **Import your GitHub repository:**
    - Select your GitHub account
-   - Find and select the `kcn-seniors-docs` repository
+   - Find and select the `documentation-portal` repository
    - Click "Import"
 4. **Configure project settings:**
-   - **Project Name:** `kcn-seniors-docs` (or your preferred name)
+   - **Project Name:** `documentation-portal` (or your preferred name)
    - **Framework Preset:** Next.js (should auto-detect)
    - **Root Directory:** `./` (leave as default)
    - **Build Command:** `npm run build` (should auto-detect)
@@ -94,50 +94,46 @@ The application is configured to work out of the box, but you can customize thes
 In your Vercel project dashboard, go to Settings → Environment Variables:
 
 ```bash
-# Optional: Customize session settings
-NEXT_PUBLIC_APP_NAME=KCN Seniors Docs
+# Optional: Customize application settings
+NEXT_PUBLIC_APP_NAME=Documentation Portal
 NEXT_PUBLIC_APP_URL=https://your-domain.vercel.app
 
-# Optional: Customize security settings
-SESSION_SECRET=your-custom-session-secret
-SESSION_MAX_AGE=86400
+# Optional: Customize performance settings
+CACHE_DURATION=600000
 ```
 
 ### Custom Domain (Optional)
 
 1. In Vercel dashboard, go to Settings → Domains
-2. Add your custom domain (e.g., `docs.kcnseniors.com`)
+2. Add your custom domain (e.g., `docs.yourcompany.com`)
 3. Follow the DNS configuration instructions
 
-## 🔐 Step 5: Security Considerations
+## 🔐 Step 5: Security Configuration
 
-### Default Credentials
+### Security Headers
 
-The application comes with demo credentials:
-- **Username:** `kcn_admin`
-- **Password:** `SecureKCN2025!`
+The application includes comprehensive security headers configured in `vercel.json`:
 
-### Production Security
+- **X-Content-Type-Options:** Prevents MIME type sniffing
+- **X-Frame-Options:** Prevents clickjacking attacks
+- **X-XSS-Protection:** Enables XSS filtering
+- **Referrer-Policy:** Controls referrer information
+- **Permissions-Policy:** Restricts browser features
 
-For production use, consider:
+### Content Security Policy
 
-1. **Change default credentials** by modifying `app/lib/auth.ts`
-2. **Use environment variables** for sensitive data
-3. **Enable HTTPS** (automatic with Vercel)
-4. **Set up proper session management** for your domain
+The application implements a Content Security Policy to prevent XSS attacks and other security vulnerabilities.
 
 ## 📱 Step 6: Testing Your Deployment
 
-1. **Visit your Vercel URL** (e.g., `https://kcn-seniors-docs.vercel.app`)
-2. **Login with demo credentials:**
-   - Username: `kcn_admin`
-   - Password: `SecureKCN2025!`
-3. **Test key features:**
+1. **Visit your Vercel URL** (e.g., `https://documentation-portal.vercel.app`)
+2. **Test key features:**
    - Navigation and sidebar
    - Search functionality
    - Documentation pages
    - Mobile responsiveness
-   - Authentication flow
+   - Markdown rendering
+   - Performance and caching
 
 ## 🔄 Step 7: Continuous Deployment
 
@@ -155,10 +151,10 @@ Once connected to GitHub, Vercel will automatically:
    - Verify all dependencies are in `package.json`
    - Check build logs in Vercel dashboard
 
-2. **Authentication issues:**
-   - Verify session cookies are working
-   - Check browser console for errors
-   - Ensure HTTPS is enabled
+2. **Markdown not rendering:**
+   - Verify markdown files are in the `docs/` directory
+   - Check frontmatter syntax in markdown files
+   - Ensure API routes are working correctly
 
 3. **Styling issues:**
    - Clear browser cache
@@ -187,15 +183,15 @@ Once connected to GitHub, Vercel will automatically:
 
 ## 🎉 Success!
 
-Your KCN Seniors Documentation Portal is now live and ready for use! The application includes:
+Your Documentation Portal is now live and ready for use! The application includes:
 
-- ✅ Secure authentication system
-- ✅ Modern, responsive UI
-- ✅ Comprehensive documentation structure
-- ✅ Search functionality
-- ✅ Mobile-optimized design
-- ✅ Dark/light mode support
-- ✅ Professional styling with glassmorphism effects
+- ✅ Modern, responsive design
+- ✅ Markdown content support
+- ✅ Advanced search functionality
+- ✅ Mobile-optimized interface
+- ✅ Performance optimizations
+- ✅ Security headers
+- ✅ Professional styling with animations
 
 ## 🔄 Updates and Maintenance
 
@@ -209,6 +205,45 @@ To update your deployment:
    git push origin main
    ```
 3. **Vercel will automatically redeploy**
+
+## 📚 Content Management
+
+### Adding New Documentation
+
+1. **Create markdown files** in the `docs/` directory
+2. **Add frontmatter metadata** for organization
+3. **Push to GitHub** - Vercel will automatically redeploy
+4. **Content is immediately available** through the API
+
+### Content Structure
+
+```
+docs/
+├── getting-started/
+│   └── welcome.md
+├── user-management/
+│   └── overview.md
+├── maintenance-support/
+│   └── overview.md
+└── troubleshooting/
+    └── common-issues.md
+```
+
+## 🚀 Performance Features
+
+### Caching Strategy
+
+- **API Caching:** 10-minute server-side cache
+- **Client Caching:** 10-minute client-side cache
+- **HTTP Caching:** Browser-level caching with validation
+- **Static Generation:** Optimized for documentation content
+
+### Optimization Features
+
+- **Code splitting** for optimal loading
+- **Image optimization** with Next.js Image component
+- **Lazy loading** for non-critical components
+- **Efficient markdown processing** with reusable processors
 
 ---
 

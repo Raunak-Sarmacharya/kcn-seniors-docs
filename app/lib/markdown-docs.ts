@@ -66,7 +66,7 @@ export const docSections: DocSection[] = [
     children: [
       { id: 'wordpress-basics-overview', title: 'WordPress Basics Overview', description: 'Complete guide to WordPress fundamentals for KCN Seniors team members', icon: 'BookOpen', slug: 'wordpress-basics-overview', category: 'basics', order: 1 },
       { id: 'dashboard-navigation', title: 'WordPress Dashboard Navigation Guide', description: 'Complete guide to navigating the WordPress dashboard and admin menu', icon: 'Layout', slug: 'dashboard-navigation', category: 'basics', order: 2 },
-      { id: 'creating-content', title: 'Creating Content - The KCN Seniors Way', description: 'Complete guide to creating posts, pages, and managing content in WordPress', icon: 'Edit', slug: 'creating-content', category: 'basics', order: 3 },
+      { id: 'creating-content', title: 'Creating Content', description: 'Complete guide to creating posts, pages, and managing content in WordPress', icon: 'Edit', slug: 'creating-content', category: 'basics', order: 3 },
     ],
   },
   {
@@ -236,7 +236,7 @@ export async function getAllMarkdownDocs(): Promise<DocContent[]> {
   }
 
   try {
-    const response = await fetch('/api/docs');
+    const response = await fetch('/api/docs?cacheBust=' + Date.now());
     if (!response.ok) {
       throw new Error('Failed to fetch documentation');
     }
@@ -277,7 +277,7 @@ export async function getMarkdownDocBySlug(slug: string): Promise<DocContent | n
   }
   
   try {
-    const response = await fetch(`/api/docs?slug=${encodeURIComponent(slug)}`);
+    const response = await fetch(`/api/docs?slug=${encodeURIComponent(slug)}&cacheBust=${Date.now()}`);
     if (!response.ok) {
       return null;
     }
@@ -296,23 +296,13 @@ export async function getMarkdownDocBySlug(slug: string): Promise<DocContent | n
 
 // Get documentation by section
 export async function getMarkdownDocsBySection(sectionId: string): Promise<DocContent[]> {
-  try {
-    const response = await fetch(`/api/docs?sectionId=${encodeURIComponent(sectionId)}`);
-    if (!response.ok) {
-      return [];
-    }
-    
-    const docs: DocContent[] = await response.json();
-    return docs;
-  } catch (error) {
-    console.error('Error fetching documents by section:', error);
-    return [];
-  }
+  const docs = await getAllMarkdownDocs();
+  return docs.filter(d => d.sectionId === sectionId);
 }
 
 // Get section by slug
-export function getSectionBySlug(slug: string): DocSection | null {
-  return docSections.find(section => section.slug === slug) || null;
+export function getSectionBySlug(slug: string): DocSection | undefined {
+  return docSections.find(s => s.slug === slug);
 }
 
 // Get all sections

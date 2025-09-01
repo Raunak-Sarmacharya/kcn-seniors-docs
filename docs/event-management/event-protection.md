@@ -28,7 +28,7 @@ Your website automatically hides specific venue information from non-members whi
 - Event titles, dates, and times
 - General descriptions and activities
 - Event information and details
-- General location area (e.g., "Bauline Community Area")
+- General location area (e.g., "[Location] Community Area")
 
 ## How Access Levels Work
 
@@ -110,7 +110,7 @@ This feature works specifically with the EventPrime event management plugin (tes
    - No additional configuration needed
 
 **Best Practices:**
-- Include general location area in public description (e.g., "Flatrock Community Center area")
+- Include general location area in public description (e.g., "[Location] Community Center area")
 - Save specific addresses only in EventPrime's venue fields
 - Test event visibility by logging out or using different user accounts
 - Use descriptive event categories for better organization

@@ -13,13 +13,13 @@ videoUrl: "https://player.vimeo.com/video/1114712978?title=0&byline=0&portrait=0
 
 # EventPrime Plugin Integration
 
-This guide covers the technical integration details, advanced features, and troubleshooting for the EventPrime plugin in your KCN Seniors website.
+This guide covers the technical integration details, advanced features, and troubleshooting for the EventPrime plugin in the website.
 
 ## 🎥 Video Tutorial Guide
 
 **Watch the Complete Process:**
 
-For a visual demonstration of the EventPrime dashboard and its capabilities, watch our comprehensive video tutorial below:
+For a visual demonstration of the EventPrime dashboard and its capabilities, watch the comprehensive video tutorial below:
 
 **What the Video Covers:**
 - EventPrime plugin dashboard overview
@@ -52,7 +52,7 @@ For a visual demonstration of the EventPrime dashboard and its capabilities, wat
 ### Role-Based Access Control System
 
 **Location Protection Implementation:**
-Your website implements sophisticated access control that selectively hides sensitive venue information based on user roles while maintaining public visibility for general event information.
+The website implements sophisticated access control that selectively hides sensitive venue information based on user roles while maintaining public visibility for general event information.
 
 **Technical Implementation (from functions.php):**
 ```php
@@ -152,7 +152,7 @@ add_shortcode('location', function($atts) {
 
 ### Multiple Display Options
 
-Your website showcases events in three distinct formats optimized for different user experiences:
+The website showcases events in three distinct formats optimized for different user experiences:
 
 #### 1. Slider Carousel (Home Page)
 **Location**: Home page event showcase
@@ -222,7 +222,7 @@ Your website showcases events in three distinct formats optimized for different 
 ### EventPrime and WordPress Roles
 
 **Seamless Integration:**
-EventPrime utilizes WordPress's built-in user system, making it fully compatible with your role-based access control:
+EventPrime utilizes WordPress's built-in user system, making it fully compatible with the role-based access control:
 
 - **WordPress Users**: All user accounts work with EventPrime
 - **Role Recognition**: EventPrime respects WordPress role assignments
@@ -231,7 +231,7 @@ EventPrime utilizes WordPress's built-in user system, making it fully compatible
 ### Members Plugin Compatibility
 
 **Enhanced Role Management:**
-Your Members plugin configuration extends to EventPrime functionality:
+The Members plugin configuration extends to EventPrime functionality:
 
 - **Custom Roles**: All custom roles (Member, Volunteer) work with EventPrime
 - **Capability Control**: Fine-tune EventPrime permissions per role

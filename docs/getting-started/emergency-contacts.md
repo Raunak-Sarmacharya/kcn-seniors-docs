@@ -1,6 +1,6 @@
 ---
 title: "Emergency Contacts & Support"
-description: "Emergency contacts and support information for KCN Seniors website"
+description: "Emergency contacts and support information for website"
 sectionId: "getting-started"
 slug: "emergency-contacts"
 tags: ["emergency", "contacts", "support", "troubleshooting", "kcn seniors", "wordpress", "plugins"]

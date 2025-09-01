@@ -1,7 +1,7 @@
 {
-  "name": "kcn-docs-portal",
+  "name": "documentation-portal",
   "version": "1.0.0",
-  "description": "Sophisticated documentation portal for KCN Seniors WordPress website",
+  "description": "Modern documentation portal built with Next.js 14+ featuring markdown support, search, and responsive design",
   "private": true,
   "scripts": {
     "dev": "next dev",

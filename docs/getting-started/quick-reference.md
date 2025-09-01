@@ -1,6 +1,6 @@
 ---
 title: "Quick Reference Guide"
-description: "Quick access to common tasks and system information for KCN Seniors website"
+description: "Quick access to common tasks and system information for website"
 sectionId: "getting-started"
 slug: "quick-reference"
 tags: ["quick reference", "common tasks", "system information", "kcn seniors", "wordpress", "eventprime", "elementor"]
@@ -14,11 +14,11 @@ order: 3
 
 ## System Overview
 
-### KCN Seniors Website
+### Website
 - **URL**: KCNseniors.coop
 - **Platform**: WordPress with specialized plugins
-- **Purpose**: Community management for Killick Coast North Seniors Co-operative
-- **Serving**: Bauline, Flatrock, and Pouch Cove, Newfoundland, Canada
+- **Purpose**: Community management for seniors co-operative
+- **Serving**: [Location], [Province/State], [Country]
 
 ### Core Technology Stack
 - **WordPress**: Primary CMS with Block Editor
@@ -361,4 +361,4 @@ order: 3
 
 *This quick reference guide provides easy access to common tasks and system information. For detailed guides, see the specific documentation sections.*
 
-*For questions or suggestions about this quick reference, please contact your website administrator.*
+*For questions or suggestions about this quick reference, please contact the website administrator.*

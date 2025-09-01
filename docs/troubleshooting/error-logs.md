@@ -14,7 +14,7 @@ order: 2
 
 ## Understanding WordPress Error Logs
 
-Error logs are essential tools for diagnosing problems on the KCN Seniors website. This guide explains how to access, read, and interpret various types of error logs to identify and resolve issues.
+Error logs are essential tools for diagnosing problems on the website. This guide explains how to access, read, and interpret various types of error logs to identify and resolve issues.
 
 ## 📍 **Types of Error Logs**
 
@@ -543,4 +543,4 @@ Long-term Solution: [Planned fix]
 
 ---
 
-*Error log analysis is a crucial skill for maintaining the KCN Seniors website. Understanding how to read and interpret error logs helps identify and resolve issues quickly and effectively.*
+*Error log analysis is a crucial skill for maintaining the website. Understanding how to read and interpret error logs helps identify and resolve issues quickly and effectively.*

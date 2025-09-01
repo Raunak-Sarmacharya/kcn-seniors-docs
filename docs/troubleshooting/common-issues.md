@@ -1,6 +1,6 @@
 ---
 title: "Common Issues & Solutions"
-description: "Solutions to common WordPress and plugin issues on the KCN Seniors website"
+description: "Solutions to common WordPress and plugin issues on the website"
 sectionId: "troubleshooting"
 slug: "common-issues"
 tags: ["troubleshooting", "common issues", "solutions", "wordpress", "plugins", "errors", "fixes"]
@@ -14,7 +14,7 @@ order: 1
 
 ## Troubleshooting Common Problems
 
-This guide provides solutions to the most common issues you may encounter while using the KCN Seniors website. Each issue includes step-by-step troubleshooting steps and solutions.
+This guide provides solutions to the most common issues you may encounter while using the website. Each issue includes step-by-step troubleshooting steps and solutions.
 
 ## 🚨 **Critical System Issues**
 

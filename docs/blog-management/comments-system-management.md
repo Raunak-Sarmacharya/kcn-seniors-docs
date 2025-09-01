@@ -14,7 +14,7 @@ order: 2
 
 ## Overview
 
-The KCN Seniors website utilizes WordPress's native commenting system integrated with role-based access control through the Members Plugin. Comments are a feature where site visitors can share their opinions and feedback on your content, such as blog posts, fostering community engagement and interaction between the co-operative and its members.
+The website utilizes WordPress's native commenting system integrated with role-based access control through the Members Plugin. Comments are a feature where site visitors can share their opinions and feedback on your content, such as blog posts, fostering community engagement and interaction between the co-operative and its members.
 
 **Key Integration Points:**
 - WordPress native comment system provides the foundation
@@ -208,7 +208,7 @@ Manually managing comments can be time‑consuming and tedious. But it's a neces
 
 ### Members Plugin Integration
 
-The KCN Seniors website integrates WordPress comments with the Members Plugin for sophisticated access control. Members is a roles and capabilities based WordPress membership plugin. It gives your users the ultimate member experience by giving you powerful tools to add roles and capabilities and assign them to your users.
+The website integrates WordPress comments with the Members Plugin for sophisticated access control. Members is a roles and capabilities based WordPress membership plugin. It gives your users the ultimate member experience by giving you powerful tools to add roles and capabilities and assign them to your users.
 
 #### **Comment Capability Management:**
 - **Comment Posting**: Restricted to logged-in users with appropriate roles
@@ -346,7 +346,7 @@ All WordPress.com sites are protected by the Akismet comment spam filter, which 
 - Implement time-based spam detection
 - Regular backup of comment data
 
-## Comment Workflow for KCN Seniors
+## Comment Workflow
 
 ### Daily Moderation Routine
 
@@ -356,7 +356,7 @@ All WordPress.com sites are protected by the Akismet comment spam filter, which 
 3. **Priority Responses**: Reply to member questions and concerns
 4. **Quality Assessment**: Ensure discussions maintain community standards
 
-#### **Approval Criteria for KCN Seniors**
+#### **Approval Criteria**
 **Automatically Approve:**
 - Comments from verified members with good history
 - Constructive questions about services or programs
@@ -542,7 +542,7 @@ You might be surprised to learn how much faster your website will load overall i
 
 ## Conclusion
 
-The WordPress Comments System serves as a vital communication channel for the KCN Seniors community, enabling meaningful interaction between co-operative members, volunteers, and administrators. The integration with the Members Plugin provides sophisticated access control while maintaining an open, welcoming environment for community discussion.
+The WordPress Comments System serves as a vital communication channel for the community, enabling meaningful interaction between co-operative members, volunteers, and administrators. The integration with the Members Plugin provides sophisticated access control while maintaining an open, welcoming environment for community discussion.
 
 **Key Success Factors:**
 - **Role-Based Access**: Ensures appropriate participation levels across user types
@@ -558,7 +558,7 @@ The WordPress Comments System serves as a vital communication channel for the KC
 - Volunteer coordination and appreciation platform
 - Professional communication standards maintenance
 
-This commenting system supports the KCN Seniors co-operative mission by facilitating respectful, productive community discussions that help seniors age well at home and in their communities, while providing administrators with the tools needed to maintain a safe, welcoming digital environment.
+This commenting system supports the co-operative mission by facilitating respectful, productive community discussions that help seniors age well at home and in their communities, while providing administrators with the tools needed to maintain a safe, welcoming digital environment.
 
 ## Additional Resources
 

@@ -1,6 +1,6 @@
 ---
 title: "WordPress Basics Overview"
-description: "Complete guide to WordPress fundamentals for KCN Seniors team members"
+description: "Complete guide to WordPress fundamentals for team members"
 sectionId: "wordpress-basics"
 slug: "wordpress-basics-overview"
 tags: ["wordpress", "basics", "dashboard", "posts", "pages", "media", "users", "roles", "kcn seniors", "fundamentals", "cms"]
@@ -10,52 +10,52 @@ lastUpdated: "2025-01-15"
 order: 1
 ---
 
-# WordPress Basics Tutorial for KCN Seniors Team Members
+# WordPress Basics Tutorial for Team Members
 
 ## Table of Contents
 
-1. [Introduction: WordPress at KCN Seniors](#introduction-wordpress-at-kcn-seniors)
+1. [Introduction: WordPress](#introduction-wordpress)
 2. [Chapter 1: Understanding WordPress - The Foundation](#chapter-1-understanding-wordpress---the-foundation)
 3. [Chapter 2: Accessing the WordPress Dashboard](#chapter-2-accessing-the-wordpress-dashboard)
 4. [Chapter 3: The WordPress Admin Menu - Your Navigation Hub](#chapter-3-the-wordpress-admin-menu---your-navigation-hub)
 5. [Chapter 4: Posts vs Pages - Understanding the Difference](#chapter-4-posts-vs-pages---understanding-the-difference)
-6. [Chapter 5: Creating Content - The KCN Seniors Way](#chapter-5-creating-content---the-kcn-seniors-way)
+6. [Chapter 5: Creating Content](#chapter-5-creating-content)
 7. [Chapter 6: Media Management Best Practices](#chapter-6-media-management-best-practices)
-8. [Chapter 7: Understanding User Roles at KCN Seniors](#chapter-7-understanding-user-roles-at-kcn-seniors)
+8. [Chapter 7: Understanding User Roles](#chapter-7-understanding-user-roles)
 9. [Chapter 8: WordPress Settings - Handle with Care](#chapter-8-wordpress-settings---handle-with-care)
 10. [Chapter 9: Working with Plugins - The KCN Extensions](#chapter-9-working-with-plugins---the-kcn-extensions)
-11. [Chapter 10: Daily WordPress Tasks at KCN Seniors](#chapter-10-daily-wordpress-tasks-at-kcn-seniors)
+11. [Chapter 10: Daily WordPress Tasks](#chapter-10-daily-wordpress-tasks)
 12. [Chapter 11: Troubleshooting Common Issues](#chapter-11-troubleshooting-common-issues)
-13. [Chapter 12: WordPress Security at KCN Seniors](#chapter-12-wordpress-security-at-kcn-seniors)
+13. [Chapter 12: WordPress Security](#chapter-12-wordpress-security)
 14. [Chapter 13: Resources and Learning](#chapter-13-resources-and-learning)
 15. [Conclusion](#conclusion)
 
 ---
 
-## Introduction: WordPress at KCN Seniors
+## Introduction: WordPress
 
-This tutorial covers WordPress fundamentals and how they apply to the KCN Seniors website. While WordPress powers millions of websites worldwide, our implementation has specific configurations for managing senior community services.
+This tutorial covers WordPress fundamentals and how they apply to the website. While WordPress powers millions of websites worldwide, the implementation has specific configurations for managing senior community services.
 
-### Important Context for KCN Seniors
-At KCN Seniors, WordPress serves as our **content management backbone**, but remember:
+### Important Context
+WordPress serves as the **content management backbone**, but remember:
 - **Elementor Pro handles ALL visual design** - You won't use WordPress's built-in editor for page design
-- We use a **6-level role hierarchy** (Public → Subscriber → Member → Volunteer → Administrator 2 → Administrator)
+- The system uses a **6-level role hierarchy** (Public → Subscriber → Member → Volunteer → Administrator 2 → Administrator)
 - The **Members Plugin** controls who sees what content
-- **EventPrime** manages all our community events
+- **EventPrime** manages all community events
 
 ---
 
 ## Chapter 1: Understanding WordPress - The Foundation
 
 ### What is WordPress?
-WordPress is a Content Management System (CMS) - think of it as the engine that powers our website. Originally created as a platform for bloggers, WordPress has evolved into a powerful tool for building all kinds of websites – from personal blogs to complex eCommerce sites. For KCN Seniors, it manages our content, users, and integrates with specialized plugins for senior services.
+WordPress is a Content Management System (CMS) - think of it as the engine that powers the website. Originally created as a platform for bloggers, WordPress has evolved into a powerful tool for building all kinds of websites – from personal blogs to complex eCommerce sites. The system manages content, users, and integrates with specialized plugins for senior services.
 
 **Official Documentation**: [WordPress.org Documentation](https://wordpress.org/documentation/)
 
 ### WordPress.org vs WordPress.com
-**We use WordPress.org** (self-hosted):
+**The system uses WordPress.org** (self-hosted):
 - Full access to themes, plugins and customizations: You can install any WordPress theme, use third-party or custom plugins and even edit the site's code.
-- Complete control over our data
+- Complete control over data
 - Integration with EventPrime, Members Plugin, and Elementor Pro
 - Custom volunteer management system
 
@@ -80,7 +80,7 @@ When you first log in, you'll see the WordPress Dashboard - your control center 
 - Quick Draft for rapid content creation
 - Site Health Status for monitoring
 
-**KCN Seniors Note**: Your dashboard view depends on your role level. Volunteers see different options than Administrators.
+**Note**: Your dashboard view depends on your role level. Volunteers see different options than Administrators.
 
 ---
 
@@ -88,21 +88,21 @@ When you first log in, you'll see the WordPress Dashboard - your control center 
 
 The WordPress Admin Menu is the vertical menu located on the left side of your Dashboard. It serves as the navigation hub for all your website management tasks.
 
-### Core Menu Items at KCN Seniors:
+### Core Menu Items:
 
 #### Dashboard
-Your home base showing site activity and quick links. For KCN Seniors staff, this displays pending volunteer tasks and upcoming events.
+Your home base showing site activity and quick links. For staff, this displays pending volunteer tasks and upcoming events.
 
 #### Posts (Blog Content)
 Posts are used for dynamic content, such as blog posts, news articles, recipes, etc. 
-- **At KCN Seniors**: Community news, volunteer stories, senior resources
+- **Community news, volunteer stories, senior resources**
 - Organized by categories (Community News, Health Tips, Volunteer Updates)
 - Tagged for easy searching (e.g., "Bauline", "senior-services", "volunteer-opportunities")
 - **Comments enabled** for member engagement (managed through our role system)
 
 #### Pages (Static Content)
 Pages are static type content, like a contact page, for example.
-- **At KCN Seniors**: About Us, Services, Membership, Contact
+- **Examples**: About Us, Services, Membership, Contact
 - **IMPORTANT**: All pages are designed with Elementor Pro, NOT the WordPress editor
 - Hierarchical structure (parent/child pages)
 - No comments by default
@@ -111,18 +111,18 @@ Pages are static type content, like a contact page, for example.
 The Media Library is where all your site's media files—images, videos, audio files, and documents—are stored and managed.
 - Stores event photos, volunteer recognition images, resource documents
 - Organized by year/month folders
-- **Best Practice**: Use descriptive filenames (e.g., "pouch-cove-senior-lunch-2025.jpg")
+- **Best Practice**: Use descriptive filenames (e.g., "[location]-senior-lunch-2025.jpg")
 
 #### Comments
 - Managed comments from blog posts
-- **KCN Seniors Policy**: Only logged-in members can comment
+- **Policy**: Only logged-in members can comment
 - Requires moderation approval for first-time commenters
 - Integration with Members Plugin for role-based permissions
 
 #### Users
 - View and manage member accounts
 - **Cannot create new roles** (managed by Members Plugin)
-- Assign users to our 6-level hierarchy
+- Assign users to the 6-level hierarchy
 - Volunteer profiles linked through ACF tags
 
 #### Appearance
@@ -151,7 +151,7 @@ The Media Library is where all your site's media files—images, videos, audio f
 ### Posts (Dynamic Content)
 Posts are timely, and pages are timeless. You can use categories and tags to organize posts, while pages are hierarchical and organized as child and parent pages.
 
-**At KCN Seniors, Posts are used for**:
+**Posts are used for**:
 - Community event recaps
 - Volunteer spotlights
 - Health and wellness tips
@@ -166,7 +166,7 @@ Posts are timely, and pages are timeless. You can use categories and tags to org
 - Appear in RSS feeds
 
 ### Pages (Static Content)
-**At KCN Seniors, Pages include**:
+**Pages include**:
 - Homepage
 - About the Co-operative
 - Services Offered
@@ -185,7 +185,7 @@ Posts are timely, and pages are timeless. You can use categories and tags to org
 
 | Feature | Posts | Pages |
 |---------|-------|-------|
-| **Purpose at KCN** | News, updates, resources | Core information |
+| **Purpose** | News, updates, resources | Core information |
 | **Design Tool** | WordPress Editor or Elementor | Always Elementor Pro |
 | **Organization** | Categories & Tags | Parent/Child hierarchy |
 | **Comments** | Yes (members only) | No |
@@ -196,7 +196,7 @@ Posts are timely, and pages are timeless. You can use categories and tags to org
 
 ---
 
-## Chapter 5: Creating Content - The KCN Seniors Way
+## Chapter 5: Creating Content
 
 ### Creating a Blog Post
 1. Navigate to **Posts → Add New**
@@ -207,7 +207,7 @@ Posts are timely, and pages are timeless. You can use categories and tags to org
 6. **Featured Image**: Add a representative photo
 7. **Publish Settings**: Immediate or schedule for later
 
-**KCN Tip**: Posts about events should reference EventPrime event details and include volunteer acknowledgments.
+**Tip**: Posts about events should reference EventPrime event details and include volunteer acknowledgments.
 
 ### Creating a Page (Remember: Elementor Only!)
 1. Navigate to **Pages → Add New**
@@ -217,7 +217,7 @@ Posts are timely, and pages are timeless. You can use categories and tags to org
 5. Use our pre-built Elementor templates for consistency
 6. Save and publish
 
-**Critical**: All KCN Seniors pages must be created with Elementor Pro to maintain design consistency.
+**Critical**: All pages must be created with Elementor Pro to maintain design consistency.
 
 ---
 
@@ -226,11 +226,11 @@ Posts are timely, and pages are timeless. You can use categories and tags to org
 ### Uploading Media
 To upload new files, click the Add New Media File button at the top of the Media Library. You can either drag and drop files from your computer or select files to upload.
 
-**KCN Seniors Guidelines**:
+**Image Guidelines**:
 - **Event Photos**: 1200×630 pixels (16:9 ratio)
 - **Featured Images**: 1200×630 pixels
 - **In-content Images**: 800×600 maximum
-- **File Naming**: Use descriptive names with location (bauline-volunteer-training-2025.jpg)
+- **File Naming**: Use descriptive names with location ([location]-volunteer-training-2025.jpg)
 
 ### Organization Tips
 - Use year/month folder structure
@@ -242,7 +242,7 @@ To upload new files, click the Add New Media File button at the top of the Media
 
 ## Chapter 7: Understanding User Roles at KCN Seniors
 
-### Our 6-Level Hierarchy Explained
+### 6-Level Hierarchy Explained
 
 1. **Public Visitors** (Level 1)
    - Can view public content
@@ -291,7 +291,7 @@ To upload new files, click the Add New Media File button at the top of the Media
 - **Date Format**: Matches local preferences
 
 ### Discussion Settings (Comment Management)
-**KCN Seniors Configuration**:
+**Comment Configuration**:
 - Comments require user login
 - First comment requires approval
 - No anonymous comments allowed

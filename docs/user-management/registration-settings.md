@@ -12,7 +12,7 @@ order: 6
 
 # User Registration Settings
 
-User registration settings control how new users can join your site and what their default permissions will be. This guide covers comprehensive registration configuration for the KCN Seniors website, including membership workflows and approval processes.
+User registration settings control how new users can join your site and what their default permissions will be. This guide covers comprehensive registration configuration for the website, including membership workflows and approval processes.
 
 ## Registration Configuration
 

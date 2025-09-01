@@ -12,7 +12,7 @@ order: 6
 
 # WordPress Code Snippets Plugin Integration
 
-Your KCN Seniors website uses the **WordPress Code Snippets plugin** to implement advanced event management and user experience features through five custom code snippets. This approach provides a safe, manageable way to extend functionality without modifying theme files.
+The website uses the **WordPress Code Snippets plugin** to implement advanced event management and user experience features through five custom code snippets. This approach provides a safe, manageable way to extend functionality without modifying theme files.
 
 ## Plugin Overview
 
@@ -293,7 +293,7 @@ add_shortcode('future_events_slider', function($atts) {
 ### Snippet Management Best Practices
 
 **Before Editing Snippets:**
-- **Backup**: Always backup your website before modifying code snippets
+- **Backup**: Always backup the website before modifying code snippets
 - **Test Environment**: Test changes on staging site if available
 - **Documentation**: Keep notes of what each snippet does and why
 

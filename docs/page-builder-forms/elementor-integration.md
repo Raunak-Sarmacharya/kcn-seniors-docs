@@ -1,6 +1,6 @@
 ---
 title: "Elementor Integration"
-description: "Complete guide to Elementor page builder integration for KCN Seniors website"
+description: "Complete guide to Elementor page builder integration for website"
 sectionId: "page-builder-forms"
 slug: "elementor-integration"
 tags: ["elementor", "page builder", "forms", "design", "integration", "wordpress", "kcn seniors", "templates", "theme builder", "popups"]
@@ -29,12 +29,12 @@ order: 1
 
 ## Overview
 
-Elementor is a powerful WordPress page builder that provides drag-and-drop functionality for creating custom pages and forms. The KCN Seniors website uses Elementor for creating membership application forms, newsletter forms, and custom page designs that integrate seamlessly with the WordPress user management and role-based access control system.
+Elementor is a powerful WordPress page builder that provides drag-and-drop functionality for creating custom pages and forms. The website uses Elementor for creating membership application forms, newsletter forms, and custom page designs that integrate seamlessly with the WordPress user management and role-based access control system.
 
 > **📚 Prerequisites**: This section assumes you have completed the [WordPress Basics](/docs/wordpress-basics/wordpress-basics-overview) section, particularly [Creating Content](/docs/wordpress-basics/creating-content). If you're new to WordPress, start there first.
 
 **Theme Foundation:**
-Elementor works in conjunction with the **Hello Biz theme** - a lightweight, performance-optimized WordPress theme specifically designed for Elementor integration. This combination provides the ideal foundation for the KCN Seniors website, ensuring optimal performance and compatibility with the complex plugin stack.
+Elementor works in conjunction with the **Hello Biz theme** - a lightweight, performance-optimized WordPress theme specifically designed for Elementor integration. This combination provides the ideal foundation for the website, ensuring optimal performance and compatibility with the complex plugin stack.
 
 ## Key Features for KCN Seniors
 
@@ -100,7 +100,7 @@ Elementor works in conjunction with the **Hello Biz theme** - a lightweight, per
 
 ## Elementor Pro Templates System
 
-The Templates system in Elementor Pro is a powerful feature that allows you to save, reuse, and manage design elements across your KCN Seniors website. Templates are pre-designed Pages & Blocks that can be inserted into any page with just one click. This system is essential for maintaining design consistency and speeding up the website development process.
+The Templates system in Elementor Pro is a powerful feature that allows you to save, reuse, and manage design elements across your website. Templates are pre-designed Pages & Blocks that can be inserted into any page with just one click. This system is essential for maintaining design consistency and speeding up the website development process.
 
 **Important**: Templates are an **Elementor Pro exclusive feature**. While Elementor Free allows basic page editing, the full Templates system including Theme Builder, Popups, and Floating Elements requires Elementor Pro.
 
@@ -113,7 +113,7 @@ To access Templates in your WordPress dashboard:
 
 ### Template Types Available at KCN Seniors
 
-Your Templates section contains several subsections:
+The Templates section contains several subsections:
 - **Saved Templates**: Custom page designs and sections
 - **Popups**: Email collection and newsletter signup forms
 - **Theme Builder**: Global site parts (headers, footers, archives)
@@ -122,7 +122,7 @@ Your Templates section contains several subsections:
 
 ### Current KCN Seniors Templates
 
-Based on your current setup:
+Based on the current setup:
 
 #### Saved Templates (2 Active)
 1. **chair-yoga-arthritis-exercise-4** 
@@ -162,7 +162,7 @@ Based on your current setup:
 ### Understanding Template Types
 
 #### 1. Saved Templates
-Your templates can be stored in either the site library or a cloud template library. These are reusable page sections or complete pages you've designed.
+Templates can be stored in either the site library or a cloud template library. These are reusable page sections or complete pages you've designed.
 
 **Use Cases at KCN Seniors**:
 - Service page layouts
@@ -174,11 +174,11 @@ Your templates can be stored in either the site library or a cloud template libr
 1. Design any page or section in Elementor
 2. Click the button with the ^ icon next to the Publish button
 3. Select "Save as Template"
-4. Name your template descriptively
+4. Name the template descriptively
 5. Access later from Templates → Saved Templates
 
 **Shortcode Usage**:
-Each saved template has a shortcode (e.g., `[elementor-template id="8059"]`) that can be inserted anywhere on your site.
+Each saved template has a shortcode (e.g., `[elementor-template id="8059"]`) that can be inserted anywhere on the site.
 
 #### 2. Popups (Elementor Pro Feature)
 Popups are overlay elements that appear based on triggers and conditions.
@@ -194,7 +194,7 @@ Popups are overlay elements that appear based on triggers and conditions.
 - **Frequency**: Once per session, once ever, or always
 
 #### 3. Theme Builder (Elementor Pro Feature)
-The Theme Builder provides a visual overview of the site elements of your site, helping to guide you through each of the site parts you need to create in order to achieve a complete website.
+The Theme Builder provides a visual overview of the site elements, helping to guide you through each of the site parts you need to create in order to achieve a complete website.
 
 **Access Methods**:
 - Go to Elementor > Theme Builder from the WordPress admin menu
@@ -232,7 +232,7 @@ The Theme Builder provides a visual overview of the site elements of your site, 
 #### 4. Floating Elements (Elementor Pro Feature)
 Floating bars are banners that display at the top or bottom of a website. Use them for promotions, announcements, and calls to action to grab your visitors' attention.
 
-**Your Announcement Bar**:
+**The Announcement Bar**:
 - **Current Status**: Active but no categories configured
 - **Purpose**: Important announcements for seniors
 - **Best Practices**:
@@ -251,15 +251,15 @@ Floating bars are banners that display at the top or bottom of a website. Use th
 ### Template Library Features
 
 #### Accessing the Library
-On the canvas, click the add template icon to add a Page template, Block, or your own Saved template from the editing screen.
+On the canvas, click the add template icon to add a Page template, Block, or a Saved template from the editing screen.
 
 **Library Sections**:
 1. **Blocks**: Individual sections to build pages
 2. **Pages**: Complete page designs
-3. **My Templates**: Your saved custom templates
+3. **My Templates**: Saved custom templates
 
 #### Import/Export Functionality
-You can export your saved templates:
+You can export saved templates:
 1. Navigate to Templates section
 2. Click ellipses (⋯) next to template name
 3. Select "Export" to download as JSON file

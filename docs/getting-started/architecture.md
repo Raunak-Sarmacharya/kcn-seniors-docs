@@ -1,6 +1,6 @@
 ---
 title: "Site Architecture Overview"
-description: "Complete system architecture overview for KCN Seniors WordPress website"
+description: "Complete system architecture overview for WordPress website"
 sectionId: "getting-started"
 slug: "architecture"
 tags: ["architecture", "system overview", "wordpress", "eventprime", "members plugin", "acf", "elementor", "code snippets", "integration"]
@@ -10,11 +10,11 @@ lastUpdated: "2025-01-15"
 order: 2
 ---
 
-# KCN Seniors Website - Complete System Architecture
+# Website - Complete System Architecture
 
 ## Overview
 
-The KCN Seniors website (KCNseniors.coop) is a comprehensive WordPress-based community management system for the Killick Coast North Seniors Co-operative, serving Bauline, Flatrock, and Pouch Cove in Newfoundland, Canada. This is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model.
+The website is a comprehensive WordPress-based community management system for the seniors co-operative. This is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model.
 
 ## System Architecture Overview
 
@@ -46,7 +46,7 @@ The website uses a sophisticated dual-system approach for comprehensive user man
 
 ## Hierarchical Role Structure (6 Levels)
 
-KCN Seniors uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
+The system uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
 
 ### Level 1 - Public Access
 - **Available to**: All website visitors
@@ -322,7 +322,7 @@ Five custom code snippets providing enhanced functionality:
 
 ## System Benefits
 
-### For KCN Seniors Organization
+### For the Organization
 - **Comprehensive Community Management**: Complete platform for member and volunteer coordination
 - **Professional Online Presence**: Modern, responsive website with professional design
 - **Efficient Operations**: Automated systems reduce administrative workload
@@ -363,6 +363,6 @@ Five custom code snippets providing enhanced functionality:
 
 ---
 
-*This architecture overview provides a complete understanding of the KCN Seniors website system. For detailed implementation guides, see the specific documentation sections.*
+*This architecture overview provides a complete understanding of the website system. For detailed implementation guides, see the specific documentation sections.*
 
 *For questions or suggestions about the system architecture, please contact your website administrator.*

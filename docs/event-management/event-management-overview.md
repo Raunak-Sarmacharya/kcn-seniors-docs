@@ -12,7 +12,7 @@ order: 1
 
 # Event Management System Overview
 
-Your KCN Seniors website uses **EventPrime** - a comprehensive WordPress event management plugin that provides robust event creation, management, and display capabilities with sophisticated role-based access control.
+Your website uses **EventPrime** - a comprehensive WordPress event management plugin that provides robust event creation, management, and display capabilities with sophisticated role-based access control.
 
 ## EventPrime Plugin Overview
 
@@ -95,7 +95,7 @@ Your website implements CSS-based content hiding that selectively conceals sensi
 - Event titles, dates, and times
 - General descriptions and activities
 - Event information and details
-- General location area (e.g., "Bauline Community Area")
+- General location area (e.g., "[Location] Community Area")
 
 ## 🎥 Quick Start Video Tutorial
 

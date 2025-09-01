@@ -1,6 +1,6 @@
 ---
 title: "WordPress Dashboard Navigation Guide"
-description: "Complete guide to navigating the WordPress dashboard and admin menu for KCN Seniors team members"
+description: "Complete guide to navigating the WordPress dashboard and admin menu for team members"
 sectionId: "wordpress-basics"
 slug: "dashboard-navigation"
 tags: ["wordpress", "dashboard", "navigation", "admin menu", "kcn seniors", "user interface", "getting started"]
@@ -26,7 +26,7 @@ order: 2
 
 ## Dashboard Overview
 
-The WordPress Dashboard is your command center for managing the KCN Seniors website. It provides an overview of your site's activity and quick access to all administrative functions.
+The WordPress Dashboard is your command center for managing the website. It provides an overview of your site's activity and quick access to all administrative functions.
 
 ### What You'll See When You First Log In
 
@@ -36,7 +36,7 @@ The WordPress Dashboard is your command center for managing the KCN Seniors webs
 4. **Quick Draft Widget**: Create a new post without leaving the dashboard
 5. **Site Health Status**: Monitor your site's performance and security
 
-### KCN Seniors Dashboard Customizations
+### Dashboard Customizations
 
 Our dashboard is customized to show:
 - **Volunteer Task Summary**: Pending tasks and upcoming events
@@ -136,7 +136,7 @@ Monitors your site's performance:
 - **Security**: Security status and recommendations
 - **Updates**: Available updates for core, themes, and plugins
 
-### KCN Seniors Custom Widgets
+### Custom Widgets
 
 #### Volunteer Dashboard
 - **Pending Tasks**: Tasks awaiting volunteer assignment
@@ -180,7 +180,7 @@ Located in the top-right corner of most admin screens, Screen Options allows you
 The top admin bar provides quick access to common functions:
 
 ### Left Side
-- **KCN Seniors**: Site name and logo
+- **Site Name**: Site name and logo
 - **+ New**: Quick access to create new content
 - **Customize**: Quick theme customization
 
@@ -265,7 +265,7 @@ The top admin bar provides quick access to common functions:
 
 ### Related Documentation
 - [WordPress Basics Overview](/docs/wordpress-basics/wordpress-basics-overview)
-- [Creating Content - The KCN Seniors Way](/docs/wordpress-basics/creating-content)
+- [Creating Content](/docs/wordpress-basics/creating-content)
 - [Understanding User Roles](/docs/user-management/role-based-access)
 
 ---

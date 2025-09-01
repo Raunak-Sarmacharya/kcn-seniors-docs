@@ -14,7 +14,7 @@ order: 5
 
 ## Understanding ACF Integration
 
-The KCN Seniors website uses Advanced Custom Fields (ACF) to extend user profiles with custom data fields, particularly for volunteer skills and preferences. This integration provides a flexible and powerful way to manage volunteer information, automate task matching, and create personalized user experiences.
+The website uses Advanced Custom Fields (ACF) to extend user profiles with custom data fields, particularly for volunteer skills and preferences. This integration provides a flexible and powerful way to manage volunteer information, automate task matching, and create personalized user experiences.
 
 ## 🎯 **ACF Integration Overview**
 
@@ -29,7 +29,7 @@ The KCN Seniors website uses Advanced Custom Fields (ACF) to extend user profile
 - Post and page custom fields
 - API integration for developers
 
-### **KCN Seniors Implementation**
+### **Implementation**
 
 **Primary Use Cases:**
 1. **Volunteer Skills Management**: Track volunteer skills and interests
@@ -604,4 +604,4 @@ function export_volunteer_data() {
 
 ---
 
-*The Advanced Custom Fields integration provides a powerful and flexible foundation for managing volunteer information on the KCN Seniors website. This system enables sophisticated volunteer management, automated task matching, and personalized user experiences while maintaining data integrity and security.*
+*The Advanced Custom Fields integration provides a powerful and flexible foundation for managing volunteer information on the website. This system enables sophisticated volunteer management, automated task matching, and personalized user experiences while maintaining data integrity and security.*

@@ -1,6 +1,6 @@
 ---
 title: "Backup & Migration System"
-description: "Comprehensive backup and migration system using WP Vivid Backup & Migration and All-in-One WP Migration for KCN Seniors website"
+description: "Comprehensive backup and migration system using WP Vivid Backup & Migration and All-in-One WP Migration for website"
 sectionId: "maintenance-support"
 slug: "backup-migration-system"
 tags: ["backup", "migration", "wp vivid", "all-in-one wp migration", "disaster recovery", "data protection", "kcn seniors"]
@@ -14,7 +14,7 @@ order: 7
 
 ## Overview
 
-The KCN Seniors website uses a **dual-plugin approach** for comprehensive backup and migration management:
+The website uses a **dual-plugin approach** for comprehensive backup and migration management:
 
 - **WP Vivid Backup & Migration**: Primary backup solution with free scheduling and comprehensive backup features
 - **All-in-One WP Migration**: Specialized tool for database migration and site transfers
@@ -90,7 +90,7 @@ This strategic combination provides optimal coverage for both regular backup mai
 
 ### Why KCN Chose Free Version
 
-The WP Vivid free version provides everything KCN Seniors needs:
+The WP Vivid free version provides everything needed:
 - **Regular Scheduled Backups**: Daily/weekly automated backups
 - **Cloud Storage**: Free Google Drive integration for offsite storage
 - **Complete Restoration**: Full site recovery capabilities
@@ -274,7 +274,7 @@ Pre-Update Backup:
 
 ## Setup and Configuration
 
-### WP Vivid Setup for KCN Seniors
+### WP Vivid Setup
 
 #### Initial Configuration:
 
@@ -639,7 +639,7 @@ Consider Upgrades If:
 - **Migration Best Practices**: WordPress codex migration guidelines
 - **Plugin Installation Guide**: https://wordpress.org/documentation/article/managing-plugins/
 
-## Integration with KCN Seniors Documentation
+## Integration with Documentation
 
 ### Related Documentation Sections:
 - **[Maintenance & Support Overview](/docs/maintenance-support/overview)**: Overall maintenance procedures
@@ -655,4 +655,4 @@ Consider Upgrades If:
 
 ---
 
-*This documentation covers the comprehensive backup and migration system for the KCN Seniors website. For emergency procedures and disaster recovery, see the Emergency Recovery documentation.*
+*This documentation covers the comprehensive backup and migration system for the website. For emergency procedures and disaster recovery, see the Emergency Recovery documentation.*

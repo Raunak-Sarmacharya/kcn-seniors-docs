@@ -1,6 +1,6 @@
 ---
 title: "Hello Biz Theme Integration & WordPress Appearance Management"
-description: "Complete guide to Hello Biz theme integration and WordPress Appearance tab options for KCN Seniors website"
+description: "Complete guide to Hello Biz theme integration and WordPress Appearance tab options for website"
 sectionId: "custom-development"
 slug: "hello-biz-theme-integration"
 tags: ["hello biz", "theme", "appearance", "wordpress dashboard", "elementor", "customization", "kcn seniors"]
@@ -14,7 +14,7 @@ order: 3
 
 ## Overview
 
-The KCN Seniors website uses the **Hello Biz theme** as its foundation, providing a clean, performance-optimized base for Elementor integration and custom development. This document covers the WordPress Appearance tab options, Hello Biz theme features, and how they integrate with the KCN Seniors community management system.
+The website uses the **Hello Biz theme** as its foundation, providing a clean, performance-optimized base for Elementor integration and custom development. This document covers the WordPress Appearance tab options, Hello Biz theme features, and how they integrate with the KCN Seniors community management system.
 
 ## WordPress Appearance Tab Options
 
@@ -134,7 +134,7 @@ Hello Biz theme adds unique features to your WordPress dashboard that streamline
 - **CTA Widget**: Call-to-action button elements
 - **Header/Footer Widgets**: Specialized header and footer builders
 
-## KCN Seniors Implementation: Real-World Application
+## Implementation: Real-World Application
 
 The KCN Seniors website demonstrates how Hello Biz theme and WordPress Appearance options work together in a complex, role-based community management system:
 
@@ -161,7 +161,7 @@ The KCN Seniors website demonstrates how Hello Biz theme and WordPress Appearanc
 
 ## Functions.php Modifications & Theme Customization
 
-Based on the KCN Seniors implementation, here's how functions.php modifications relate to the dashboard options:
+Based on the implementation, here's how functions.php modifications relate to the dashboard options:
 
 ### Common functions.php Customizations:
 
@@ -313,7 +313,7 @@ add_filter('wp_authenticate_username_password', 'kcn_email_login', 20, 3);
 - Verify theme compatibility with WordPress version
 - Review error logs for specific issues
 
-### KCN-Specific Troubleshooting:
+### System-Specific Troubleshooting:
 **Role-Based Content Not Displaying Correctly:**
 - Check Members Plugin configuration in dashboard
 - Verify role capabilities in Users → All Users
@@ -338,7 +338,7 @@ add_filter('wp_authenticate_username_password', 'kcn_email_login', 20, 3);
 - **Code Snippets**: Function conflicts
 - **EventPrime**: Theme styling conflicts
 
-### Debugging KCN System:
+### Debugging System:
 1. **Test with Default Theme**: Switch temporarily to Twenty Twenty-Three
 2. **Check Plugin Conflicts**: Deactivate plugins one by one
 3. **Review Error Logs**: Check WordPress debug logs
@@ -365,7 +365,7 @@ add_filter('wp_authenticate_username_password', 'kcn_email_login', 20, 3);
 - **Navigation Menus**: [Menu Development](https://developer.wordpress.org/themes/functionality/navigation-menus/)
 - **Theme File Editor**: [Safe Editing Practices](https://wordpress.org/documentation/article/appearance-theme-file-editor/)
 
-## Integration with KCN Seniors Documentation
+## Integration with Documentation
 
 ### Related Documentation Sections:
 - **[Elementor Integration](/docs/page-builder-forms/elementor-integration)**: How Hello Biz works with Elementor

@@ -14,7 +14,7 @@ order: 1
 
 ## Introduction
 
-The KCN Seniors WordPress website features a comprehensive blog system built on WordPress's native Posts functionality. This system provides members with engaging content while implementing **role-based access control** for comments, ensuring only logged-in users can participate in discussions.
+The WordPress website features a comprehensive blog system built on WordPress's native Posts functionality. This system provides members with engaging content while implementing **role-based access control** for comments, ensuring only logged-in users can participate in discussions.
 
 > **📚 Prerequisites**: This section assumes you have completed the [WordPress Basics](/docs/wordpress-basics/wordpress-basics-overview) section, particularly [Creating Content](/docs/wordpress-basics/creating-content). If you're new to WordPress, start there first.
 
@@ -58,7 +58,7 @@ The KCN Seniors WordPress website features a comprehensive blog system built on 
 
 ### WordPress Block Editor (Gutenberg)
 
-The KCN Seniors blog uses the modern **WordPress Block Editor** introduced in WordPress 5.0. This replaces the old Classic Editor with a block-based approach.
+The blog uses the modern **WordPress Block Editor** introduced in WordPress 5.0. This replaces the old Classic Editor with a block-based approach.
 
 #### What Are Blocks?
 **Blocks** are individual content elements that combine to create rich, engaging posts. Each paragraph, image, heading, or multimedia element is a separate block.
@@ -196,7 +196,7 @@ Add New Tag:
 
 ### Comment Access Control
 
-The KCN Seniors blog implements **role-based commenting** where only logged-in users can leave comments on blog posts.
+The blog implements **role-based commenting** where only logged-in users can leave comments on blog posts.
 
 #### Comment Permissions:
 
@@ -469,7 +469,7 @@ Avoid: /p=123 or /2025/01/29/post-title-here/
 - [WordPress Support Forums](https://wordpress.org/support/)
 - [Block Editor Discussions](https://make.wordpress.org/core/handbook/tutorials/quick-start-guide/)
 
-### KCN Seniors Internal Documentation
+### Internal Documentation
 - [User Management Overview](/docs/user-management/user-management-overview)
 - [Role-Based Access Control](/docs/user-management/role-based-access)
 - [Comments System Management](/docs/blog-management/comments-system-management)
@@ -518,7 +518,7 @@ Avoid: /p=123 or /2025/01/29/post-title-here/
 
 ### Role-Based Commenting
 
-The KCN Seniors blog system integrates with the **Members Plugin** to provide sophisticated comment access control:
+The blog system integrates with the **Members Plugin** to provide sophisticated comment access control:
 
 #### **Comment Access Levels:**
 - **Public Posts**: All logged-in users can comment
@@ -558,4 +558,4 @@ The KCN Seniors blog system integrates with the **Members Plugin** to provide so
 
 ---
 
-*This documentation is part of the comprehensive KCN Seniors WordPress Website Documentation System. For additional support or questions about the blog system, please refer to the [Emergency Contacts & Support](/docs/getting-started/welcome) guide.*
+*This documentation is part of the comprehensive WordPress Website Documentation System. For additional support or questions about the blog system, please refer to the [Emergency Contacts & Support](/docs/getting-started/welcome) guide.*

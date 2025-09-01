@@ -5,11 +5,11 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'KCN Seniors Documentation Portal',
-  description: 'Comprehensive documentation portal for KCN Seniors WordPress website management',
-  keywords: ['WordPress', 'documentation', 'KCN Seniors', 'website management'],
-  authors: [{ name: 'KCN Seniors' }],
-  robots: 'index, follow', // Public documentation portal
+  title: 'Documentation Portal',
+  description: 'Modern documentation portal with markdown support, search, and responsive design',
+  keywords: ['documentation', 'markdown', 'search', 'responsive design'],
+  authors: [{ name: 'Documentation Portal' }],
+  robots: 'index, follow',
 };
 
 export const viewport = {
@@ -24,9 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
       <body className={inter.className}>
         {children}
       </body>

@@ -14,7 +14,7 @@ order: 3
 
 ## Understanding WordPress Debug Mode
 
-WordPress debug mode is a powerful tool for developers and administrators to identify and resolve issues on the KCN Seniors website. When activated, it provides detailed error information, logs errors to files, and displays debugging information.
+WordPress debug mode is a powerful tool for developers and administrators to identify and resolve issues on the website. When activated, it provides detailed error information, logs errors to files, and displays debugging information.
 
 ## ⚠️ **Important Security Considerations**
 
@@ -491,4 +491,4 @@ if (!empty($new_errors)) {
 
 ---
 
-*Debug mode is an essential tool for maintaining the KCN Seniors website. When used correctly, it provides valuable information for identifying and resolving issues while maintaining security.*
+*Debug mode is an essential tool for maintaining the website. When used correctly, it provides valuable information for identifying and resolving issues while maintaining security.*

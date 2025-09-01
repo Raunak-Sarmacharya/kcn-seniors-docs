@@ -14,7 +14,7 @@ order: 3
 
 ## Introduction
 
-The WordPress Media Library is the centralized hub for managing all media files on the KCN Seniors website. This comprehensive system stores and organizes images, videos, audio files, and documents used throughout the site, including blog posts, EventPrime events, and member content.
+The WordPress Media Library is the centralized hub for managing all media files on the website. This comprehensive system stores and organizes images, videos, audio files, and documents used throughout the site, including blog posts, EventPrime events, and member content.
 
 ### Key Features
 - **Centralized File Storage** - All media files in one location
@@ -530,7 +530,7 @@ Alt Text Guidelines:
 - Don't use "image of" or "picture of"
 
 Examples:
-- Good: "KCN Seniors members planting vegetables in community garden"
+- Good: "Members planting vegetables in community garden"
 - Poor: "Image of people gardening"
 
 Missing Alt Text Impact:
@@ -990,7 +990,7 @@ Optimization Tracking:
 - **Pingdom** - Website speed monitoring
 - **WebPageTest** - Advanced performance testing
 
-### KCN Seniors Internal Documentation
+### Internal Documentation
 - [Blog System Overview](./blog-system-overview.md) - Media integration with posts
 - [Event Management System](../event-management/event-management-overview.md) - EventPrime media features
 - [User Management System](../user-management/user-management-overview.md) - Role-based media access
@@ -1052,4 +1052,4 @@ Optimization Tracking:
 
 ---
 
-*This documentation is part of the comprehensive KCN Seniors WordPress Website Documentation System. For additional support or questions about media management, please refer to the [Emergency Contacts & Support](../getting-started/emergency-contacts-support.md) guide.*
+*This documentation is part of the comprehensive WordPress Website Documentation System. For additional support or questions about media management, please refer to the [Emergency Contacts & Support](../getting-started/emergency-contacts-support.md) guide.*

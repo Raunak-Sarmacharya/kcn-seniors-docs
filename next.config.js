@@ -23,10 +23,35 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
-          // Add caching headers for static content
+          // Smart caching: shorter max-age with validation
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, stale-while-revalidate=86400',
+            value: 'public, max-age=300, stale-while-revalidate=600, must-revalidate',
+          },
+          // Add ETag support for cache validation
+          {
+            key: 'ETag',
+            value: '"${Date.now()}"',
+          },
+        ],
+      },
+      // Special caching for documentation pages
+      {
+        source: '/docs/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=180, stale-while-revalidate=300, must-revalidate',
+          },
+        ],
+      },
+      // No caching for dynamic content
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-cache, no-store, must-revalidate',
           },
         ],
       },

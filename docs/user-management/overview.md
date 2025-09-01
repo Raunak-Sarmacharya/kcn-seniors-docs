@@ -13,7 +13,7 @@ videoUrl: "https://player.vimeo.com/video/1114714099?title=0&byline=0&portrait=0
 
 # User Management System
 
-User management is a critical aspect of WordPress site administration that involves managing user accounts, roles, and permissions to ensure proper access control and security. The KCN Seniors website uses a comprehensive approach combining WordPress's built-in user system with the Members plugin for enhanced functionality.
+User management is a critical aspect of WordPress site administration that involves managing user accounts, roles, and permissions to ensure proper access control and security. The website uses a comprehensive approach combining WordPress's built-in user system with the Members plugin for enhanced functionality.
 
 ## 🎥 Video Tutorial Guide
 
@@ -22,7 +22,7 @@ User management is a critical aspect of WordPress site administration that invol
 For a visual demonstration of user management basics, watch our comprehensive video tutorial below:
 
 **What the Video Covers:**
-- Changing user roles in the KCN Seniors system
+- Changing user roles in the system
 - Adding volunteer tags to volunteer users
 - Managing role permissions through the Members plugin
 - Essential user administration tasks
@@ -64,7 +64,7 @@ For a visual demonstration of user management basics, watch our comprehensive vi
 
 > **📚 Prerequisites**: This section assumes you have completed the [WordPress Basics](/docs/wordpress-basics/wordpress-basics-overview) section. If you're new to WordPress, start there first.
 
-## System Benefits for KCN Seniors
+## System Benefits
 
 - **Volunteer Coordination**: Admin-created volunteer accounts with ACF skill tags for specific responsibilities
 - **Member Benefits**: Exclusive content and event access for paying members
@@ -73,7 +73,7 @@ For a visual demonstration of user management basics, watch our comprehensive vi
 
 ## Site Architecture Overview
 
-The KCN Seniors website uses a dual-system approach for comprehensive user management:
+The website uses a dual-system approach for comprehensive user management:
 
 ### Core Components
 1. **WordPress Users System**: Manages user accounts, profiles, and basic role assignment
@@ -96,7 +96,7 @@ The KCN Seniors website uses a dual-system approach for comprehensive user manag
 
 ### Hierarchical Access Levels
 
-KCN Seniors uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
+The system uses a **hierarchical role system** where each higher role includes all permissions from lower roles:
 
 **Level 1 - Public Access**: Available to all website visitors
 - General website information and public content
@@ -160,10 +160,10 @@ KCN Seniors uses a **hierarchical role system** where each higher role includes 
 
 ### Welcome & Overview
 
-Welcome to the complete KCN Seniors website documentation! This comprehensive guide covers all aspects of managing the Killick Coast North Seniors Co-operative (KCNseniors.coop) website - a non-profit community service co-operative serving Bauline, Flatrock, and Pouch Cove in Newfoundland, Canada.
+Welcome to the complete website documentation! This comprehensive guide covers all aspects of managing the seniors co-operative website - a non-profit community service co-operative.
 
-**About KCN Seniors Co-operative:**
-KCN Seniors is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model of the Village to Village Network.
+**About the Co-operative:**
+This is a non-profit community service co-operative where volunteers offer services to help seniors age well at home and in their communities, following co-operative values and the Village Model of the Village to Village Network.
 
 **Complete Website Management Includes:**
 - **User Management**: User accounts, roles, and permissions (covered in this section)

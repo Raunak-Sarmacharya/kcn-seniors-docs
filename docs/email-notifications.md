@@ -85,7 +85,7 @@ For detailed technical implementation, see [ACF & WP Mail SMTP Integration](/doc
 ### Template Structure
 
 **Standard Email Components:**
-- **Header**: KCN Seniors branding and identification
+- **Header**: Website branding and identification
 - **Greeting**: Personalized volunteer or administrator greeting
 - **Content**: Task-specific information and details
 - **Action Items**: Clear next steps and requirements

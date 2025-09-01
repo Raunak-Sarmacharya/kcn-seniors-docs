@@ -11,8 +11,8 @@ lastUpdated: "2025-01-15"
 
 # Video Tutorials
 
-## Master KCN Seniors Website Management
+## Master Website Management
 
-Welcome to our comprehensive video tutorial library! These step-by-step video guides will help you master every aspect of managing the KCN Seniors WordPress website, from basic operations to advanced customizations.
+Welcome to our comprehensive video tutorial library! These step-by-step video guides will help you master every aspect of managing the WordPress website, from basic operations to advanced customizations.
 
 <VideoTutorials />

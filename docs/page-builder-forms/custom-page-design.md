@@ -1,6 +1,6 @@
 ---
 title: "Custom Page Design"
-description: "Creating custom pages with Elementor for KCN Seniors website"
+description: "Creating custom pages with Elementor for website"
 sectionId: "page-builder-forms"
 slug: "custom-page-design"
 tags: ["design", "elementor", "pages", "layout", "branding", "kcn seniors", "custom"]
@@ -16,10 +16,10 @@ order: 3
 
 Custom page design is a key component of the KCN Seniors website, allowing administrators to create professional, branded pages that effectively communicate with members, volunteers, and the community. Elementor provides powerful tools for creating custom layouts, forms, and interactive content that integrates seamlessly with the WordPress user management and role-based access control system.
 
-## Design Principles for KCN Seniors
+## Design Principles
 
 ### Brand Consistency
-- **Color Scheme**: Maintain KCN Seniors brand colors throughout
+- **Color Scheme**: Maintain brand colors throughout
 - **Typography**: Use consistent font families and hierarchy
 - **Logo Usage**: Proper logo placement and sizing
 - **Visual Elements**: Consistent use of images and graphics
@@ -44,7 +44,7 @@ Custom page design is a key component of the KCN Seniors website, allowing admin
 - **Purpose**: Main landing page for all visitors
 - **Key Elements**:
   - Hero section with clear value proposition
-  - About KCN Seniors overview
+  - About the organization overview
   - Upcoming events preview
   - Call-to-action for membership
   - Contact information
@@ -210,7 +210,7 @@ Custom page design is a key component of the KCN Seniors website, allowing admin
 ## Brand Guidelines Implementation
 
 ### Color Palette
-- **Primary Colors**: KCN Seniors brand colors
+- **Primary Colors**: Brand colors
 - **Secondary Colors**: Complementary accent colors
 - **Text Colors**: High contrast for readability
 - **Background Colors**: Clean, professional backgrounds

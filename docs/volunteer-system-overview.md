@@ -13,7 +13,7 @@ lastUpdated: "2024-01-15"
 
 ## Understanding the Volunteer Management System
 
-The KCN Seniors volunteer management system provides a comprehensive platform for coordinating volunteer services requested by members. This system automates the process of matching volunteers with service requests based on their skills and availability.
+The volunteer management system provides a comprehensive platform for coordinating volunteer services requested by members. This system automates the process of matching volunteers with service requests based on their skills and availability.
 
 ### System Benefits
 
@@ -181,14 +181,14 @@ The volunteer management system is built on:
 
 
 **For Volunteers:**
-1. Ensure your profile includes relevant skill tags
+1. Ensure the profile includes relevant skill tags
 2. Monitor your email for task notifications
 3. Respond promptly to task assignments
 4. Update task status upon completion
 
 **For Members:**
 1. Contact administrators for service requests
-2. Provide detailed information about your needs
+2. Provide detailed information about the needs
 3. Be available for volunteer coordination
 4. Provide feedback on completed services
 

@@ -12,7 +12,7 @@ order: 4
 
 # Password Management & Security
 
-Strong password policies and security measures are essential for protecting your WordPress site from unauthorized access. This guide covers comprehensive password management strategies and security implementations for the KCN Seniors website.
+Strong password policies and security measures are essential for protecting your WordPress site from unauthorized access. This guide covers comprehensive password management strategies and security implementations for the website.
 
 ## Password Policy Requirements
 
@@ -336,7 +336,7 @@ Two-factor authentication adds an extra layer of security by requiring an additi
 
 ### Security Standards
 
-| Standard | Requirement | KCN Seniors Implementation |
+| Standard | Requirement | Implementation |
 |----------|-------------|---------------------------|
 | **Password Complexity** | 12+ characters, mixed types | ✅ Enforced |
 | **Password Expiration** | 90-day rotation for admin accounts | ✅ Implemented |

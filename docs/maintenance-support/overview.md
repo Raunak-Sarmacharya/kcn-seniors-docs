@@ -12,7 +12,7 @@ order: 1
 
 # Maintenance & Support Overview
 
-This section covers all aspects of maintaining and supporting the KCN Seniors website, including regular maintenance tasks, support procedures, and emergency contacts.
+This section covers all aspects of maintaining and supporting the website, including regular maintenance tasks, support procedures, and emergency contacts.
 
 ## What's Covered
 

@@ -67,10 +67,10 @@ export default function DocsOverviewPage() {
             className="mb-12"
           >
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              KCN Seniors Documentation
+              Documentation Portal
             </h1>
             <p className="text-xl text-gray-600 max-w-5xl leading-relaxed">
-              Welcome to your comprehensive documentation portal. Find everything you need to manage your KCN Seniors website effectively and efficiently.
+              Welcome to your comprehensive documentation portal. Find everything you need to know, beautifully organized and easy to navigate.
             </p>
           </motion.div>
 
@@ -216,20 +216,32 @@ export default function DocsOverviewPage() {
                 Need Help?
               </h3>
               <p className="text-gray-600 mb-8 max-w-4xl mx-auto text-lg leading-relaxed">
-                Can't find what you're looking for? Our comprehensive documentation covers everything from basic setup to advanced customization. We're here to help you succeed.
+                Can't find what you're looking for? Browse troubleshooting guides, quick references, and video tutorials.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
                 <Link
                   href="/docs/troubleshooting/common-issues"
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                 >
-                  View Troubleshooting
+                  Troubleshooting
                 </Link>
                 <Link
                   href="/docs/getting-started/quick-reference"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Quick Reference
+                </Link>
+                <Link
+                  href="/docs/maintenance-support/backup-migration-system"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                >
+                  Backup & Migration
+                </Link>
+                <Link
+                  href="/docs/wordpress-basics/dashboard-navigation"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  Dashboard Navigation
                 </Link>
               </div>
             </div>

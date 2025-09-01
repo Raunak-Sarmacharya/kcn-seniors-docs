@@ -1,16 +1,16 @@
 ---
-title: "Creating Content - The KCN Seniors Way"
-description: "Complete guide to creating posts, pages, and managing content in WordPress for KCN Seniors team members"
+title: "Creating Content"
+description: "Complete guide to creating posts, pages, and managing content in WordPress"
 sectionId: "wordpress-basics"
 slug: "creating-content"
-tags: ["wordpress", "content creation", "posts", "pages", "block editor", "elementor", "kcn seniors", "blogging", "content management"]
+tags: ["wordpress", "content creation", "posts", "pages", "block editor", "elementor", "blogging", "content management"]
 difficulty: "beginner"
 estimatedTime: "30 minutes"
 lastUpdated: "2025-01-15"
 order: 3
 ---
 
-# Creating Content - The KCN Seniors Way
+# Creating Content
 
 ## Table of Contents
 
@@ -27,9 +27,9 @@ order: 3
 
 ## Content Creation Overview
 
-At KCN Seniors, we have two main types of content, each with its own creation method:
+There are two main types of content, each with its own creation method:
 
-### Content Types at KCN Seniors
+### Content Types
 
 #### 📝 Blog Posts (Dynamic Content)
 - **Purpose**: News, updates, community stories, volunteer spotlights
@@ -65,12 +65,12 @@ At KCN Seniors, we have two main types of content, each with its own creation me
 #### 2. Add Your Title
 1. Click in the "Add title" field at the top
 2. Enter a descriptive, engaging title
-3. **KCN Tip**: Include location names (Bauline, Flatrock, Pouch Cove) for local relevance
+3. **Tip**: Include location names for local relevance
 
 #### 3. Write Your Content
 1. Click below the title to add your first content block
 2. Use the **+** button to add different block types
-3. Common blocks for KCN Seniors posts:
+3. Common blocks for posts:
    - **Paragraph**: Regular text content
    - **Heading**: Section headers (H2, H3, H4)
    - **Image**: Photos and graphics
@@ -93,7 +93,7 @@ At KCN Seniors, we have two main types of content, each with its own creation me
    - Senior Resources
 
 2. **Tags** (right sidebar):
-   - Location: bauline, flatrock, pouch-cove
+   - Location: [location-specific tags]
    - Service: senior-services, volunteer-opportunities
    - Topic: health-tips, community-events
 
@@ -108,7 +108,7 @@ At KCN Seniors, we have two main types of content, each with its own creation me
 3. **Publish Date**: Immediate or schedule for later
 4. **Author**: Verify correct author attribution
 
-### Block Editor Tips for KCN Seniors
+### Block Editor Tips
 
 #### Useful Block Types
 - **Cover**: Hero images with text overlay
@@ -129,7 +129,7 @@ At KCN Seniors, we have two main types of content, each with its own creation me
 
 ### Important: Never Use WordPress Editor for Pages!
 
-At KCN Seniors, **ALL pages must be created with Elementor Pro** to maintain design consistency and functionality.
+**ALL pages must be created with Elementor Pro** to maintain design consistency and functionality.
 
 > **💡 Pro Tip**: For advanced page creation, learn about [Elementor Pro Templates](/docs/page-builder-forms/elementor-integration#elementor-pro-templates-system) which allow you to save and reuse page designs across your website.
 
@@ -147,7 +147,7 @@ At KCN Seniors, **ALL pages must be created with Elementor Pro** to maintain des
 3. **Right Panel**: Element settings and page settings
 
 #### 3. Choose Template
-1. **Templates**: Use pre-built KCN Seniors templates
+1. **Templates**: Use pre-built templates
 2. **Sections**: Common page sections (header, content, footer)
 3. **Pages**: Complete page templates
 
@@ -157,7 +157,7 @@ At KCN Seniors, **ALL pages must be created with Elementor Pro** to maintain des
 3. **Customize**: Use right panel to adjust settings
 4. **Responsive**: Test on different screen sizes
 
-#### 5. Common KCN Seniors Page Elements
+#### 5. Common Page Elements
 - **Hero Section**: Page title and introduction
 - **Content Blocks**: Text, images, and information
 - **Contact Forms**: WPForms integration
@@ -172,7 +172,7 @@ At KCN Seniors, **ALL pages must be created with Elementor Pro** to maintain des
 ### Elementor Best Practices
 
 #### Design Consistency
-- Use KCN Seniors color scheme (orange and blue)
+- Use consistent color scheme (orange and blue)
 - Follow established typography hierarchy
 - Maintain consistent spacing and layout
 - Use approved images and graphics
@@ -193,15 +193,15 @@ At KCN Seniors, **ALL pages must be created with Elementor Pro** to maintain des
 Categories organize your content into main sections:
 
 - **Community News**: Local updates and announcements
-- **Health & Wellness**: Senior health tips and resources
+- **Health & Wellness**: Health tips and resources
 - **Volunteer Updates**: Volunteer stories and opportunities
 - **Event Recaps**: Community event summaries
-- **Senior Resources**: Helpful information and links
+- **Resources**: Helpful information and links
 
 #### Tags (Specific Details)
 Tags help with search and organization:
 
-- **Locations**: bauline, flatrock, pouch-cove, newfoundland
+- **Locations**: [location-specific tags]
 - **Services**: senior-services, volunteer-opportunities, community-support
 - **Topics**: health-tips, safety, social-activities, transportation
 - **Audience**: seniors, caregivers, volunteers, community-members
@@ -224,7 +224,7 @@ Tags help with search and organization:
 
 ## Media Management
 
-### Image Guidelines for KCN Seniors
+### Image Guidelines
 
 #### Recommended Image Sizes
 - **Featured Images**: 1200×630 pixels (16:9 ratio)
@@ -235,9 +235,9 @@ Tags help with search and organization:
 #### File Naming Convention
 - **Format**: location-event-date.jpg
 - **Examples**: 
-  - bauline-senior-lunch-2025-01-15.jpg
-  - flatrock-volunteer-training-2025-01-20.jpg
-  - pouch-cove-community-garden-2025-01-25.jpg
+  - [location]-senior-lunch-2025-01-15.jpg
+  - [location]-volunteer-training-2025-01-20.jpg
+  - [location]-community-garden-2025-01-25.jpg
 
 #### Image Optimization
 - **Compress**: Use tools like TinyPNG before uploading
@@ -310,7 +310,7 @@ Tags help with search and organization:
 
 #### Writing Guidelines
 - **Clear Language**: Use simple, direct language
-- **Local Focus**: Emphasize KCN Seniors community
+- **Local Focus**: Emphasize community relevance
 - **Helpful Content**: Provide practical value to readers
 - **Engaging Style**: Write in conversational tone
 - **Accessibility**: Ensure content is easy to read
@@ -319,7 +319,7 @@ Tags help with search and organization:
 - **High Quality**: Use clear, professional images
 - **Relevant**: Images should relate to content
 - **Accessible**: Include alt text and captions
-- **Consistent**: Follow KCN Seniors visual style
+- **Consistent**: Follow established visual style
 - **Optimized**: Compress images for web use
 
 ### SEO and Accessibility
@@ -385,7 +385,7 @@ Tags help with search and organization:
 
 1. **Practice Post Creation**: Create a draft post to learn the interface
 2. **Explore Elementor**: Familiarize yourself with page building tools
-3. **Review Content Guidelines**: Understand KCN Seniors content standards
+3. **Review Content Guidelines**: Understand content standards
 4. **Join Content Team**: Participate in content planning and creation
 
 ### Related Documentation

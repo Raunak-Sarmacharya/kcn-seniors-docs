@@ -1,6 +1,6 @@
 ---
 title: "ACF & WP Mail SMTP Integration"
-description: "Advanced Custom Fields and WP Mail SMTP integration for KCN Seniors volunteer management system"
+description: "Advanced Custom Fields and WP Mail SMTP integration for volunteer management system"
 sectionId: "custom-development"
 slug: "acf-wp-mail-smtp-integration"
 tags: ["acf", "advanced custom fields", "wp mail smtp", "email", "volunteer management", "automated matching", "notifications", "kcn seniors"]
@@ -14,7 +14,7 @@ order: 4
 
 ## Overview
 
-This documentation covers the integration of **Advanced Custom Fields (ACF)** and **WP Mail SMTP** plugins within the KCN Seniors website volunteer management system. These plugins work together to create an automated volunteer matching and notification system that powers the volunteer booking service.
+This documentation covers the integration of **Advanced Custom Fields (ACF)** and **WP Mail SMTP** plugins within the website volunteer management system. These plugins work together to create an automated volunteer matching and notification system that powers the volunteer booking service.
 
 ### System Integration Summary:
 - **ACF**: Manages volunteer skills, interests, and task requirements
@@ -36,7 +36,7 @@ Advanced Custom Fields is a WordPress plugin that allows you to add extra conten
 
 ### KCN's ACF Implementation
 
-Based on the ACF interface, KCN Seniors uses two main field groups:
+Based on the ACF interface, the system uses two main field groups:
 
 #### 1. **Volunteer Task Details** Field Group
 - **Purpose**: Detailed information for volunteer tasks
@@ -125,7 +125,7 @@ WP Mail SMTP fixes email deliverability issues by reconfiguring WordPress to use
 
 ### KCN's WP Mail SMTP Configuration
 
-Based on the configuration, KCN Seniors uses:
+Based on the configuration, the system uses:
 
 #### SMTP Settings:
 - **Mailer**: Other SMTP (Custom SMTP server)
@@ -258,7 +258,7 @@ function kcn_send_task_notification($volunteer, $task_id) {
         Please contact us if you're available to help.
         
         Best regards,
-        KCN Seniors Team
+        Team
     ";
     
     // WP Mail SMTP handles reliable delivery
@@ -495,7 +495,7 @@ wp_mail('test@example.com', 'Test Subject', 'Test message');
 - **WordPress Email Functions**: WordPress `wp_mail()` function documentation
 - **Custom Post Types**: WordPress custom post type development guide
 
-## Integration with KCN Seniors Documentation
+## Integration with Documentation
 
 ### Related Documentation Sections:
 - **[Volunteer System Overview](/docs/volunteer-management/volunteer-system-overview)**: Complete volunteer management system
@@ -512,4 +512,4 @@ wp_mail('test@example.com', 'Test Subject', 'Test message');
 
 ---
 
-*This documentation covers ACF and WP Mail SMTP integration for the KCN Seniors volunteer management system. For technical implementation details, see the Functions.php Customizations and Code Snippets Plugin documentation.*
+*This documentation covers ACF and WP Mail SMTP integration for the volunteer management system. For technical implementation details, see the Functions.php Customizations and Code Snippets Plugin documentation.*

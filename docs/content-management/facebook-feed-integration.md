@@ -1,6 +1,6 @@
 ---
 title: "Facebook Integration System"
-description: "Dual Facebook integration system using Smash Balloon Facebook Feed and Cardoza Facebook Like Box for KCN Seniors homepage"
+description: "Dual Facebook integration system using Smash Balloon Facebook Feed and Cardoza Facebook Like Box for homepage"
 sectionId: "content-management"
 slug: "facebook-feed-integration"
 tags: ["facebook", "social media", "smash balloon", "feed", "homepage", "content display", "kcn seniors"]
@@ -14,9 +14,9 @@ order: 3
 
 ## Overview
 
-The KCN Seniors website uses **two separate Facebook integrations** to provide comprehensive social media presence:
+The website uses **two separate Facebook integrations** to provide comprehensive social media presence:
 
-1. **Smash Balloon Facebook Feed**: Displays Casey and's Facebook posts in a professional 3x3 grid format
+1. **Smash Balloon Facebook Feed**: Displays Facebook posts in a professional 3x3 grid format
 2. **Cardoza Facebook Like Box**: Small Facebook widget under the hero section for page engagement
 
 ### Implementation Summary:
@@ -52,7 +52,7 @@ Smash Balloon Facebook Feed is a WordPress plugin that displays Facebook content
 ## Cardoza Facebook Like Box Widget
 
 ### Overview:
-The **Cardoza Facebook Like Box** is a separate Facebook integration that provides a compact engagement widget positioned under the hero section on the homepage. This widget encourages visitors to like and follow the KCN Seniors Facebook page.
+The **Cardoza Facebook Like Box** is a separate Facebook integration that provides a compact engagement widget positioned under the hero section on the homepage. This widget encourages visitors to like and follow the Facebook page.
 
 ### Implementation Details:
 - **Plugin**: Cardoza Facebook Like Box (separate from Smash Balloon)
@@ -511,7 +511,7 @@ add_action('cff_after_feed', 'custom_after_feed');
 - **Knowledge Base**: Comprehensive FAQ and troubleshooting guides
 - **Video Tutorials**: Step-by-step setup and customization guides
 
-## Integration with KCN Seniors Documentation
+## Integration with Documentation
 
 ### Related Documentation Sections:
 - **[Content Management Overview](/docs/content-management/media-library-management)**: Managing website content and media
@@ -527,4 +527,4 @@ add_action('cff_after_feed', 'custom_after_feed');
 
 ---
 
-*This documentation covers Facebook Feed integration for the KCN Seniors website. For technical implementation details, see the Custom Development section.*
+*This documentation covers Facebook Feed integration for the website. For technical implementation details, see the Custom Development section.*
